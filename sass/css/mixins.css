@@ -1,0 +1,10 @@
+.cuadro-1,
+.cuadro-2,
+.cuadro-3 {
+  background: #444;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px; }
+
+/*# sourceMappingURL=mixins.css.map */
