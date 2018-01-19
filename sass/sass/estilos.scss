@@ -1,0 +1,16 @@
+$colorUno: #f9ed69;
+$colorDos: #f08a5d;
+$colorTres: #b83b5e;
+$colorCuatro: #6a2c70;
+section {
+	background: $colorUno;
+	h1{
+		background: $colorDos;
+	}
+	h2{
+		background: $colorTres;
+	}
+	p {
+		background: $colorCuatro;
+	}
+}

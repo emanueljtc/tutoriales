@@ -1,5 +1,10 @@
-body { background: #ccc; }
-
-p { font-size: 22px; }
+section {
+  background: #f9ed69; }
+  section h1 {
+    background: #f08a5d; }
+  section h2 {
+    background: #b83b5e; }
+  section p {
+    background: #6a2c70; }
 
 /*# sourceMappingURL=estilos.css.map */
