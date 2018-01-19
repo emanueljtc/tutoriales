@@ -1,8 +1,20 @@
-.cuadro-1,
-.cuadro-2,
-.cuadro-3 {
-  background: #444;
+.cuadro-1 {
+  background: #000;
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px; }
+
+.cuadro-2 {
+  background: #bf2222;
   width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px; }
+
+.cuadro-3 {
+  background: tomato;
+  width: 100px;
   height: 200px;
   margin-top: 10px;
   padding: 10px; }

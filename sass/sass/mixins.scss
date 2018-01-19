@@ -1,13 +1,19 @@
-@mixin cuadrado {
-    background: #444;
-    width: 200px;
+@mixin cuadrado ($fondo, $ancho:200px) {
+    background: $fondo;
+    width: $ancho;
     height: 200px;
     margin-top: 10px;
     padding: 10px;
 }
 
-.cuadro-1,
-.cuadro-2,
+.cuadro-1 {
+    @include cuadrado(#000, 300px);
+}
+
+.cuadro-2 {
+    @include cuadrado(#bf2222);
+}
+
 .cuadro-3 {
-    @include cuadrado;
+    @include cuadrado(tomato, 100px);
 }
