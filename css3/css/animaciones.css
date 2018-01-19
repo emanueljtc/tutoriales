@@ -4,7 +4,7 @@
 }
 body{
 	background: url(bg.jpg) no-repeat 0px -30px #3D3B3B;
-	background-size: cover;
+	animation: fondo .2s ease-in-out infinite;
 
 }
 .carro img {
@@ -13,36 +13,38 @@ body{
 	height: 80px;
 	position: relative;
 	top: 505px;
-	animation-name: carro;
-	animation-duration: 2s;
-	animation-timing-function: ease-in-out;
-	animation-delay: 3s;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	left: 40%
+	
 }
 .rueda1 img{
 	background-image: url(rueda.png);
 	position: absolute;
 	top: 536px;
-	left: 8px;
+	left: 552px;
 	width: 33px;
 	height: 33px;
 	z-index: 10;
-	 
+	 animation: llanta .2s infinite linear;
 }
 .rueda2 img{
 	background-image: url(rueda.png);
 	position: absolute;
 	top: 536px;
-	left: 157px;
+	left: 704px;
 	width: 33px;
 	height: 33px;
 	z-index: 10;
+	animation: llanta .2s infinite linear;
 }
 
 /* ANIMACIONES */
 
-@keyframes carro {
-	0% {left: 0;}
-	100% {left: 80%;}
+@keyframes fondo {
+	0% {background-position: left top}
+	100% {background-position: right top;}
+}
+
+@keyframes llanta {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
