@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(bg.jpg) no-repeat 0px -30px #3D3B3B;
+	background-size: cover;
+
+}
+.carro img {
+	background: url(ferrari.png);
+	width: 220px;
+	height: 80px;
+	position: relative;
+	top: 505px;
+	animation-name: carro;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+.rueda1 img{
+	background-image: url(rueda.png);
+	position: absolute;
+	top: 536px;
+	left: 8px;
+	width: 33px;
+	height: 33px;
+	z-index: 10;
+	 
+}
+.rueda2 img{
+	background-image: url(rueda.png);
+	position: absolute;
+	top: 536px;
+	left: 157px;
+	width: 33px;
+	height: 33px;
+	z-index: 10;
+}
+
+/* ANIMACIONES */
+
+@keyframes carro {
+	0% {left: 0;}
+	100% {left: 80%;}
+}
