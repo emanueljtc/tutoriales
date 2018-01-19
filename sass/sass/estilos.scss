@@ -1,16 +1,16 @@
-$colorUno: #f9ed69;
-$colorDos: #f08a5d;
-$colorTres: #b83b5e;
-$colorCuatro: #6a2c70;
+@import "variables";
 section {
-	background: $colorUno;
-	h1{
-		background: $colorDos;
-	}
-	h2{
-		background: $colorTres;
-	}
-	p {
-		background: $colorCuatro;
-	}
+    background: $colorUno;
+    h1 {
+        height: 200px;
+        background: $colorDos;
+    }
+    h2 {
+        height: 200px;
+        background: $colorTres;
+    }
+    p {
+        height: 200px;
+        background: $colorCuatro;
+    }
 }
