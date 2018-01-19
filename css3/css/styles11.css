@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div.caja{
+	margin: 50px auto;
+	border: 12px double tomato;
+	width: 700px;
+}
+p{
+	background: silver;
+	color: #444;
+	padding: 10px;
+	border: 2px #eee solid;
+	margin: 0;
+}
+p > a {
+	display: block;
+}

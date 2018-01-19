@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fondo</title>
+	<style>
+		body{
+			
+			background-color: white;
+
+		}
+		.contenedor{
+			background-image: url('fondo.jpg');
+			background-repeat: no-repeat;
+			background-size: 300px auto;
+			width: 300px;
+			height: 200px;
+			margin: 20% auto;
+			border: 30px solid;
+
+			border-image-source: url('border.png');
+			border-image-slice: 20 fill;
+			border-image-repeat: stretch;
+			border-image-width: 30px;
+			border-image-outset: 20px;
+		}
+		.degradado-lineal{
+			margin: 20% auto;
+			height: 300px;
+			width: 300px;
+			border: 1px solid black;
+			background: repeating-radial-gradient(circle at top left, red, orange 20px, red 50px);
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		
+	</div>
+	<div class="degradado-lineal">
+		
+	</div>
+</body>
+</html>

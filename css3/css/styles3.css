@@ -1,0 +1,29 @@
+body {
+    background: #eae4e4;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
+li, div{
+    border: 1px solid #DDDDDD;
+    list-style-type: none;
+    margin: 2px 50px 2px 0;
+    padding: 5px 10px;
+}
+section div:nth-last-of-type(2){
+    background: blue;
+    color: white;
+    font-size: 2em;
+}
+

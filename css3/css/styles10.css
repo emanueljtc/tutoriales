@@ -1,0 +1,43 @@
+body{
+    background-image: url(fondo.jpg)
+    
+}
+section{
+    padding: 60px;
+}
+div{
+    border: 1px solid #555;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0,0,0, .5);
+    
+}
+p {
+  text-align: justify;
+  text-align-last: center;
+  -moz-text-align-last: center;
+    font-family: Times, "Times new roman", bookman, serif;
+    font-style: oblique;
+    font-weight: 800;
+    font-variant: small-caps;
+    color: white;
+    letter-spacing: normal;
+    text-decoration: line-through;
+    text-decoration-color: green;
+    text-decoration-style: double;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 1px 1px 4px white;
+}
+
+ul{
+    color: white;
+    list-style: armenian inside;
+
+}
+ol {
+    list-style-type: decimal-leading-zero;
+    color: white;
+    list-style-position: inside;
+}

@@ -1,0 +1,85 @@
+/*SELECTOR UNIVERSAL
+* {
+	margin: 0;
+	padding: 0;
+	color: red;
+}*/
+body{
+	background-color: #cadde5;
+	padding: 0px;
+	margin: 0px;
+}
+#contenido{
+	margin: 10px auto;
+	width: 550px;
+}
+div > a {
+	color: #a4b736;
+	font-weight: bold;
+}
+p > span {
+ 	color: red;
+}
+h1 + p {
+	color: #c30;
+	font-weight: bold;
+}
+p + p {
+   text-decoration: underline;
+}
+h2 ~ p {
+	font-size: 30px;
+	font-weight: bold;
+}
+a[rel]{
+	background: #ffd183;
+	color: #665042;
+	display:block;
+	margin: 2px; 
+}
+a[rel="externo"]{
+	background: #ffe082;
+	color: #665042;
+	display:block;
+	margin: 2px; 
+	border: 1px solid #000;
+}
+/*SELECTOR DE ATRIBUTOS POR ESPACIOS*/
+[title~="titulo"]{
+    background: #69708a;
+    border: 1px dashed #a4b2cc;
+    color: white;
+    margin: 2px;
+    padding: 20px;
+}
+/*SELECTOR DE ATRIBUTOS POR GUIONES*/
+[title|="titulo"]{
+    background: #69708a;
+    border: 1px dashed #a4b2cc;
+    color: white;
+    margin: 2px;
+    padding: 20px;
+}
+/*SELECTOR DE ATRIBUTOS comienza POR VALOR*/
+a[href^="http://"]{
+    background: url(link.png) no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    display: block;
+    
+}
+/*SELECTOR DE ATRIBUTOS termina POR VALOR*/
+a[href$="rar"]{
+    background: url(rar.png) no-repeat;
+    background-size: 20px;
+    padding-left: 20px;
+    display: block;
+    
+}
+/*SELECTOR DE ATRIBUTOS contiene  VALOR*/
+p[title*="parrafo"]{
+    background: #b90000;
+    padding-left: 20px;
+    display: block;
+    
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi Columnas</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	body{
+    		background: #193F41;
+    		margin: 0;
+    		padding: 0;
+    		font-family: 'Open sans', helvetica, arial;
+    	}
+    	.contenedor {
+    		background: rgb(213, 213, 213);
+    		width: 90%;
+    		margin: 10% auto 0;
+    		padding: 20px;
+    		border-radius: 10px;
+    		box-shadow: 0px 1px 1px 1px #555, 0 -3px 0 #fff
+    	}
+
+    	.contenedor img {
+    		max-width: 100%;
+    	}
+
+    	.contenedor {
+    		columns: 3 300px;
+    		column-gap: 50px;
+    		column-rule: 2px dashed red;
+    	}
+		h1 {
+			column-span: all;
+			text-align: center;
+			margin-bottom: 12px;
+			text-transform: uppercase;
+			font-family: 'Lato', sans-serif;
+		}
+    	p{
+    		font-family: 'Open sans', sans-serif;
+    	}
+    </style>
+</head>
+<body>
+	<section class="contenedor">
+		<h1>Multi Columnas</h1>
+		
+		<img src="responsive.png" alt="" class="">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nulla, doloribus consectetur dicta, neque magnam? Quis nemo magnam tenetur neque modi consectetur blanditiis recusandae nihil nam at, corrupti, ratione impedit.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae possimus blanditiis sint nisi asperiores, beatae. Impedit illum aliquam laboriosam debitis tenetur, velit est enim in mollitia culpa nihil quibusdam dignissimos!
+		</p>
+
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nisi modi officiis et explicabo, commodi eligendi asperiores delectus nam molestias atque earum iste eum officia ad expedita nesciunt, consequatur culpa!</p>
+	</section>
+</body>
+</html>

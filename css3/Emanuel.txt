@@ -1,0 +1,2 @@
+¿Describe brevemente el entorno de desarrollo?
+	Pues basicamente necesitamos como entorno de desarrollo para Wordpress, principalmente se requiere de la popular arqquitectura PHP, MYSQL, APACHE para windows se puede usar WAMP o linux LAMP o instalarlo en crudo cada servicio.

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: caption;
+  background: #222;
+}
+section {
+    margin: 0 auto;
+}
+/*------ UNIDADES RELATIVAS -------*/
+p {
+    color: white;
+    font-size: 1em;
+}
+p.uno {
+    background: steelblue;
+    width: 100vw;
+    height: 50vh;
+    font-size: 4vw;
+}
+p.dos{
+    background: tomato;
+    width: 100vw;
+    height: 50vh;
+    font-size: 4vw;
+}

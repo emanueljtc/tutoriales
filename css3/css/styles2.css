@@ -1,0 +1,77 @@
+body {
+    background: #eae4e4;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    background-color: #4C76AE;
+}
+
+nav li {
+    border-right: 1px solid #87CEEB;
+    display: inline-block;
+    padding: 15px;
+}
+
+nav li a {
+    color: #CAD7EA;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #fff;
+}
+
+.items li {
+    border-bottom: 1px solid #AAAAAA;
+    margin: 10px;
+}
+
+/* --------------------- PSEUDO CLASES ESTRUCTURALES BASICAS -------- */
+
+nav li:first-child {
+    background: #b40000;
+    color: white;
+}
+
+article p:first-child {
+    background: #b40000;
+    color: white;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+article p:last-child {
+    background: #c1a100;
+    color: #222;
+}
+ul li:last-child {
+    background: blue;
+    color: white;
+    padding: 5px;
+}
+span:only-child {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+li{
+    border: 1px solid #DDDDDD;
+    list-style-type; none;
+    margin: 2px 50px 2px 0;
+    padding: 5px 10px;
+}

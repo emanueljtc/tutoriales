@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    background: #aaaaaa91;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+h1{
+    border-bottom: 1px solid #FFFFFF;
+    color: #4682B4;
+    padding-bottom: 20px;
+    text-align: center;
+}
+div {
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+/* ----------- PSEUDO ELEMENTOS ------------ */
+p::first-line {
+    color: tomato;
+    font-weight: bold;
+    font-size: 20px;
+}
+p.parrafo::first-letter {
+    background: #fff;
+    color: tomato;
+    float: left;
+    font-family: 'Joti One', cursive;
+    font-size: 70px;
+    margin: 10px;
+    padding: 10px;
+}
+.ie::before {
+  content: url('ie.png');
+  position:relative;
+  top: 10px;
+  margin-right: 5px;
+  
+}
+.ie::after {
+  content: attr(title);
+  color: tomato;
+  margin-left: 3px;
+}
+h3::before, h3::after {
+    content: attr(title);
+    background: yellow;
+    color: red;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 0 3px;
+}
+

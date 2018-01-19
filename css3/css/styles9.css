@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    padding: 60px;
+}
+div {
+    border: 1px solid #555;
+    font-family: fantasy;
+    font-size: 30px;
+    height: 100px;
+    line-height: 4;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
+}
+/* Colores por medio de Keyworks */
+div.uno{
+    background-color: tomato;
+}
+/* Colores por Medio de Hexadecimales */
+div.dos{
+    background-color: #0372a6;
+}
+/* Colores por Medio de valores RGB */
+div.tres{
+    background-color: rgb(132,129,133);
+}
+/* Colores por Medio de valores HSL */
+div.cuatro{
+    background-color: hsla(0, 100%, 50%, .6);
+}
