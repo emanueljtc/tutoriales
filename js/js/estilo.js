@@ -37,7 +37,7 @@ console.log("Usted Tiene" + " " + amigos.length + " " + "amigos"); */
 //document.write(amigos.sort());
 
 //Condicionales
-
+/* 
 var edad = prompt("Ingrese su Edad");
 
 if (edad >= 18) {
@@ -45,4 +45,34 @@ if (edad >= 18) {
     alert("Usted es Mayor de Edad, Pase");
 } else {
     alert("Eres Menor de Edad, NO PASE");
+} */
+//CICLO FOR
+/* var numeroDeUsuarios = 50;
+
+for (i = 1; i <= numeroDeUsuarios; i++) {
+    document.write(i + "<br>");
+} */
+
+//CICLO WHILE
+/* var dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+
+var numeroDias = dias.length - 1;
+var i = 0;
+
+while (i <= numeroDias) {
+    document.write(dias[i] + "<br>");
+    i++;
+} */
+//FUNCIONES
+
+var suma = function(numero1, numero2) {
+    var numero1 = parseInt(document.getElementById("numero1").value);
+    var numero2 = parseInt(document.getElementById("numero2").value);
+    var resultado = numero1 + numero2;
+    return resultado;
 }
+
+var texto = "Venezuela Libre";
+var nuevoTexto = texto.substring(7);
+
+document.write(nuevoTexto);
