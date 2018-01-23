@@ -64,7 +64,7 @@ while (i <= numeroDias) {
     i++;
 } */
 //FUNCIONES
-
+/* 
 var suma = function(numero1, numero2) {
     var numero1 = parseInt(document.getElementById("numero1").value);
     var numero2 = parseInt(document.getElementById("numero2").value);
@@ -75,4 +75,28 @@ var suma = function(numero1, numero2) {
 var texto = "Venezuela Libre";
 var nuevoTexto = texto.substring(7);
 
-document.write(nuevoTexto);
+document.write(nuevoTexto); */
+
+var elementosP = document.getElementsByTagName("p");
+var segundoParrafo = document.getElementById("P1");
+
+//CREAR UN NODO DEL DOM
+
+/* // 1- Crear el Elemento
+var elemento = document.createElement("h2");
+// 2- Crear el Nodo de Texto
+var contenido = document.createTextNode("Este es nuestro elemento desde Js");
+// 3- Añadir el nodo al elemento
+elemento.appendChild(contenido);
+// 4- Agregar atributos al elemento
+elemento.setAttribute("align", "center");
+// 5- Añadir el elemento al documento
+document.getElementById("subtitulo").appendChild(elemento); */
+
+//AGREGANDO NODOS AL DOM
+var elemento = document.createElement("li"),
+    contenido = document.createTextNode("Nuevo Texto");
+elemento.appendChild(contenido);
+var padre = document.getElementsByTagName("li")[0].parentNode;
+var primerElemento = document.getElementsByTagName("li")[0];
+padre.insertBefore(elemento, primerElemento);
