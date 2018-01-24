@@ -14,20 +14,15 @@
     <div id="main" class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h1>VUE-js Filtros</h1>
-                <button class="btn btn-primary" v-on:click="getUsers" v-if="!lists.length">
-                    Listar
-                </button>
-                <ul class="list-group" v-else>
-                    <li class="list-group-item">
-                        <input type="text" placeholder="Buscar..." class="form-control" v-model="name">
-                    </li>
-                    <li v-for="item in searchUser" class="list-group-item">
-                        {{ item.name }}
-                    </li>
-                </ul>
+                <h1>Albums</h1>
+                <common-list v-bind:lists="albums"></common-list>
+
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-4">
+                <h1>Posts</h1>
+                <common-list v-bind:lists="posts"></common-list>
+            </div>
+            <div class="col-sm-12">
                 <h1>Json</h1>
                 <pre>
                     {{ $data  }}
@@ -38,25 +33,37 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
     <script type="text/javascript">
+        Vue.component('common-list', {
+            props: ['lists'],
+            template: `<ul class="list-group">
+                          <li v-for="item in lists" class="list-group-item">
+                            {{ item.title }}
+                          </li>
+                        </ul>`,
+        });
         new Vue({
             el: '#main',
-
+            created: function() {
+                this.getPosts(),
+                    this.getAlbums()
+            },
             data: {
-                lists: [],
-                name: '',
+                posts: [],
+                albums: [],
 
             },
             methods: {
-                getUsers: function() {
-                    var urlUsers = 'https://jsonplaceholder.typicode.com/users';
-                    axios.get(urlUsers).then(response => {
-                        this.lists = response.data
+                getPosts: function() {
+                    var urlPosts = 'https://jsonplaceholder.typicode.com/posts';
+                    axios.get(urlPosts).then(response => {
+                        this.posts = response.data
                     });
-                }
-            },
-            computed: {
-                searchUser: function() {
-                    return this.lists.filter((item) => item.name.includes(this.name));
+                },
+                getAlbums: function() {
+                    var urlAlbums = 'https://jsonplaceholder.typicode.com/albums';
+                    axios.get(urlAlbums).then(response => {
+                        this.albums = response.data
+                    });
                 }
             }
         });
