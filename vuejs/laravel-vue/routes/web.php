@@ -13,9 +13,6 @@
 use App\User;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
-Route::get('users', function(){
-    $users = User::orderBy('id', 'DESC')->take(10)->get();
-    return $users;
-});
+ Route::resource('tasks', 'TaskController', ['except' => 'show','create', 'edit']);
