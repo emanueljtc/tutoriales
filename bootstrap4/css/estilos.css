@@ -1,27 +1,13 @@
-.fondo {
-    background: blue;
+.first {
+    background: rebeccapurple;
+    color: #fff;
+    font-size: 3em;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.borde {
-    border: 1px #000 solid;
-    text-align: center;
-    height: 50px;
-    padding: 10px;
-}
-
-.color1 {
-    background: #eeeeee;
-}
-
-.color2 {
-    background: #fcc314;
-}
-
-.color3 {
-    background: #94ac3c;
-}
-
-.color4 {
-    background: #295ba7;
-    height: 500px;
+div[class |="col"] {
+    border: 1px solid #ffc107;
 }
