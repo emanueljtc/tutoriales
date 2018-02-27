@@ -3,22 +3,6 @@ body {
     padding: 1em;
 }
 
-.first {
-    background: rebeccapurple;
-    color: #fff;
-    /* font-size: 3em;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-    text-align: center;
-}
-
-.row {
-    height: 200px;
-    border: 1px solid #777;
-}
-
 div[class |="col"] {
     border: 1px solid #ddd;
     background: #fff;
