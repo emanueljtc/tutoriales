@@ -1,11 +1,12 @@
 .first {
     background: rebeccapurple;
     color: #fff;
-    font-size: 3em;
+    /* font-size: 3em;
     height: 50vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    text-align: center;
 }
 
 div[class |="col"] {
