@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "firebase": "^4.10.1",
+    "jquery": "^3.3.1",
+    "toastr": "^2.1.4",
     "vue": "^2.5.2",
     "vuefire": "^1.4.5"
   },
@@ -27,6 +29,8 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "eslint": "^4.18.1",
+    "eslint-plugin-vue": "^4.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",

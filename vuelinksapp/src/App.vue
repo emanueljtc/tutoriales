@@ -69,7 +69,7 @@
 <script>
 //importamos Firebase
 import Firebase from 'firebase';
-
+import toastr from 'toastr';
 //creamos la variable que contiene los datos de la APIKEY
 let config = {
   apiKey: "AIzaSyDK5LixDK_ZbPEFtTbrnRATXyYjVSBnn20",
@@ -110,9 +110,11 @@ export default {
       this.newLink.title = '';
       this.newLink.author = '';
       this.newLink.url = '';
+      toastr.success('Link Agregado!!')
     },
     deleteLink: function (link) {
       linksRef.child(link['.key']).remove();
+      toastr.success('Link Eliminado!!')
     }
   }
 }
