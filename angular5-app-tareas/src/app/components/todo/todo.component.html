@@ -1,3 +1,8 @@
-<p>
-  todo works!
-</p>
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Insert TODO" #itemTitle>
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" (click)="addTodo(itemTitle)">
+      <i class="fas fa-plus-circle"></i>
+    </button>
+    </div>
+</div>
