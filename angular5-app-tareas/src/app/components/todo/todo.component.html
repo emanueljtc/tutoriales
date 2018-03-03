@@ -13,8 +13,8 @@
             <i [ngClass]="todo.isChecked ? 'fas fa-check-circle' : 'far fa-circle' "></i>
         </span> {{todo.title}}
 
-        <span class="cursor-hover">
-            
+        <span class="text-danger cursor-hover" (click)="deleteTodo(todo.$key)">
+            <i class="far fa-trash-alt"></i>
         </span>
     </li>
 </ul>

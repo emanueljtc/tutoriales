@@ -10,7 +10,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 //Componentes
 import { TodoComponent } from './components/todo/todo.component';
+//Toastr
+import { CommonModule } from "@angular/common";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import { ToastrModule } from "ngx-toastr";
 //Services
 import { TodoService } from './services/todo.service';
 @NgModule({
@@ -18,11 +22,12 @@ import { TodoService } from './services/todo.service';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() // ToastrModule added
   ],
-  providers: [
-    TodoService
-  ],
-  bootstrap: [AppComponent]
+  providers: [TodoService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
