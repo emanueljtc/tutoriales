@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 //services
 import { ProductService } from '../../../services/product.service'
+import { ToastrService } from "ngx-toastr";
 
 // class product
 import { Product } from '../../../models/product';
@@ -12,7 +13,8 @@ import { Product } from '../../../models/product';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[];
-  constructor(private productService: ProductService) 
+  constructor(private productService: ProductService, 
+    private toastr: ToastrService) 
   {
     
    }
@@ -35,7 +37,10 @@ export class ProductListComponent implements OnInit {
   }
 
   onDelete($key: string){
-    this.productService.deleteProduct($key);
+    if(confirm('Are  your sure you want to delete?')){
+      this.productService.deleteProduct($key);
+      this.toastr.success("Successfull Operations", "Product Deleted");
+    }
   }
 
 }
