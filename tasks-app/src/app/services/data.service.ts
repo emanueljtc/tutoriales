@@ -20,5 +20,11 @@ export class DataService {
 
   addTask(task: Task):void {
     this.tasks.unshift(task);
+    let tasks;
+    if(localStorage.getItem('tasks') == null){
+      tasks = [];
+      tasks.unshift(task);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
   }
 }
