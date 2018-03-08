@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import "rxjs";
+import "rxjs/Rx";
 import { Task } from '../Task';
 @Injectable()
 export class TaskService {
-  domain: string = "http://localhost:3000/";
+  domain: string = "http://localhost:3000";
   constructor( private http: HttpClient) {
 
    }
