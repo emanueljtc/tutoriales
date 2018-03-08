@@ -20,7 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(indexRoutes);
 app.use('/api', tasksRoutes);
 
-
+// static files 
+app.use(express.static(path.join(__dirname, 'dist')));
+// start serve
 
 app.listen(app.get('port'), () => {
     console.log('Servidor en el puerto', app.get('port'));
