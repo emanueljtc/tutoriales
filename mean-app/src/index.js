@@ -2,7 +2,7 @@ const cors = require('cors');
 const express = require('express');
 const path = require('path');
 const app = express();
-const indexRoutes = require("./routes/index");
+//const indexRoutes = require("./routes/index");
 const tasksRoutes = require("./routes/tasks");
 
 // configuraciones
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // rutas 
-app.use(indexRoutes);
+//app.use(indexRoutes);
 app.use('/api', tasksRoutes);
 
 // static files 
