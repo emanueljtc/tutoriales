@@ -25,6 +25,20 @@ export class DataService {
       tasks = [];
       tasks.unshift(task);
       localStorage.setItem('tasks', JSON.stringify(tasks));
+    }else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+      tasks.unshift(task);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      
+    }
+  }
+
+  removeTask(task: Task){
+    for(let i = 0; this.tasks.length; i++){
+      if(task == this.tasks[i]){
+        this.tasks.splice(i, 1);
+        localStorage.setItem('tasks', JSON.stringify(this.tasks));
+      }
     }
   }
 }

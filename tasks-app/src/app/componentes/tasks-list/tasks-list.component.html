@@ -1,3 +1,6 @@
-<p>
-  tasks-list works!
-</p>
+<app-task-add (taskAdded)="addTask($event)"></app-task-add>
+
+<div class="container">
+    <app-task *ngFor="let task of tasks" class="col-md-4 p2" [task]="task">
+    </app-task>
+</div>

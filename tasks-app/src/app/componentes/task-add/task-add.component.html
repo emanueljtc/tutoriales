@@ -1,3 +1,18 @@
-<p>
-  task-add works!
-</p>
+<div class="card">
+    <div class="card-header">
+        Agrega Una Nueva Tarea
+    </div>
+    <div class="card-body">
+        <form (submit)="addTask()">
+            <div class="form-group">
+                <label for="title">Titulo de Tarea:</label>
+                <input type="text" class="form-control" name="title" [(ngModel)]="title">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripcion de Tarea:</label>
+                <input type="text" class="form-control" name="description" [(ngModel)]="description">
+            </div>
+            <input type="submit" value="Add Task" class="btn btn-primary">
+        </form>
+    </div>
+</div>
