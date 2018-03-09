@@ -10,7 +10,7 @@ export class TaskService {
    }
 
    getTasks(){
-     return  this.http.get(`${this.domain}/api/tasks`)
+     return  this.http.get<Task[]>(`${this.domain}/api/tasks`)
       .map(res => res);
    }
 
