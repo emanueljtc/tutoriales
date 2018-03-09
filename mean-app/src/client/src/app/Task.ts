@@ -1,6 +1,6 @@
 export class Task {
-         _id?: String;
-         title: String;
-         isDone: boolean;
-         n?: number;
+  _id?: String;
+  title: String;
+  isDone: boolean;
+  n?: number;
 }
