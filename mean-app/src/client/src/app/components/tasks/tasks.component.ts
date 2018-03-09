@@ -34,21 +34,11 @@ export class TasksComponent implements OnInit {
     });
   }
 
-  deleteTask(id) {
-    const response = confirm("are you sure to delete it?");
-    if (response) {
-      const tasks = this.tasks;
-      this.taskService.deleteTask(id)
-      .subscribe(data => {
-        if (data.n == 1) {
-          for (let i = 0; i < tasks.length; i++) {
-            if (tasks[i]._id == id) {
-              tasks.splice(i, 1);
-            }
-          }
-        }
-      })
-    }
-    return
+  deleteTask(id: string) {
+   const tasks = this.tasks;
+   this.taskService.deleteTask(id)
+    .subscribe(data => {
+      console.log(data)
+    })
   }
 }
