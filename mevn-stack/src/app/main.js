@@ -11,5 +11,5 @@ import App from './App.ve';
 const routes = [
 
 ];
-const router = new VueRouter({ mode: 'history', routes: routes });
+const router = new VueRouter({ mode: 'history' }, { routes: routes });
 new Vue(Vue.util.extend({ router }, App)).$mount('#app');
