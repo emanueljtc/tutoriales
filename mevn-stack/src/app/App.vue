@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <h1>Vuejs Funcionado</h1>
 </template>
 
