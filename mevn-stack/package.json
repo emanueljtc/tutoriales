@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node src/server.js",
-        "build": "webpack"
+        "build": "webpack",
+        "webpack:watch": "webpack -w"
     },
     "keywords": [],
     "author": "",
@@ -22,7 +23,7 @@
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.4",
         "css-loader": "^0.28.10",
-        "vue": "2.5.*",
+        "vue": "^2.5.15",
         "vue-axios": "^2.0.2",
         "vue-loader": "^14.2.1",
         "vue-router": "^3.0.1",
