@@ -16,7 +16,8 @@
         "cors": "^2.8.4",
         "express": "^4.16.2",
         "mongoose": "^5.0.9",
-        "morgan": "^1.9.0"
+        "morgan": "^1.9.0",
+        "vue-toastr": "^2.0.12"
     },
     "devDependencies": {
         "axios": "^0.18.0",
