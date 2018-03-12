@@ -12,13 +12,13 @@
             </thead>
             <tbody>
                 <tr v-for="item in items">
-                     <td>{{ item._id }}</td>
-                     <td>{{ item.name }}</td>
-                     <td>{{ item.price }}</td>
-                     <td>
-                         <a href="#" class="btn btn-dark">Editar</a>
-                         <a href="#" class="btn btn-danger">Eliminar</a>
-                     </td>
+                    <td>{{ item._id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>
+                        <a href="#" class="btn btn-dark">Editar</a>
+                        <a href="#" class="btn btn-danger" v-on:click="deleteItem(item._id)">Eliminar</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -27,23 +27,31 @@
 
 <script>
     export default {
-        data(){
-            return{
+        data() {
+            return {
                 items: []
             }
         },
-        created(){
+        created() {
             this.fetchItems();
         },
         methods: {
             fetchItems() {
-                //const uri = "http://localhost:3000/item"
-                this.axios.get('/item')
-                    .then(res => {
-                        this.items = res.data;
-                    })
-                    .catch(err => console.log(err));
+                let uri = 'http://localhost:3000/item';
+                this.axios.get(uri).then((response) => {
+                    this.items = response.data;
+                });
+            },
+
+            deleteItem(id) {
+                const response = confirm('are you sure you want to delete?');
+                if (response) {
+                    let uri = 'http://localhost:3000/item/delete/' + id;
+                    this.items.splice(id, 1);
+                    this.axios.get(uri);
+                }
             }
+
         }
     }
 </script>

@@ -52,7 +52,7 @@ itemRoutes.route('/delete/:id').get(function(req, res) {
         if (err) res.json(err);
         else res.json('Successfully removed');
     });
-})
+});
 
 
 module.exports = itemRoutes;
