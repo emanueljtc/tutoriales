@@ -32,7 +32,9 @@
         methods: {
             addItem() {
                 this.axios.post('/item', this.item)
-                    .then(res => console.log(res))
+                    .then(res => {
+                        this.$router.replace({name: 'DisplayItem'});
+                    })
                     .catch(err => console.log(err));
             }
         }
