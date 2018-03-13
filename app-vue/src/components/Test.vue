@@ -40,6 +40,7 @@
                 <p>{{ msg }}</p>
             </div>
         </div>
+        <br>
     </div>
 </template>
 
