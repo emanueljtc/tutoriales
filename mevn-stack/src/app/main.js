@@ -7,6 +7,13 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 Vue.use(VueAxios, axios);
 
+// import Toastr
+import Toastr from 'vue-toastr';
+// import toastr less file: need webpack less-loader
+require('vue-toastr/src/vue-toastr.less');
+// Register plugin
+Vue.use(Toastr);
+
 import App from './App.vue';
 import DisplayItem from './components/DisplayItem.vue';
 import CreateItem from './components/CreateItem.vue';
