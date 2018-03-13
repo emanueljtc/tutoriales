@@ -3,10 +3,11 @@
 </template>
 
 <script>
-    export default{
-        
+    export default {
+    
     }
 </script>
 
 <style media="screen">
+    
 </style>

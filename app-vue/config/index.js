@@ -23,14 +23,14 @@ module.exports = {
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
-    useEslint: true,
+    useEslint: false,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
     showEslintErrorsInOverlay: false,
 
     /**
-     * Source Maps
-     */
+         * Source Maps
+         */
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'cheap-module-eval-source-map',
@@ -53,8 +53,8 @@ module.exports = {
     assetsPublicPath: '/',
 
     /**
-     * Source Maps
-     */
+         * Source Maps
+         */
 
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
