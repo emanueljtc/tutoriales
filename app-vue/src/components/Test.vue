@@ -1,19 +1,9 @@
 <template>
 <div>
-  <div v-text="title"></div>
-    <div v-if="showName">
-        <p>{{user.firstName}}</p>
-    </div>
-    <div v-else>
-        <p>No puedo Mostrar Nombre</p>
-    </div>
-    <hr>
-    <ul>
-        <li v-for="task in tasks"
-            :key="task">
-            {{ task.title }}
-        </li>
-    </ul>
+    <input type="text"  v-model="user.firstName">
+  <button type="button" value="saludar" v-on:click="saludar(user.firstName)">
+      Click Me
+  </button>
 </div>
 </template>
 
@@ -32,6 +22,11 @@
                     {title: 'comer'},
                     {title: 'dormir'}
                     ]
+            }
+        },
+        methods: {
+            saludar(name){
+                alert('Gracias' + ' ' + name)
             }
         }
     }
