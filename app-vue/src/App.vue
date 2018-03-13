@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>Hola soy Vue Js</h2>
-    <test></test>
+   <Test msg="Datp"/>
   </div>
 </template>
 
