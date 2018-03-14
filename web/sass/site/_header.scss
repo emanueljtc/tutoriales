@@ -1,0 +1,11 @@
+header {
+    width: 100%;
+    background: #55d6AA;
+    position: fixed;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
