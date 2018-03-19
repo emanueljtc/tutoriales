@@ -1,3 +1,4 @@
+@import "colors/colors.scss";
 .logo {
     float: left;
     padding: 10px 0;
@@ -24,7 +25,7 @@ nav li {
 }
 
 nav ul li a {
-    color: #444;
+    color: $gris;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
