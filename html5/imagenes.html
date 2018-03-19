@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Imagenes</title>
+</head>
+
+<body>
+    <!-- <img src="img/bride.jpg" srcset="img/man.jpg 500w , img/dog.jpg 800w">-->
+    <h2>Pictures Element</h2>
+
+
+    <picture>
+        <img src="img/dog.jpg">
+        <source srcset="img/man.jpg" media="
+                (min-width: 500px)">
+        <source srcset="img/bride.jpg" media="
+                (min-width: 800px)">
+    </picture>
+
+
+</body>
+
+</html>

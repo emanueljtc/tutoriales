@@ -1,0 +1,21 @@
+body {
+    /*background: yellow;*/
+    margin: 0;
+    padding: 20px;
+}
+
+.logo {
+    height: 200px;
+    width: 200px;
+}
+
+footer {
+    background: black;
+    padding: 2px;
+    width: 100%;
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+}
