@@ -19,3 +19,19 @@ footer {
 footer p {
     text-align: center;
 }
+
+.zapatos {
+    background: brown;
+    height: 200px;
+    width: 600px;
+    color: #fff;
+    padding: 20px;
+}
+
+.zapatos img {
+    height: 40%;
+}
+
+.article {
+    background: aquamarine
+}
