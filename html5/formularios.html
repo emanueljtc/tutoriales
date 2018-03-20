@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <a href="./index.html">Ir al Inicio</a>
+    <hr>
+    <!-- FORMULARIOS -->
+    <h1>Formularios</h1>
+    <form>
+        <fieldset>
+            <legend>TUS DATOS:</legend>
+            <div>
+                <label>
+                    Ingrese su nombre
+                    <input id="username" name="nombre" placeholder="***">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Tu Correo
+                    <input type="email">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Fecha de Nacimiento
+                    <input type="date">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Datos en la Plataforma</legend>
+            <div>
+                <label>
+                    Ingrese Telefono
+                    <input type="number">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Ingrese su contraseña
+                    <input name="password" type="password" placeholder="****" required>
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tus Pasatiempos</legend>
+            <div>
+                <label>
+                    <input type="checkbox"> Deporte
+                </label>
+                <label>
+                    <input type="checkbox"> Cine
+                </label>
+                <label>
+                    <input type="checkbox"> Musica
+                </label>
+                <label>
+                    <input type="checkbox"> Leer
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tu Genero</legend>
+            <label>
+                <input type="radio" name="gender">Hombre</label>
+            <label>
+                <input type="radio" name="gender">Mujer</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select y Opciones</legend>
+            <label for="country">Escoge país</label>
+            <select name="country" id="country">
+                <optgroup label="America">
+                    <option value="pe">Perú</option>
+                    <option value="co">Colombia</option>
+                    <option value="ve">Venezuela</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="Esp">España</option>
+                    <option value="It">Italia</option>
+                    <option value="Por">Portugal</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Ingresa tus observaciones</legend>
+            <textarea name="observations" id="observation" cols="30" rows="10" placeholder="Minim commodo dolor ad excepteur ullamco esse labore pariatur. Cupidatat ut sunt commodo commodo laboris consectetur ullamco pariatur commodo amet tempor et id magna. Officia esse aute officia nisi aliquip. Culpa qui aliquip laboris quis est consectetur non. Nostrud minim magna consequat amet cupidatat sunt nisi mollit fugiat.
+
+Consequat nostrud amet ullamco officia adipisicing sint quis dolore proident laborum. Laboris et non culpa officia nostrud nulla fugiat veniam elit cillum enim. Sit adipisicing consectetur duis eiusmod in dolore et voluptate commodo est culpa ullamco. Ipsum sint aute incididunt adipisicing culpa amet anim reprehenderit duis voluptate do minim in."></textarea>
+        </fieldset>
+        <input type="submit" value="Iniciar">
+        <!--  <button>Enviar</button>-->
+    </form>
+    <script>
+        document.getElementById('username').addEventListener('keyup', e => {
+            console.log(e.target.value)
+        })
+    </script>
+</body>
+
+</html>
