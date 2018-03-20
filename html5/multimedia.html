@@ -13,7 +13,24 @@
     <a href="./index.html">Ir al Inicio</a>
     <hr>
     <!-- Multimedia -->
+    <video id="video" src="media/promomedical.mp4" poster="img/dog.jpg"></video>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <hr>
+    <audio src="media/tueresdeesas.mp3" controls autoplay></audio>
+    <script>
+        const video = document.getElementById('video');
+        const play = document.getElementById('play');
+        const pause = document.getElementById('pause');
 
+        play.addEventListener('click', () => {
+            video.play();
+        })
+
+        pause.addEventListener('click', () => {
+            video.pause();
+        })
+    </script>
 
 </body>
 
