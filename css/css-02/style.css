@@ -1,0 +1,128 @@
+/*variables*/
+
+:root
+{
+    --fondo: rgb(230, 224, 224);
+    --fh1: yellow;
+    --fp: rgb(5, 129, 5);
+    --ch1: black;
+    --cp: #fff;
+}
+
+
+/* Selectores de Tipo */
+
+body
+{
+    margin: 0;
+    padding: 20px;
+
+    background: var(--fondo);
+}
+
+
+/* h1 {
+    background: var(--fh1);
+    color: var(--ch1);
+}
+
+p {
+    background: var(--fp);
+    color: var(--cp);
+} */
+
+
+/* Selectores de Clase */
+
+.title
+{
+    color: red;
+    background: var(--fh1);
+}
+
+.description
+{
+    color: var(--cp);
+    background: var(--fp);
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.center
+{
+    text-align: center;
+}
+
+
+/* Selectores de ID */
+
+#p_id
+{
+    background: tomato;
+}
+
+
+/* Selectores Universales */
+
+
+/* * {
+    color: red;
+} */
+
+
+/* Case Sensitive en selectores CSS */
+
+
+/* OJO los TAGS no son sensitive */
+
+div
+{
+    color: green;
+}
+
+
+/* Los atributos son sensitive */
+
+.parrafo
+{
+    background: gold;
+}
+
+
+/* Selectores Agrupados */
+
+.titulo,
+.text
+{
+    color: red;
+}
+
+/* Selectores Descendientes: por tema de especifidad no son muy
+recomendados */
+.list .list-item
+{
+    color: blueviolet;
+}
+/* cuando defino un espacio entre la agrupacion de selectores
+el navegador comprende que una clase esta dentro de la otra*/
+/* Hijo directo */
+
+li > ul
+{
+    display: none;
+}
+
+li:hover ul
+{
+    display: block;
+}
+
+/* Selector Hermano Siguiente */
+.subtitle {
+  font-size: .5em;
+  margin: 0;
+  
+}
