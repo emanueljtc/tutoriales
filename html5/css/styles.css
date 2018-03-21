@@ -62,3 +62,11 @@ dialog {
     background: #3f51b5de;
     color: darkgrey
 }
+
+.box {
+    background: #bbb;
+    border: 10px solid black;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
