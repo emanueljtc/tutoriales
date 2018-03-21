@@ -7,6 +7,8 @@
     --fp: rgb(5, 129, 5);
     --ch1: black;
     --cp: #fff;
+    --color-title: green;
+    --color-subtitle: blue;
 }
 
 
@@ -16,7 +18,7 @@ body
 {
     margin: 0;
     padding: 20px;
-
+    font-size: 2em;
     background: var(--fondo);
 }
 
@@ -121,8 +123,45 @@ li:hover ul
 }
 
 /* Selector Hermano Siguiente */
+.title-1{
+  color: red;
+}
+.title-2{
+  color: blue;
+}
 .subtitle {
   font-size: .5em;
-  margin: 0;
-  
+  margin-top: -2em;
+}
+
+.title-1 + .subtitle{
+  color: var(--color-title);
+}
+
+.title-2 + .subtitle{
+  color: var(--color-subtitle);
+}
+/* Selector Hermanos Siguientes = ~ */
+.enabled {
+  display: none;
+}
+.check:checked ~ .enabled{
+  display: block;
+}
+.check:checked ~ .disabled{
+  display: none;
+}
+/* Selectores de atributos */
+[type="email"] {
+  border: 1px solid blue;
+}
+
+[type="submit"] {
+  background: red;
+  color: white;
+  border: none;
+}
+[required]{
+  border: 2px solid red;
+  margin: .5em;
 }
