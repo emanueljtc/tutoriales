@@ -1,0 +1,23 @@
+/* variables */
+
+:root {
+  --fondo: white;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--fondo);
+}
+
+/* ESPECIFICIDAD siempre tendra mas valor*/
+
+p.titulo {
+  color: red;
+}
+
+p {
+  color: blue !important;
+  /* comentario explicando porque se usa important en el caso de ser
+  especificamente necesario */
+}
