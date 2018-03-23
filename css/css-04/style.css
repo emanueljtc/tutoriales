@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-size: 2em;
+    box-sizing: border-box;
+}
+
+
+/* Todos los elementos son por naturaleza CAJAS o rectangulos */
+
+
+/* 
+p {
+    display: inline;
+    background: pink;
+} */
+
+span {
+    background: yellow;
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+}
+
+h1 {
+    background: yellow;
+    height: 200px;
+    width: 500px;
+    display: inline;
+}
+
+
+/* el box model es el algoritmo mediante el cual el navegador dibuja las cajas 
+en pantalla obviamente el box model solo se plica a los elementos de bloque no a 
+los de linea, en el box model tenemos tres cajas: contenido, caja del padding, 
+caja border.*/
+
+.box {
+    background: yellow;
+    background-clip: content-box;
+    /*Box Model */
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    margin: 50px;
+    border: 10px solid black;
+    /*Box sizing */
+    box-sizing: border-box;
+}
+
+
+/* Nota: la diferencia entre las propiedades visibility: hidden y display:none
+es que la primera solo oculta a nivel visual el elemento pero igual el navegador
+lo renderiza mientras que con la segunda el navegador ignora el elemento */
+
+
+/*MARGIN*/
+
+[class^="box-"] {
+    background: cadetblue;
+    padding: 50px;
+    width: 50%;
+}
+
+
+/* p {
+    clear: both;
+    background: pink;
+} */
+
+.box-1 {
+    /* margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    margin-left: 30px; */
+    /* margin: 50px 100px 50px 100px; */
+    /* margin: 50px 100px; */
+    margin-bottom: 50px;
+}
+
+.box-2 {
+    margin-top: -50px;
+}
+
+.container {
+    width: 600px;
+    background: lime;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.item {
+    margin-left: -20px;
+    margin-right: -20px;
+    border: 1px solid red;
+}
+
+.title {
+    background: yellow;
+}
+
+.article {
+    background: yellow;
+    padding: 50px 100px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.video {
+    background: yellow;
+    padding-bottom: 56.25%;
+}
+
+.video video {
+    height: 100vh;
+    width: 100vw;
+}

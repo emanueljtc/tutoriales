@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 2.5em;
+    /* min-height: tamaño automatico */
+    height: 100vh;
+}
+
+
+/* las alturas van a depender del papa solo para tamaños definidos nunca automaticos */
+
+img {
+    display: block;
+}
+
+.container {
+    border: 1px solid red;
+    display: table;
+    height: 50%;
+}
