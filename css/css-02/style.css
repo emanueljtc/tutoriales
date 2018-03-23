@@ -165,3 +165,10 @@ li:hover ul
   border: 2px solid red;
   margin: .5em;
 }
+/* selectores de atributo empieza con */
+[href^="/"]{
+  background: tomato;
+}
+[href^="https:"]{
+  background: yellow;
+}

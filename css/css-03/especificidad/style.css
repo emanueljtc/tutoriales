@@ -1,0 +1,49 @@
+/* variables */
+
+:root {
+  --fondo: white;
+  --color_p: red;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--fondo);
+  font-size: 2em;
+}
+
+/*Tamaños*/
+
+.small {
+  font-size: .75em;
+}
+
+.big {
+  font-size: 2em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+/*Especificidad*/
+
+/*div#main .post p {
+  color: var(--color_p);
+}*/
+
+/* Pero es una mejor practica aplicar una clase ya que seria muy
+tedioso aplicar especificidad porque es algo que ya el navegador
+hace por si mismo solo se aplica en ciertos casos de que se repita
+clase*/
+
+.titulo {
+  color: var(--color_p);
+}
+
+/*aqui podemos aplicar especificidad pero es recomendable usar selectores
+de un solo nivel*/
+
+.product .titulo {
+  color: blue;
+}

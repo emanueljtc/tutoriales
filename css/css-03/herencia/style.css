@@ -1,0 +1,19 @@
+body{
+  margin: 0;
+  padding: 20px;
+  font-size: 2em;
+}
+/* Palabras Claves initial */
+/*initial
+    resetea los elementos a su valor inicial*/
+/* inherit obliga a que un elemento herede una propiedad */
+span{
+  font-size: .5em;
+}
+
+p {
+  color: green;
+}
+a {
+  color: inherit;
+}

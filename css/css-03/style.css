@@ -1,0 +1,9 @@
+/* variables */
+:root{
+  --fondo: white;
+}
+body{
+  margin: 0;
+  padding: 20px;
+  background: var(--fondo);
+}
