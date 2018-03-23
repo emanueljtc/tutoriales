@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.box {
+    --border-radius-y: 60px;
+    --border-radius-x: 150px;
+    width: 500px;
+    height: 350px;
+    padding-top: 0.1px;
+    background: hsl(10, 90%, 50%);
+    margin: 100px auto;
+    border-radius: var(--border-radius-x) / var(--border-radius-y);
+}
+
+.play {
+    width: 220px;
+    margin-left: 150px;
+    margin-top: 75px;
+    height: 200px;
+    border: 100px solid;
+    border-color: transparent transparent transparent white;
+}
+
+
+/* propiedad outline y box-shadow*/
+
+.box_2 {
+    width: 200px;
+    height: 200px;
+    color: green;
+    background: hsl(10, 90%, 50%);
+    margin: 100px auto;
+    /* outline: 20px solid black; */
+    /* box-shadow: 0 0 0 10px blue, 0 0 0 20px green, 0 0 0 30px yellow; */
+    border-radius: 50%;
+    box-shadow: -6px -6px 40px rgba(0, 0, 0, .5) inset;
+}
