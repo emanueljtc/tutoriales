@@ -3,6 +3,10 @@ body {
     padding: 10px;
     color: #fff;
     /* background-color: purple; */
+    background-image: url('https://images.pexels.com/photos/462402/pexels-photo-462402.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box {
