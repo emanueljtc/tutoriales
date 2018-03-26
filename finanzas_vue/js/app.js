@@ -19,12 +19,18 @@ new Vue({
                     default: ""
                 },
                 mounted() {
-                    this.formatValue()
+                    this.formatValue();
                 },
                 methods: {
-                    updateValue(value) {},
+                    updateValue(value) {
+                        let result = currencyValidator.parse(value, this.value);
+                        if (result.waning) {
+                            this.$refs.input.value = result.value;
+                        }
+                        this.$emit("input", result.value);
+                    },
                     formatValue() {
-                        this.$refs.input.value = currencyValidator.format(this.value)
+                        this.$refs.input.value = currencyValidator.format(this.value);
                     }
                 }
             }
@@ -32,10 +38,10 @@ new Vue({
     },
     computed: {
         total() {
-            let subtotal = this.price * this.amount
-            subtotal -= ((subtotal * this.discount) / 100)
-            subtotal += ((subtotal * this.tax) / 100)
-            return subtotal.toFixed(2)
+            let subtotal = this.price * this.amount;
+            subtotal -= subtotal * this.discount / 100;
+            subtotal += subtotal * this.tax / 100;
+            return subtotal.toFixed(2);
         }
     }
 });

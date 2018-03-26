@@ -21,18 +21,62 @@
 
     </main>
     <template id="input-sale">
-		<div>
-			<label v-if="label">{{label}}</label>
-				<input type="text" 
-						ref="input" 
-						:value="value"
-						@input="updateValue($event.target.value)"
-						v-on:blur=formatValue>
-		</div>
-	</template>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <div>
+        <label v-if="label">{{ label }}</label>
+        <input ref="input" :value="value" @input="updateValue($event.target.value)" @:blur="formatValue">
+    </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/currency-validator.js"></script>
-    <script src="js/app.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                price: 0,
+                amount: 0,
+                discount: 0,
+                tax: 0
+            },
+            components: {
+                'input-sale': {
+                    template: '#input-sale',
+                    props: {
+                        value: {
+                            type: Number,
+                            default: 0
+                        },
+                        label: {
+                            type: String,
+                            default: ''
+                        }
+                    },
+                    mounted() {
+                        this.formatValue()
+                    },
+                    methods: {
+                        updateValue(value) {
+                            let result = currencyValidator.parse(value, this.value)
+                            if (result.warning) {
+                                this.$refs.input.value = result.value
+                            }
+                            this.$emit('input', result.value)
+                        },
+                        formatValue() {
+                            this.$refs.input.value = currencyValidator.format(this.value)
+                        }
+                    }
+                }
+            },
+            computed: {
+                total() {
+                    let subtotal = this.price * this.amount
+                    subtotal -= ((subtotal * this.discount) / 100)
+                    subtotal += ((subtotal * this.tax) / 100)
+                    return subtotal.toFixed(2)
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
