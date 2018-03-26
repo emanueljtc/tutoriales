@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/app.js"></script>
+
     <title>Finanzas Vue</title>
 </head>
 
@@ -13,18 +13,26 @@
     <h1>Taller Vue JS - EDteam</h1>
     <p>Venta de Producto</p>
     <main id="app">
-        <input-sale label="Precio $"></input-sale>
+        <input-sale label="Precio $" v-model="price"></input-sale>
+        <input-sale label="Cantidad" v-model="amount"></input-sale>
+        <input-sale label="Descuento %" v-model="discount"></input-sale>
+        <input-sale label="Impuesto %" v-model="tax"></input-sale>
+        <p>Total: ${{ total }}</p>
+
     </main>
     <template id="input-sale">
 		<div>
 			<label v-if="label">{{label}}</label>
-				<input type="" 
+				<input type="text" 
 						ref="input" 
 						:value="value"
 						@input="updateValue($event.target.value)"
-						@blur=formatValue>
+						v-on:blur=formatValue>
 		</div>
 	</template>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/currency-validator.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

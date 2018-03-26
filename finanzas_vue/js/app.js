@@ -19,14 +19,12 @@ new Vue({
                     default: ""
                 },
                 mounted() {
-
+                    this.formatValue()
                 },
                 methods: {
-                    updateValue(value) {
-
-                    },
+                    updateValue(value) {},
                     formatValue() {
-
+                        this.$refs.input.value = currencyValidator.format(this.value)
                     }
                 }
             }
@@ -34,7 +32,10 @@ new Vue({
     },
     computed: {
         total() {
-
+            let subtotal = this.price * this.amount
+            subtotal -= ((subtotal * this.discount) / 100)
+            subtotal += ((subtotal * this.tax) / 100)
+            return subtotal.toFixed(2)
         }
     }
 });
