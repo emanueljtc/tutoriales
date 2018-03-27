@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reactividad con Vue.js</title>
+    <link rel="icon" href="https://vuejs.org/images/logo.png">
+</head>
+
+<body>
+    <h1>Reactividad con VueJS</h1>
+    <a href="./">Regresar</a>
+    <main id="app">
+        <h2>{{ mensaje }}</h2>
+        <input v-model="mensaje">
+        <pre>
+			<code>{{ $data }}</code>
+		</pre>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        //VUE JS
+        new Vue({
+            el: '#app',
+            data: {
+                mensaje: "Hola Mundo con Vue JS"
+            }
+        });
+        //VANILLA JS
+        /*  const input = document.querySelector('input'),
+             h2 = document.querySelector('h2')
+
+         input.addEventListener('keyup', () => h2.innerHTML = input.value) */
+    </script>
+</body>
+
+</html>
