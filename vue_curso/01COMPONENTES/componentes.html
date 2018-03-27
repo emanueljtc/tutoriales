@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Componentes</title>
+    <link rel="icon" href="https://vuejs.org/images/logo.png">
+
+</head>
+
+<body>
+    <main id="app">
+        <h1>Componentes con VueJS</h1>
+        <a href="./">Regresar</a>
+        <shows></shows>
+        <pre>
+          {{ $data }}
+        </pre>
+        <startwars-characters></startwars-characters>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        Vue.component('shows', {
+            template: `
+                          <div>
+                          <h2>Componente Global</h2>
+                          <h3>Shows TV Maze</h3>
+                          <ul>
+                          <li v-for="show in shows">{{ show.name }}</li>
+                          </ul>
+                          </div>
+                          `,
+            mounted() {
+                axios.get('http://api.tvmaze.com/shows')
+                    .then(res => {
+                        console.log(res)
+                        this.shows = res.data
+                    })
+            },
+            data() {
+                return {
+                    shows: []
+                }
+            }
+
+        })
+        const StartWarsCharacters = {
+            template: `
+          <div>
+            <h2>Componente Local</h2>
+            <h3>Personajes StartWars</h3>
+            <ul>
+              <li v-for="character in characters">{{ character.name }}</li>
+            </ul>
+          </div>
+          `,
+            mounted() {
+                axios.get('https://swapi.co/api/people/')
+                    .then(res => {
+                        console.log(res)
+                        this.characters = res.data.results
+                    })
+            },
+            data() {
+                return {
+                    characters: []
+                }
+            }
+        }
+        const mv = new Vue({
+            el: '#app',
+            components: {
+                'startwars-characters': StartWarsCharacters
+            }
+        })
+    </script>
+</body>
+
+</html>
