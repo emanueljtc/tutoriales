@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eventos Bus VueJs</title>
+    <title>Event-Bus Comunicacion entre Componentes VueJs</title>
     <link rel="icon" href="https://vuejs.org/images/logo.png">
 
 </head>
 
 <body>
-    <h1>Evento Bus</h1>
+    <h1>Event-Bus Comunicacion entre Componentes VueJs</h1>
     <a href="./">regresar</a>
     <main id="app">
         <todo-list :todos="todos"></todo-list>
@@ -52,7 +52,7 @@
             },
             methods: {
                 addTodo() {
-                    if (!this.text != '') {
+                    if (this.text != '') {
                         let todo = {
                             text: this.text
                         }
