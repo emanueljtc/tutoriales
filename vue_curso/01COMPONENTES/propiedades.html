@@ -14,17 +14,17 @@
     <main id="app">
         <h1>Propiedades VUEJS</h1>
         <a href="./">Regresar</a>
-        <shows></shows>
+        <shows v-for="show in shows" :name="show.name" :poster="show.image.medium" :rating="show.rating.average" :genres="show.genres"></shows>
     </main>
     <template id="shows">
 		<figure>
-			<img src="poster":alt="name">
+			<img :src="poster":alt="name">
 			<figcaption>
 				<h3>{{ name }}</h3>
 				<p>Calificación:<b>{{rating}}</b></p>
 				<p>Generos:</p>
 				<ul>
-					<li v-for="genre in genres" v-text="genre">{{ show.name }}</li>
+					<li v-for="genre in genres" v-text="genre"></li>
 				</ul>
 			</figcaption>
 		</figure>
@@ -35,12 +35,22 @@
 <script>
     Vue.component('shows', {
         template: '#shows',
-        data() {
-            return {
-                shows: []
+        //NOTA: SI NO SE REQUIERE QUE LAS PROPIEDADES LES SEA DECLARO EL TIPO PUEDE DEJARSE 
+        //DECLARADAS EN UN ARREGLO TAL COMO ABAJO SI NO SE DECLARA EN UN OBJETO
+        //props: ['name', 'poster', 'rating', 'genres']
+        props: {
+            name: {
+                type: String,
+                required: true
+            },
+            poster: String,
+            rating: Number,
+            genres: {
+                type: [String, Array],
+                required: true,
+                default: 'No tiene genero'
             }
         }
-
     })
     const mv = new Vue({
         el: '#app',
