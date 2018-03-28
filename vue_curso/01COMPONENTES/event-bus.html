@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comunicación entre componentes Vue.js</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos Bus VueJs</title>
     <link rel="icon" href="https://vuejs.org/images/logo.png">
+
 </head>
 
 <body>
-    <h1>Comunicación entre componentes Vue.js</h1>
-    <a href="../">regresar</a>
+    <h1>Evento Bus</h1>
+    <a href="./">regresar</a>
     <main id="app">
         <todo-list :todos="todos"></todo-list>
         <todo-add></todo-add>
+
     </main>
     <template id="todo-list">
-    <ul>
-      <li v-for="todo in todos" v-text="todo.text"></li>
-    </ul>
-  </template>
+		<ul>
+			<li v-for="todo in todos" v-text="todo.text"></li>
+		</ul>
+	</template>
     <template id="todo-add">
-    <form v-on:submit.prevent="addTodo">
-      <input type="text" placeholder="Agrega una tarea" v-model="text">
-    </form>
-  </template>
+		<form v-on:submit.prevent="addTodo">
+			<input type="text" placeholder="Agrega una tarea" v-model="text">
+		</form>
+	</template>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
+        //Instancia Auxiliar de Vue que por convencion se llama eventBus
         const eventBus = new Vue()
 
         Vue.component('todo-list', {
@@ -48,7 +52,7 @@
             },
             methods: {
                 addTodo() {
-                    if (this.text != '') {
+                    if (!this.text != '') {
                         let todo = {
                             text: this.text
                         }
@@ -63,10 +67,12 @@
             el: '#app',
             data: {
                 todos: [{
-                    text: 'Tarea 1'
-                }, {
-                    text: 'Tarea 2'
-                }, ]
+                        text: 'Tarea1'
+                    }, {
+                        text: 'Tarea2'
+                    }
+
+                ]
             }
         })
     </script>
