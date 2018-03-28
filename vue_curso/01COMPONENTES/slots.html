@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slots VUEJS</title>
+    <link rel="icon" href="https://vuejs.org/images/logo.png">
+
+</head>
+
+<body>
+    <main id="app">
+        <h1>Slots VUEJS</h1>
+        <a href="./">regresar</a>
+        <card></card>
+        <card>
+            <template slot="position">
+				<p>Profesor</p>
+			</template>
+            <template slot="pharse">
+				<p>Entrena tu mente y tu cuerpo de tal manera que cualquier dia que salgas,
+					y corras una maratón
+				</p>
+			</template>
+            <template>
+				 <img style="border-radius: 50%;" src="https://ed.team/sites/default/files/styles/perfil_en_views_200x200_/public/pictures/2017-11/mircha.jpg?itok=HOaoIACB">
+			</template>
+            <template slot="name"><p>Jhonatan Mircha</p></template>
+        </card>
+        <cards :members="team">
+            <template scope="data">
+				<img :src="data.avatar" style="border-radius: 50%;" >
+			</template>
+            <template slot="name" scope="data">
+				<h3 v-text="data.nombre"></h3>
+			</template>
+        </cards>
+    </main>
+    <template id="card">
+		<figure>
+			<slot>
+				<img src="https://ed.team/sites/default/files/styles/perfil_en_views_200x200_/public/2017-11/comunidad%20%282%29.png?itok=uDP9Hwaq">
+			</slot>
+			<figcaption>
+				<slot name="name">EDteam</slot>
+				<slot name="position">Comunidad</slot>
+				<slot name="pharse">Educación con Honestidad</slot>
+			</figcaption>
+		</figure>
+	</template>
+    <template id="cards">
+		<div>
+			<figure v-for="member in members">
+				<slot :avatar="member.avatar"></slot>
+				<figcaption>
+					<slot name="name" :nombre="member.name"></slot>
+				</figcaption>
+			</figure>
+		</div>
+	</template>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        const mv = new Vue({
+            el: '#app',
+            data: {
+                team: [{
+                    name: 'Alexys Lozada',
+                    avatar: 'https://ed.team/sites/default/files/styles/perfil_en_views_200x200_/public/2017-11/alexys.jpg?itok=L_Ph0WWh'
+                }, {
+                    name: 'Daniel Romero',
+                    avatar: 'https://ed.team/sites/default/files/styles/perfil_en_views_200x200_/public/2017-11/daniel.jpg?itok=Wxen0rpU'
+                }, {
+                    name: 'Beto Quiroga',
+                    avatar: 'https://ed.team/sites/default/files/styles/perfil_en_views_200x200_/public/2017-11/beto%20%281%29.jpg?itok=OwcPkvye'
+                }]
+            },
+            components: {
+                'card': {
+                    template: '#card'
+                },
+                'cards': {
+                    props: ['members'],
+                    template: '#cards'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
