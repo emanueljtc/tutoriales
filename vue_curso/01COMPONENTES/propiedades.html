@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Propiedades VUEJS</title>
+    <link rel="icon" href="https://vuejs.org/images/logo.png">
+
+</head>
+
+<body>
+    <main id="app">
+        <h1>Propiedades VUEJS</h1>
+        <a href="./">Regresar</a>
+        <shows></shows>
+    </main>
+    <template id="shows">
+		<figure>
+			<img src="poster":alt="name">
+			<figcaption>
+				<h3>{{ name }}</h3>
+				<p>Calificación:<b>{{rating}}</b></p>
+				<p>Generos:</p>
+				<ul>
+					<li v-for="genre in genres" v-text="genre">{{ show.name }}</li>
+				</ul>
+			</figcaption>
+		</figure>
+	</template>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+<script>
+    Vue.component('shows', {
+        template: '#shows',
+        data() {
+            return {
+                shows: []
+            }
+        }
+
+    })
+    const mv = new Vue({
+        el: '#app',
+        mounted() {
+            axios.get('http://api.tvmaze.com/shows')
+                .then(res => {
+                    console.log(res)
+                    this.shows = res.data
+                })
+        },
+        data: {
+            shows: []
+        }
+
+    })
+</script>
+
+</html>
