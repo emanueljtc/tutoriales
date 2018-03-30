@@ -93,7 +93,7 @@
     <template id="todo-list">
 		<ul class="ToDo-tasks">
 			<li :key="todo.id" v-for="todo in todos" 
-				:class="{completed: todo.completed}" class="ToDo-task" 
+				:class="{completed: todo.completed}" class="ToDo-task" @click="toggleTodo(todo.id)"
 				@dblclick="deleteTodo(todo.id)">{{todo.task}}</li>
 		</ul>
 	</template>
@@ -144,7 +144,7 @@
                 DELETE_TODO: (state, payload) => {
                     let index = state.todos.findIndex(todo => todo.id === payload)
                     state.todos.splice(index, 1)
-                }
+                },
             }
             //Actions: Son funciones asincronas que actualizan el estado a traves de una mutacion existente, puede invocar mutaciones
         const actions = {
