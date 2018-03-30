@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuex</title>
+</head>
+
+<body>
+    <main id="app" class="ToDo-container">
+        <h1 class="ToDo-title">
+            Todo List con Vuex
+        </h1>
+        <todo-add></todo-add>
+        <todo-list></todo-list>
+        <a href="./">regresar</a>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <script>
+        //State: es el objeto JavaScript que contiene los datos de la aplicacion
+        const state = {
+                todos: [{
+                    id: 0,
+                    task: 'Tarea 1',
+                    completed: false
+                }, {
+                    id: 1,
+                    task: 'Tarea 2',
+                    completed: false
+                }, {
+                    id: 2,
+                    task: 'Tarea 3',
+                    completed: false
+                }]
+            }
+            //Getters: son funciones que devuelven los contenidos de los estados
+        const getters = {
+                getTodos: state => state.todos
+            }
+            //Mutations: son funciones sincronas que devuelven el estado, y son el unico mecanismo que existe para esto.
+            //POR CONVENCION LAS MUTACIONES SE DEFINEN EN MAYUSCULAS PARA DIFERENCIAR
+        const mutations = {
+                ADD_TODO: (state, payload) => {
+                    const newTask = {
+                        id: payload.id,
+                        task: payload.task,
+                        completed: false
+                    }
+                    state.todos.unshift(newTask)
+                },
+                TOGGLE_TODO: (state, payload) => {
+                    let item = state.todos.fine(todo => todo.id === payload)
+                    item.completed = !item.completed
+                },
+                DELETE_TODO: (state, payload) => {
+                    let index = state.todos.findIndex(todo => todo.id === payload)
+                    state.todos.splice(index, 1)
+                }
+            }
+            //Actions: Son funciones asincronas que actualizan el estado a traves de una mutacion existente, puede invocar mutaciones
+        const actions = {
+            addTodo: (context, payload) => {
+                context.commit('ADD_TODO', payload)
+            },
+            toggleTodo: (context, payload) => {
+                context.commit('TOGGLE_TODO', payload)
+
+            },
+            deleteTodo: (context, payload) => {
+                context.commit('DELETE_TODO', payload)
+            }
+        }
+
+        const store = new Vuex.Store({
+            state,
+            getters,
+            mutations,
+            actions
+        })
+
+        Vue.component('todo-list', {})
+
+        Vue.component('todo-add', {})
+
+        const app = new Vue({
+            store: store,
+            el: '#app'
+        })
+    </script>
+</body>
+
+</html>
