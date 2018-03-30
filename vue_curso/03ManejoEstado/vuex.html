@@ -17,6 +17,19 @@
         <todo-list></todo-list>
         <a href="./">regresar</a>
     </main>
+    <template id="todo-list">
+		<ul class="ToDo-tasks">
+			<li :key="todo.id" v-for="todo in todos" 
+				:class="{completed: todo.completed}" class="ToDo-task" 
+				@dblclick="deleteTodo(todo.id)">{{todo.task}}</li>
+		</ul>
+	</template>
+    <template id="todo-add">
+		<form @submit.prevent="addTodo">
+			<input class="ToDo-input" placeholder="Agregue una Tarea"
+					v-model="task">
+		</form>
+	</template>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script>
@@ -81,9 +94,39 @@
             actions
         })
 
-        Vue.component('todo-list', {})
+        Vue.component('todo-list', {
+            computed: {
+                todos() {
+                    return this.$store.getters.getTodos;
+                }
+            },
+            methods: {
+                toggleTodo(id) {
+                    this.$store.dispatch('toggleTodo', id)
+                },
+                deleteTodo(id) {
+                    this.$store.dispatch('deleteTodo', id)
+                }
+            },
+            template: '#todo-list'
+        })
 
-        Vue.component('todo-add', {})
+        Vue.component('todo-add', {
+            data() {
+                return {
+                    task: '',
+                    id: 3
+                }
+            },
+            methods: {
+                addTodo() {
+                    this.$store.dispatch('addTodo', this)
+                    this.id++
+                        this.task = ''
+                }
+            },
+            template: '#todo-add'
+        })
 
         const app = new Vue({
             store: store,
