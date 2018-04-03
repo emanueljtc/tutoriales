@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-size: 2em;
+    /* font-family: 'Lato';
+    font-weight: 100;
+    font-variant: small-caps; */
+}
+
+
+/*----- ------ 
+    rem -> tamaño de fuente relativo al HTML (fijo)
+    em -> tamaño de fuente relativo al contexto (variable)
+    font-face es una add rule
+
+----- ------*/
+
+@font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+}
+
+article {
+    font-family: "Bitstream Vera Serif Bold", serif
+}
