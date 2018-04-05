@@ -1,14 +1,12 @@
 <template>
 <div>
 	<h1>{{ title }}</h1>
-	<img src="../assets/logo.png" alt="Vue.js">
+	<img class="responsive-img" src="../assets/logo.png" alt="Vue.js">
 	<div class="row">
 		<div class="col s4 offset-s4">
 			<label class="flow-text">DE</label>
 			<currency-rates-list 
-				:list="baseList()"
-				:initialValue="base" 
-				name="base"
+				@changeRates="changeRates" :list="baseList()" name="base" :initialValue="base"
 			>
 				
 			</currency-rates-list>
@@ -17,7 +15,13 @@
 	<div class="row">
 		<div class="col s4 offset-s4">
 			<label class="flow-text">A</label>
-			<currency-rates-list></currency-rates-list>
+			<currency-rates-list
+				@changeRates="changeRates"
+				:list="targetList()"
+				:initialValue="target"
+				 name="target"
+
+			></currency-rates-list>
 		</div>
 	</div>
 	<div class="row">
@@ -28,7 +32,9 @@
 	</div>
 	<div class="row">
 		<div class="col s12">
-			<h5>Valor de Conversión</h5>
+			<h5 v-if="base_amount">
+				{{ base_amount }} {{base.name}} = {{target_amount}} {{target.name}}
+			</h5>
 		</div>
 	</div>
 </div>
@@ -60,17 +66,26 @@ import CurrencyRatesList from './CurrencyRatesList'
 			});
 		},
 		methods:{
-			changeRates(){
+			changeRates(val, name){
+				this[name] = val;
+				this.convertRates()
 
 			},
 			convertRates(){
-
+				if(!this.base_amount){
+					return;
+				}
+				convertRates(this.base.name, this.target.name).then(res =>{
+					this.target_amount = res;
+				});
 			},
 			baseList(){
-
+				return this.currencyList.filter(currency => currency.name != this.base.name)
 			},
 			targetList(){
-
+				return this.currencyList.filter(
+					currency=> currency.name != this.base.name
+				);
 			}
 		}
 	};
