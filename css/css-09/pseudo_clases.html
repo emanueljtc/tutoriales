@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Clases</title>
+    <style>
+         :root {
+            --first-color: #007BDF;
+            --first-color-alt: #006DC6;
+            --second-color: #00CBFF;
+            --second-color-alt: #00BFF0;
+            --third-color: #FF3C32;
+            --third-color-rgba: rgba(255, 60, 50, .5);
+            --third-color-alt: #FF2419;
+            --accent-color: #FBA905;
+            --accent-color-alt: #F1A000;
+            --dark-color: #282D31;
+            --dark-color-alt: #141618;
+            --border-color: #DFE0E0;
+            --text-color: #53575A;
+            --body-bg: #FAFDFF;
+            --font-main: sans-serif;
+            --font-size: 16px;
+            --line-height: 1.6;
+            --header-height: 8rem;
+            --max-width: 1200px;
+        }
+        
+        html {
+            box-sizing: border-box;
+            font-family: var(--font-main);
+            font-size: var(--font-size);
+            line-height: var(--line-height);
+            background-color: var(--body-bg);
+            color: var(--text-color);
+        }
+        
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            color: var(--second-color);
+            transition: color .3s ease-in;
+        }
+        
+        a:hover {
+            color: var(--first-color-alt)
+        }
+        
+        li {
+            margin-left: 2rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .Header {
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            height: var(--header-height);
+            text-align: center;
+            background-color: var(--first-color);
+            color: var(--border-color);
+            font-size: 1.25rem;
+        }
+        
+        .Main {
+            padding: calc(var(--header-height) + 1rem) 1rem 0;
+            margin: 0 auto;
+            max-width: var(--max-width);
+        }
+        
+        .Main h2 {
+            color: var(--third-color)
+        }
+        
+        .Main article {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--dark-color);
+            color: var(--accent-color);
+            transition: all .5s ease-out;
+        }
+        
+        .Main article:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        .Main article:active {
+            background-color: var(--second-color);
+            color: var(--dark-color);
+        }
+        
+        .Main article:nth-child(3) {
+            background-color: var(--dark-color-alt);
+        }
+        
+        .Main article:nth-child(3):hover {
+            background-color: var(--accent-color-alt);
+            color: var(--dark-color-alt);
+        }
+        
+        .Main article:nth-child(3):active {
+            background-color: var(--second-color-alt);
+            color: var(--dark-color-alt);
+        }
+        
+        .Modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--third-color-rgba);
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            display: none;
+            transition: all .5s ease-in;
+        }
+        
+        .Modal:target {
+            display: flex
+        }
+        
+        .Modal-box {
+            width: 50%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="Header">
+        <h1>Pseudoclases</h1>
+        <p>
+            Estilos especiales dependiendo del contexto, posicion o estado
+        </p>
+    </header>
+    <main class="Main">
+        <article>
+            <h2><code>:root</code></h2>
+            <p>La Pseudo-clase :root selecciona el elemento raiz de un documento aplicado a HTML, :root representa el elemento &lt;html&gt; y es identico al selector html, exepto que su nivel de especificidad es mayor. Sirve para declarar variables CSS.
+            </p>
+        </article>
+        <article>
+            <h2><code>:hover</code></h2>
+            <p>La Pseudo-clase CSS :hover se representa el usuario coloca el puntero sobre algún elemento, pero no necesariamente está activo. En pantallas touch :hover es problemático.
+            </p>
+        </article>
+        <article>
+            <h2><code>:active</code></h2>
+            <p>La pseudo-clase :active cubre el caso en el que el elemento esta siendo activado por el usuario. Cuando se interactua con el raton en el momento en el que el usuario presiona el raton hasta que lo suelta. A menudo es usado en los elementos
+                &lt;a&gt; y &lt;button&gt; de HTML.
+            </p>
+            <p>
+                El orden si importa:
+            </p>
+            <ol>
+                <li>
+                    <code>:link {...}</code>
+                </li>
+                <li>
+                    <code>:visited {...}</code>
+                </li>
+                <li>
+                    <code>:hover {...}</code>
+                </li>
+                <li>
+                    <code>:active {...}</code>
+                </li>
+            </ol>
+        </article>
+        <article>
+            <h2>
+                <code>:target</code>
+            </h2>
+            <p>
+                La peudo-clase :target representa el elemento único, si existe alguno, con id coincidente con el identificador de fragmentos de la URL del documento.
+            </p>
+            <p>
+                <a href="#modal">Modal con Clase CSS</a>
+            </p>
+        </article>
+        <div id="modal" class="Modal">
+            <aside class="Modal-box">
+                <h2>Hola soy un bonito modal con css</h2>
+                <a href="#">cerrar</a>
+            </aside>
+        </div>
+        <article>
+            <h2>
+                <code>:nth-child :first-child :last-child</code>
+            </h2>
+            <ul>
+                <li>
+                    <code>nth-child</code>: selecciona el elemento indicado que sea el enésimo hijo de su elemento padre.
+                </li>
+                <li>
+                    <code>first-child</code>: selecciona el elemento indicado que sea el primer hijo de su elemento padre.
+                </li>
+                <li>
+                    <code>last-child</code>: selecciona el elemento indicado que sea el ultimo hijo de su elemento padre.
+                </li>
+            </ul>
+        </article>
+
+    </main>
+</body>
+
+</html>
