@@ -72,3 +72,7 @@ if($action == 'delete'){
 	}
 }
 
+$conn->close();
+
+header('Content-type:aplication/json');
+echo json_encode($res);
