@@ -99,7 +99,7 @@
 				<h3 class="left">Lista de Estudiantes</h3>
 			</div>
 			<div class="col s2">
-				<button class="btn-large btn-floating">
+				<button class="btn-large btn-floating" @click="toggleModal('add')">
 					<i class="material-icons">add_circle</i>
 				</button>
 			</div>
@@ -112,7 +112,7 @@
 			</p>
 			<p class="u-flexColumnCenter green accent-1 green-text
 			text-darken-4" v-if="successMessage">
-				{{succesMessage}}
+				{{successMessage}}
 				<i class="material-icons prefix">check_circle</i>
 			</p>
 
@@ -133,13 +133,13 @@
 					<td>{{student.email}}</td>
 					<td>{{student.web}}</td>
 					<td>
-						<button class="btn btn-floating" @click="toggleModal('add')">
+						<button class="btn btn-floating" @click="getStudent('edit',student)">
 							<i class="material-icons">edit</i>
 							</span>
 						</button>
 					</td>
 					<td>
-						<button class="btn btn-floating">
+						<button class="btn btn-floating" @click="getStudent('delete',student)">
 							<i class="material-icons">delete</i>
 						</button>
 					</td>
@@ -156,7 +156,7 @@
 							</div>
 							<div class="col s2">
 								<button class="btn-large btn-floating" @click="toggleModal('add')">
-									<i class="material-icons">add_circle</i>
+									<i class="material-icons">close</i>
 								</button>
 							</div>
 						</div>
@@ -222,7 +222,7 @@
 			</section>
 		</transition>
 		<transition name="fade">
-			<section :class="['ModalWindow', displayDeleteModal]">
+			<section :class="['ModalWindow', displayDeleteModal]" v-if="showDeleteModal">
 				<div class="ModalWindow-container">
 					<header class="ModalWindow-heading">
 						<div class="row valign-wrapper">
@@ -262,12 +262,13 @@
 			el: '#app',
 			data: {
 				showAddModal: false,
-				showEditModal: false,
-				showDeleteModal: false,
-				errorMessage: '',
-				successMessage: '',
-				students: [],
-				activeStudent: {}
+        showEditModal: false,
+        showDeleteModal: false,
+        errorMessage: '',
+        successMessage: '',
+        students: [],
+        activeStudent: {}
+
 			},
 			mounted() {
 				this.getAllStudents()
@@ -294,12 +295,51 @@
 						this.showDeleteModal = !this.showDeleteModal
 					}
 				},
-				setMessages() {},
-				getAllStudents() {},
-				createStudent() {},
-				getStudent() {},
-				updateStudent() {},
-				deleteStudent() {}
+				setMessages(res) {
+          if(res.data.error){
+            this.errorMessage = res.data.message
+          }else{
+            this.successMessage = res.data.message
+            this.getAllStudents()
+          }
+
+          setTimeout(() => {
+              this.errorMessage = false
+              this.successMessage = false
+          }, 2000);
+        },
+				getAllStudents() {
+          axios.get('./api.php?action=read')
+           .then(res => {
+             console.log(res)
+             this.setMessages(res)
+             this.students = res.data.students
+           })
+        },
+				createStudent(e) {
+          axios.post('./api.php?action=create',new FormData (e.target))
+          .then(res => {
+            this.toggleModal('add')
+            this.setMessages(res)
+           })
+        },
+				getStudent(action, student) {
+          this.toggleModal(action)
+          this.activeStudent = student
+        },
+				updateStudent(e) {
+          axios.post('./api.php?action=update',new FormData (e.target))
+          .then(res => {
+            this.toggleModal('edit')
+            this.setMessages(res)
+          })
+        },
+				deleteStudent(e) {
+          axios.post('./api.php?action=delete',new FormData (e.target))
+          .then(res => {
+            this.toggleModal('delete')
+            this.setMessages(res)
+          })}
 			}
 
 		})
