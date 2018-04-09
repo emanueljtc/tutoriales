@@ -58,3 +58,17 @@ if( $action == 'update'){
 		$res['message'] = "Error al tratar de actualizar estudiante.";
 	}
 }
+
+if($action == 'delete'){
+	$id = $_POST['id'];
+
+	$result = $conn->query("DELETE FROM students WHERE id=$id");
+
+	if($result){
+		$res['message']='Estudiante eliminado con exito';
+	}else{
+		$res['error'] = true;
+		$res['message'] = "Error al tratar de eliminar estudiante.";
+	}
+}
+
