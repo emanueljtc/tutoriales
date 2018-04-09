@@ -38,3 +38,23 @@ if( $action == 'create'){
 		$res['message']="Error al tratar de registrar el estudiante."; 
 	}
 }
+
+if( $action == 'update'){
+	$id = $_POST['id'];
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$web = $_POST['web'];
+
+	$result = $conn->query("UPDATE students SET 
+	name='$name',
+	email='$email',
+	web='$web'
+	WHERE id=$id");
+
+	if($result){
+		$res['message'] = "Éxito al actualizar estudiante.";
+	}else{
+		$res['error'] = true;
+		$res['message'] = "Error al tratar de actualizar estudiante.";
+	}
+}
