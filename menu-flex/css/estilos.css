@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #f2f2f2;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  padding-top: 55px; }
+
+header {
+  background: #4357ad;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+  header .logo {
+    display: inline-block;
+    margin-right: 1em; }
+    header .logo img {
+      vertical-align: top;
+      height: 22px; }
+  header .menu {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .menu:hover {
+      background: #4357ad; }
+    header .menu .btn-menu {
+      display: none;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px; }
+    header .menu .enlaces {
+      display: inline-block;
+      text-align: right; }
+      header .menu .enlaces a {
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1em;
+        text-align: center;
+        font-size: 1em; }
+        header .menu .enlaces a:hover {
+          background: #f2f2f2;
+          color: #4357ad; }
+      header .menu .enlaces i {
+        margin-right: 5px; }
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+  /*EFECTOS DEL MENU */ }
+  main article h1 {
+    font-weight: normal;
+    margin-bottom: 0.5em; }
+  main article hr {
+    margin-bottom: 1em;
+    height: 2px;
+    background: #4357ad;
+    border: none; }
+  main article p {
+    margin-bottom: 1em; }
+
+.headroom {
+  transition: transform 0.3s ease; }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%); }
+
+/* Mediaqueries */
+@media screen and (max-width: 700px) {
+  header .menu {
+    flex-direction: column; }
+    header .menu .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1em; }
+      header .menu .logo .btn-menu {
+        display: inline-block; }
+    header .menu .enlaces {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; } }
+
+/*# sourceMappingURL=estilos.css.map */
