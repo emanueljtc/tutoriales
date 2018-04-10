@@ -357,11 +357,13 @@
 
                 },
                 deleteStudent(e) {
-                    /*  axios.post('./api.php?action=delete', new FormData(e.target))
-                         .then(res => {
-                             this.toggleModal('delete')
-                             this.setMessages(res)
-                         }) */
+                    let formData = new FormData(e.target)
+                    dbRef.child(formData.get('id')).remove()
+                        .then(() => this.setMessages(false, 'Estudiante eliminado con éxito'))
+                        .catch(() => this.setMessages(true, 'Error al tratar de eliminar el estudiante.'))
+
+                    e.target.reset()
+                    this.toggleModal('delete')
                 }
             }
 
