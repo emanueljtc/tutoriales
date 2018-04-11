@@ -1,0 +1,27 @@
+body {
+    background: #E9E9E9;
+}
+
+.contenedor {
+    width: 500px;
+    height: 200px;
+    background: #FFF;
+    padding: 10px;
+    border: 10px solid #2C3E50;
+    margin: 20px;
+    /*FLEXBOX*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.elemento {
+    color: #fff;
+    margin: 5px;
+    width: 200px;
+    height: 50px;
+    background: #e67e22;
+    text-align: center;
+}
