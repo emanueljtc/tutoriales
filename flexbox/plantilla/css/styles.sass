@@ -1,0 +1,129 @@
+@import variables
+@import url('https://fonts.googleapis.com/css?family=Anton')
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans')
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+
+body
+	background: $fondo-body
+
+header
+	background: $fondo-header
+	width: 100%
+	padding: 20px
+	/* Flex */
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-direction: row
+	flex-wrap: wrap
+
+	.logo
+		color: #ffffff
+		font-size: 30px
+		
+		img 
+			width: 50px
+			vertical-align: top
+		a 
+			color: #ffffff
+			text-decoration: none
+			font-family: 'Anton', sans-serif
+			line-height: 50px
+			
+
+nav
+	width: 50%
+	/*flex*/
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+
+	a 
+		background: #dc3220
+		color: #ffffff
+		text-align: center
+		text-decoration: none
+		padding: 10px
+		text-transform: uppercase
+		font-family: 'Bubblegum Sans', cursive
+		font-size: 20px
+		&:hover
+			transition: background-color .5s ease-out
+			background-color: #dc7820
+	  
+		/*flex*/
+		flex-grow: 1
+.contenedor
+	background: $fondo-contenedor
+	width: 90%
+	max-width: 1000px
+	margin: auto
+
+	/*FLEX*/
+	display: flex
+	flex-flow: row wrap
+
+
+
+.main
+	background: $fondo-main
+	padding: 20px
+	// flex: 1 1 70%
+	flex: 1
+
+	article
+		margin-bottom: 20px
+		padding-bottom: 20px
+		border-bottom: 1px solid #000000
+		&:nth-last-child(1)
+			margin-bottom: 0
+			padding-bottom: 0
+			border-bottom: none
+
+aside
+	background: $fondo-aside
+	padding: 20px
+	/*flex*/
+	// flex: 1 1 30%
+	flex: 0 0 300px
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	flex-direction: column
+	
+
+	.widget
+		background: $fondo-widget
+		height: 150px
+		margin: 10px 
+
+footer
+	background: $fondo-footer
+	width: 100%
+	padding: 20px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+	.links
+		background: #dc3220
+		display: flex
+		flex-wrap: wrap
+		a 
+			flex-grow: 1
+			color: #ffffff
+			padding: 10px
+			text-align: center
+			text-decoration: none
+			padding: 10px
+			text-transform: uppercase
+			font-family: 'Bubblegum Sans', cursive
+			font-size: 20px
+			&:hover
+				transition: background-color .5s ease-out
+				background-color: #dc7820
+
