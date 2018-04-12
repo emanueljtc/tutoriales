@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC;EACJ,UAAU,ECDH,OAAO;CDcjB;;AAdD,AAEI,OAFG,CAEH,EAAE,CAAC;EACC,MAAM,EAAE,KAAK;EACb,UAAU,ECHP,OAAO;CDIb;;AALL,AAMI,OANG,CAMH,EAAE,CAAC;EACC,MAAM,EAAE,KAAK;EACb,UAAU,ECNN,OAAO;CDOd;;AATL,AAUI,OAVG,CAUH,CAAC,CAAC;EACE,MAAM,EAAE,KAAK;EACb,UAAU,ECTJ,OAAO;CDUhB",
+    "sources": [
+        "estilos.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "estilos.css"
+}

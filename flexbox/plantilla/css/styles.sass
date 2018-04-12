@@ -1,3 +1,8 @@
+/* Author: Ing. Torres Emanuel */
+/*Year: 2018*/
+/*Country: Venezuela*/
+/*City: Villa de Cura*/
+/*State: Aragua*/
 @import variables
 @import url('https://fonts.googleapis.com/css?family=Anton')
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans')
@@ -8,8 +13,9 @@
 
 
 body
-	background: $fondo-body
-
+	background-image: url('https://images.pexels.com/photos/993019/pexels-photo-993019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+	background-repeat: no-repeat
+	background-size: cover
 header
 	background: $fondo-header
 	width: 100%
@@ -33,7 +39,44 @@ header
 			text-decoration: none
 			font-family: 'Anton', sans-serif
 			line-height: 50px
-			
+.contenedor-carrousel
+	width: 100%
+	.carrousel
+		width: 80%
+		position: absolute
+		animation: rotar 10s infinite linear
+		figure
+			width: 100%
+			height: 100%
+			position: absolute
+			&:nth-child(1)
+				transform: rotateY(0deg) translateZ(300px)
+			&:nth-child(2)
+				transform: rotateY(40deg) translateZ(300px)
+			&:nth-child(3)
+				transform: rotateY(80deg) translateZ(300px)
+			&:nth-child(4)
+				transform: rotateY(120deg) translateZ(300px)
+			&:nth-child(5)
+				transform: rotateY(160deg) translateZ(300px)
+			&:nth-child(6)
+				transform: rotateY(200deg) translateZ(300px)
+			&:nth-child(7)
+				transform: rotateY(240deg) translateZ(300px)
+			&:nth-child(8)
+				transform: rotateY(280deg) translateZ(300px)
+			&:nth-child(9)
+				transform: rotateY(320deg) translateZ(300px)
+			&:nth-child(10)
+				transform: rotateY(360deg) translateZ(300px)
+				
+			img
+				width: 100%			
+@keyframes rotar
+	from
+		transform: rotateY(0deg)
+	to 
+		transform: rotateY(360deg)		
 
 nav
 	width: 50%
@@ -43,7 +86,7 @@ nav
 	align-items: center
 
 	a 
-		background: #dc3220
+		background: $fondo-enlaces
 		color: #ffffff
 		text-align: center
 		text-decoration: none
@@ -58,11 +101,10 @@ nav
 		/*flex*/
 		flex-grow: 1
 .contenedor
-	background: $fondo-contenedor
+	// background: $fondo-contenedor
 	width: 90%
 	max-width: 1000px
 	margin: auto
-
 	/*FLEX*/
 	display: flex
 	flex-flow: row wrap
@@ -83,6 +125,8 @@ nav
 			margin-bottom: 0
 			padding-bottom: 0
 			border-bottom: none
+		p
+			margin-top: 10px
 
 aside
 	background: $fondo-aside
@@ -100,6 +144,11 @@ aside
 		background: $fondo-widget
 		height: 150px
 		margin: 10px 
+		.imagen
+			img 
+				width: 240px
+				height: 150px
+			
 
 footer
 	background: $fondo-footer
@@ -110,7 +159,7 @@ footer
 	justify-content: space-between
 
 	.links
-		background: #dc3220
+		background: $fondo-enlaces
 		display: flex
 		flex-wrap: wrap
 		a 
@@ -126,4 +175,79 @@ footer
 			&:hover
 				transition: background-color .5s ease-out
 				background-color: #dc7820
+	.social
+		// background: $fondo-aside
+		
+		a
+			color: #fff
+			text-decoration: none
+			margin-right: 20px
+			margin-top: -1px
+			display: inline-block
+			img 
+				width: 40px
+				height: 40px
+	.footer-copyright
+		width: 100%
+		margin-top: 20px
+		margin-left: 35%
+		color: #ffffff
+		font-family: 'Ubuntu'
+		font-weight: bold
+/*Mediaquerys*/
+@media screen and (max-width: 799px)
+	.contenedor
+		flex-direction: column
+	header
+		flex-direction: column
+		padding: 0
+		.logo
+			margin: 20px 0
+		nav
+			width: 100%
+	aside
+		flex-direction: row
+		flex: 0
+		.widget
+			flex-grow: 1
+			.imagen
+				img 
+					width: 275px
+					height: 150px
+	footer
+		justify-content:space-around
+		.social
+			margin-top: 20px
+			margin-left: 34%
+		.links
+			flex-grow: 1
+		.footer-copyright
+			width: 100%
+			margin-top: 20px
+			margin-left: 22%
+
+@media screen and (max-width: 699px)
+	aside
+		flex-direction: column
+		flex: 1
+		.widget
+			flex-grow: 0
+			width: 255px
+	footer
+		flex-grow: 1
+		justify-content: space-around
+		.social
+			margin-top: 20px
+			margin-left: 5%
+			a
+				margin-top: 20px
+@media screen and (max-width: 400px)
+	aside
+		flex-direction: column
+	footer 
+		justify-content: space-around
+		.social
+			a
+				margin-top: 20px
+
 

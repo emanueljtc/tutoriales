@@ -1,3 +1,8 @@
+/* Author: Ing. Torres Emanuel */
+/*Year: 2018 */
+/*Country: Venezuela */
+/*City: Villa de Cura */
+/*State: Aragua */
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Bubblegum+Sans");
 * {
@@ -6,10 +11,12 @@
   box-sizing: border-box; }
 
 body {
-  background: #e9e9e9; }
+  background-image: url("https://images.pexels.com/photos/993019/pexels-photo-993019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 header {
-  background: #0374b9;
+  background: rgba(2, 87, 139, 0.43);
   width: 100%;
   padding: 20px;
   /* Flex */
@@ -30,6 +37,44 @@ header {
       font-family: "Anton", sans-serif;
       line-height: 50px; }
 
+.contenedor-carrousel {
+  width: 100%; }
+  .contenedor-carrousel .carrousel {
+    width: 80%;
+    position: absolute;
+    animation: rotar 10s infinite linear; }
+    .contenedor-carrousel .carrousel figure {
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      .contenedor-carrousel .carrousel figure:nth-child(1) {
+        transform: rotateY(0deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(2) {
+        transform: rotateY(40deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(3) {
+        transform: rotateY(80deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(4) {
+        transform: rotateY(120deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(5) {
+        transform: rotateY(160deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(6) {
+        transform: rotateY(200deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(7) {
+        transform: rotateY(240deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(8) {
+        transform: rotateY(280deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(9) {
+        transform: rotateY(320deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure:nth-child(10) {
+        transform: rotateY(360deg) translateZ(300px); }
+      .contenedor-carrousel .carrousel figure img {
+        width: 100%; }
+
+@keyframes rotar {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(360deg); } }
 nav {
   width: 50%;
   /*flex */
@@ -37,7 +82,7 @@ nav {
   flex-wrap: wrap;
   align-items: center; }
   nav a {
-    background: #dc3220;
+    background: rgba(220, 50, 32, 0.72);
     color: #ffffff;
     text-align: center;
     text-decoration: none;
@@ -52,7 +97,6 @@ nav {
       background-color: #dc7820; }
 
 .contenedor {
-  background: #ccc;
   width: 90%;
   max-width: 1000px;
   margin: auto;
@@ -61,7 +105,7 @@ nav {
   flex-flow: row wrap; }
 
 .main {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.91);
   padding: 20px;
   flex: 1; }
   .main article {
@@ -72,9 +116,11 @@ nav {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none; }
+    .main article p {
+      margin-top: 10px; }
 
 aside {
-  background: #e67e22;
+  background: rgba(230, 126, 34, 0.85);
   padding: 20px;
   /*flex */
   flex: 0 0 300px;
@@ -86,16 +132,19 @@ aside {
     background: #d35400;
     height: 150px;
     margin: 10px; }
+    aside .widget .imagen img {
+      width: 240px;
+      height: 150px; }
 
 footer {
-  background: #0374b9;
+  background: rgba(2, 87, 139, 0.43);
   width: 100%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   footer .links {
-    background: #dc3220;
+    background: rgba(220, 50, 32, 0.72);
     display: flex;
     flex-wrap: wrap; }
     footer .links a {
@@ -111,5 +160,77 @@ footer {
       footer .links a:hover {
         transition: background-color 0.5s ease-out;
         background-color: #dc7820; }
+  footer .social a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: -1px;
+    display: inline-block; }
+    footer .social a img {
+      width: 40px;
+      height: 40px; }
+  footer .footer-copyright {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 35%;
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: bold; }
+
+/*Mediaquerys */
+@media screen and (max-width: 799px) {
+  .contenedor {
+    flex-direction: column; }
+
+  header {
+    flex-direction: column;
+    padding: 0; }
+    header .logo {
+      margin: 20px 0; }
+    header nav {
+      width: 100%; }
+
+  aside {
+    flex-direction: row;
+    flex: 0; }
+    aside .widget {
+      flex-grow: 1; }
+      aside .widget .imagen img {
+        width: 275px;
+        height: 150px; }
+
+  footer .social {
+    margin-top: 20px;
+    margin-left: 34%; }
+  footer .links {
+    flex-grow: 1; }
+  footer .footer-copyright {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 22%; } }
+@media screen and (max-width: 699px) {
+  aside {
+    flex-direction: column;
+    flex: 1; }
+    aside .widget {
+      flex-grow: 0;
+      width: 255px; }
+
+  footer {
+    flex-grow: 1;
+    justify-content: space-around; }
+    footer .social {
+      margin-top: 20px;
+      margin-left: 5%; }
+      footer .social a {
+        margin-top: 20px; } }
+@media screen and (max-width: 400px) {
+  aside {
+    flex-direction: column; }
+
+  footer {
+    justify-content: space-around; }
+    footer .social a {
+      margin-top: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
