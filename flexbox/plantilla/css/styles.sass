@@ -39,45 +39,48 @@ header
 			text-decoration: none
 			font-family: 'Anton', sans-serif
 			line-height: 50px
-.contenedor-carrousel
-	width: 100%
-	.carrousel
-		width: 80%
-		position: absolute
-		animation: rotar 10s infinite linear
-		figure
+	#img1
+		display: block
+		transform: translateY(0)
+	.contenedor-slider
+		width: 100%
+		height: 500px
+		position: relative
+		top: 19px
+		left: -3%
+		display: flex
+		margin: auto
+		margin-top: 0%
+		overflow: hidden
+		.slider-img
+			display: none
 			width: 100%
 			height: 100%
 			position: absolute
-			&:nth-child(1)
-				transform: rotateY(0deg) translateZ(300px)
-			&:nth-child(2)
-				transform: rotateY(40deg) translateZ(300px)
-			&:nth-child(3)
-				transform: rotateY(80deg) translateZ(300px)
-			&:nth-child(4)
-				transform: rotateY(120deg) translateZ(300px)
-			&:nth-child(5)
-				transform: rotateY(160deg) translateZ(300px)
-			&:nth-child(6)
-				transform: rotateY(200deg) translateZ(300px)
-			&:nth-child(7)
-				transform: rotateY(240deg) translateZ(300px)
-			&:nth-child(8)
-				transform: rotateY(280deg) translateZ(300px)
-			&:nth-child(9)
-				transform: rotateY(320deg) translateZ(300px)
-			&:nth-child(10)
-				transform: rotateY(360deg) translateZ(300px)
+			top: 82px
+			left: 6%
+			transform: translateY(-100%)
+			img 
+				width: 100%
+				height: 100%
+			&:target
+				display: block
+				transform: translateY(0)
 				
-			img
-				width: 100%			
-@keyframes rotar
-	from
-		transform: rotateY(0deg)
-	to 
-		transform: rotateY(360deg)		
-
+			.icon-left-open
+				position: absolute
+				top: 250px
+				left: 15%
+				font-size: 40px
+				text-decoration: none
+				color: white
+			.icon-right-open
+				position: absolute
+				top: 250px
+				left: 81%
+				font-size: 40px
+				text-decoration: none
+				color: white
 nav
 	width: 50%
 	/*flex*/
@@ -103,7 +106,7 @@ nav
 .contenedor
 	// background: $fondo-contenedor
 	width: 90%
-	max-width: 1000px
+	// max-width: 1000px
 	margin: auto
 	/*FLEX*/
 	display: flex
