@@ -25,17 +25,19 @@ h1 {
 
 .button_left {
     position: absolute;
+    z-index: 1;
     width: 30px;
     border: none;
     background: transparent;
-    color: #fff;
-    font-size: 40px;
+    color: #ffeb00;
+    font-size: 82px;
     text-align: center;
     outline: none;
     opacity: 0.5;
     transition: opacity 300ms ease-out;
+    left: 7%;
     &:hover {
-        opacity: 1;
+        opacity: 2;
     }
 }
 
@@ -50,8 +52,7 @@ h1 {
     outline: none;
     opacity: 0.5;
     transition: opacity 300ms ease-out;
-    top: 50%;
-    left: 90%;
+    left: 88%;
 }
 
 .scroller {
