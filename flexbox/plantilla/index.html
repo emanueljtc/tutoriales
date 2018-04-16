@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plantilla Flex-Box</title>
+    <style>
+        li #texto {
+            font-size: 40px;
+            text-align: center;
+            font-size: 26px;
+            background: #ffffff4d;
+            width: 200px;
+            height: auto;
+            margin-left: 43%;
+            top: 50%;
+            position: relative;
+        }
+    </style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/fontello.css">
@@ -29,9 +42,15 @@
             <button onclick="prev()" class="button_left">&laquo;</button>
             <div class="scroller">
                 <ul class="items">
-                    <li class="item" style="background-image:url(img/1.jpeg);">HAMBURG</li>
-                    <li class="item" style="background-image:url(https://farm3.staticflickr.com/2937/14371160993_186df4a083_b.jpg);">URBAN LIGHTS</li>
-                    <li class="item" style="background-image:url(https://farm3.staticflickr.com/2914/14185397280_e51c40b1df_b.jpg);">SOUNDS</li>
+                    <li class="item" style="background-image:url(img/1.jpeg);">
+                        <div id="texto">TU TEXTO</div>
+                    </li>
+                    <li class="item" style="background-image:url(https://farm3.staticflickr.com/2937/14371160993_186df4a083_b.jpg);">
+                        <div id="texto">TU TEXTO</div>
+                    </li>
+                    <li class="item" style="background-image:url(https://farm3.staticflickr.com/2914/14185397280_e51c40b1df_b.jpg);">
+                        <div id="texto">TU TEXTO</div>
+                    </li>
                 </ul>
             </div>
             <button onclick="next()" class="button_right">&raquo;</button>
