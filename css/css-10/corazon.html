@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Corazon con Css</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            display: grid;
+            min-height: 100vh;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        h1 {
+            display: table;
+            margin-bottom: 120px
+        }
+        
+        h1::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: red;
+            transform: scale(0, 1);
+            transform-origin: center left;
+            transition: transform .25s;
+        }
+        
+        h1:hover::after {
+            transform: scale(1, 1);
+        }
+        
+        .heart {
+            --size: 200px;
+            --color: red;
+            margin-left: 24%;
+            transform: rotate(45deg);
+            animation: beat 1s infinite alternate ease-in-out;
+        }
+        
+        @keyframes beat {
+            to {
+                transform: rotate(45deg) scale(1.2);
+            }
+        }
+        
+        .heart,
+        .heart::before,
+        .heart::after {
+            width: var(--size);
+            height: var(--size);
+            background: var(--color);
+        }
+        
+        .heart::before,
+        .heart::after {
+            content: '';
+            display: block;
+            margin-top: calc(var(--size) * -0.5);
+            border-radius: 50%;
+        }
+        
+        .heart::after {
+            margin-left: calc(var(--size) * -0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CORAZON CON CSS</h1>
+
+    <div class="heart"></div>
+</body>
+
+</html>
