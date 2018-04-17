@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LISTAS</title>
+    <style>
+        body {
+            font-size: 2em;
+            padding: 1em;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        li::before {
+            content: '';
+            background: url('https://findicons.com/files/icons/808/on_stage/128/symbol_check.png');
+            background-size: contain;
+            display: inline-block;
+            width: .8em;
+            height: .8em;
+            margin-right: .25em;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+        <li>ITEM</li>
+    </ul>
+    <ol>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item
+            <ol>
+                <li>Item hijo</li>
+            </ol>
+        </li>
+        <li>Item</li>
+    </ol>
+</body>
+
+</html>
