@@ -20,10 +20,9 @@
             line-height: 1;
             font-family: serif;
         } */
-        
-        h1 {
+        /* h1 {
             quotes: '\201C' '\201D';
-        }
+        } */
         /*   h1::before {
             content: open-quote;
         }
@@ -32,6 +31,24 @@
             content: close-quote;
 
         } */
+        
+        h1 {
+            display: table;
+        }
+        
+        h1::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: red;
+            transform: scale(0, 1);
+            transform-origin: center left;
+            transition: transform .25s;
+        }
+        
+        h1:hover::after {
+            transform: scale(1, 1);
+        }
         
         .usd::before {
             content: '$ '
@@ -47,6 +64,17 @@
         
         .co::before {
             content: '$ '
+        }
+        
+        .box {
+            width: 200px;
+            background: rebeccapurple;
+        }
+        
+        .box::before {
+            content: '';
+            display: block;
+            padding-bottom: 100%
         }
     </style>
 </head>
@@ -68,6 +96,10 @@
     <p class="currency usd two-decimals">45</p>
     <p class="pen">98</p>
     <p class="co">2000</p>
+
+    <div class="box">
+
+    </div>
 </body>
 
 </html>
