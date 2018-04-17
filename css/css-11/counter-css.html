@@ -12,38 +12,65 @@
             padding: 1em;
         }
         
-        ul,
+        .chapters {
+            counter-reset: chapters;
+        }
+        
+        .chapter {
+            counter-increment: chapter;
+        }
+        
+        .chapter::before {
+            content: counter(chapter) '.';
+            color: red;
+            margin-right: .5em;
+        }
+        
         ol {
+            counter-reset: list;
+        }
+        
+        li {
+            counter-increment: list;
             list-style: none;
         }
         
         li::before {
-            content: '';
-            background: url('https://findicons.com/files/icons/808/on_stage/128/symbol_check.png');
-            background-size: contain;
-            display: inline-block;
-            width: .8em;
-            height: .8em;
-            margin-right: .25em;
+            content: counters(list, '.') '. ';
+            color: red;
+            font-size: 0.75em;
+            margin-right: .5em;
         }
     </style>
 </head>
 
 <body>
-    <ul>
-        <li>ITEM</li>
-        <li>ITEM</li>
-        <li>ITEM</li>
-        <li>ITEM</li>
-    </ul>
+    <h1>Manual de CSS</h1>
+    <div class="chapters">
+        <h2 class="chapter">Introducción</h2>
+        <h2 class="chapter">Selectores</h2>
+        <h2 class="chapter">Box Model</h2>
+        <h2 class="chapter">Posicionamiento</h2>
+    </div>
     <ol>
         <li>Item</li>
         <li>Item</li>
         <li>Item
             <ol>
-                <li>Item hijo</li>
+                <li>Item</li>
+                <li>Item
+                    <ol>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ol>
+                </li>
+                <li>Item</li>
+                <li>Item</li>
             </ol>
         </li>
+        <li>Item</li>
         <li>Item</li>
     </ol>
 </body>
