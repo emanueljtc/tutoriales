@@ -9,10 +9,17 @@ $(function() {
     //obteniendo elementos del DOM desde el nicknameForm
     const $nickForm = $('#nickForm');
     const $nickError = $('#nickError');
-    const $nickName = $("#nickName");
+    const $nickName = $("#nickname");
 
     //obteniendo elementos del DOM desde el usernames
     const $users = $('#usernames');
+
+    $nickForm.submit(e => {
+        e.preventDefault();
+        socket.emit('new user', $nickName.val(), data => {
+
+        });
+    });
 
     // Eventos
     $messageForm.submit(e => {
