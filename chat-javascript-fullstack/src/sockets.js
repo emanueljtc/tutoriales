@@ -11,12 +11,25 @@ module.exports = function(io) {
                 cb(true);
                 socket.nickname = data;
                 nicknames.push(socket.nickname);
+                updateNicknames();
             }
         });
-        socket.on('send message', function(data) {
-            io.sockets.emit('new message', data)
+        socket.on('send message', data => {
+            io.sockets.emit("new message", {
+                msg: data,
+                nick: socket.nickname
+            });
         });
 
+        socket.on('disconnect', data => {
+            if (!socket.nickname) return;
+            nicknames.splice(nicknames.indexOf(socket.nickname), 1);
+            updateNicknames();
 
+        })
+
+        function updateNicknames() {
+            io.sockets.emit("usernames", nicknames);
+        }
     });
 }
