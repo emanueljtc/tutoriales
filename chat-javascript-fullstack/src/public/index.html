@@ -16,7 +16,24 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand mx-auto" href="/">Chat Javascript</a>
     </nav>
-    <div class="container">
+    <div class="col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card">
+            <div class="card-header cabecera-tarjeta">
+                <h4 class="text-center">Acceso</h4>
+            </div>
+            <p id="nickError">
+
+            </p>
+            <div class="card-body">
+                <form id="nickForm">
+                    <label>NickName</label>
+                    <input type="text" id="nickname" class="form-control">
+                    <input type="submit" class="btn btn-success btn-block mt-2">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contentWrap">
         <div class="col-md-6 mt-4">
             <div class="card">
                 <div class="card-header cabecera-tarjeta">
