@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("https://images.pexels.com/photos/993019/pexels-photo-993019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+canvas {
+  border: 1px solid #000000;
+  margin-left: 32%;
+  margin-top: 8%; }
+
+/*# sourceMappingURL=style.css.map */
