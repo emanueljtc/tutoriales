@@ -8,6 +8,8 @@
     <title>Chat Javascript</title>
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -27,9 +29,15 @@
             </p>
             <div class="card-body">
                 <form id="nickForm">
-                    <label>NickName</label>
+                    <label>  
+                        <i class="fas fa-user-secret"></i>
+                        NickName
+                   </label>
                     <input type="text" id="nickname" class="form-control">
-                    <input type="submit" class="btn btn-success btn-block mt-2">
+                    <button type="submit" class="btn btn-success btn-block mt-2">
+                        Acceder
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -45,7 +53,10 @@
                     <div class="input-group">
                         <input type="text" id="message" class="form-control">
                         <div class="input-group-append">
-                            <input type="submit" class="btn btn-warning">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-location-arrow"></i> 
+                                Enviar
+                            </button>
                         </div>
                     </div>
                 </form>
