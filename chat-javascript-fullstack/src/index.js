@@ -1,4 +1,5 @@
 const http = require('http');
+const path = require('path');
 
 const express = require('express');
 const socketio = require('socket.io');
@@ -7,13 +8,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio.listen(server);
 
-io.on('connection', socket => {
-    console.log('Nuevo Usuario Conectado');
-})
-
+require('./sockets')(io);
 
 //Archivos Estaticos
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Iniciando el servidor
 server.listen(3000, () => {
