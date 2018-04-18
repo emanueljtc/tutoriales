@@ -17,7 +17,17 @@ $(function() {
     $nickForm.submit(e => {
         e.preventDefault();
         socket.emit('new user', $nickName.val(), data => {
-
+            if (data) {
+                $('#nickWrap').hide();
+                $('#contentWrap').show();
+            } else {
+                $nickError.html(`
+								<div class="alert alert-danger">
+									Este usuario ya existe
+								</div>
+							`)
+            }
+            $nickName.val('');
         });
     });
 

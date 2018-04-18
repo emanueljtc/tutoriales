@@ -5,7 +5,6 @@ module.exports = function(io) {
         console.log("Nuevo Usuario Conectado");
 
         socket.on('new user', (data, cb) => {
-            console.log(data);
             if (nicknames.indexOf(data) != -1) {
                 cb(false);
             } else {

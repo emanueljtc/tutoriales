@@ -8,8 +8,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.cabecera-tarjeta {
+.cabecera-tarjeta-azul {
   background-color: #013573;
+  color: #fff; }
+
+.cabecera-tarjeta-verde {
+  background-color: #0e8c0c;
   color: #fff; }
 
 #contentWrap {
