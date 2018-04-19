@@ -42,6 +42,31 @@ header {
         background: #58b813;
         margin-top: 15px;
         transform: rotateY(240deg) scale(0);
-        transition: all 1s; }
+        transition: all 1s;
+        box-shadow: 1px 1px 10px 0px black; }
+        .menu ul li ul:before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-bottom: 8px solid #58b813;
+          position: absolute;
+          margin-top: -8px;
+          margin-left: 20px; }
+        .menu ul li ul li {
+          position: relative; }
+          .menu ul li ul li:hover > ul {
+            transform: rotateY(8deg) scale(1); }
+          .menu ul li ul li ul {
+            right: -127px;
+            top: -15px;
+            background: #b87113; }
+            .menu ul li ul li ul:before {
+              position: absolute;
+              border-bottom: 8px solid #b87113;
+              margin-top: 20px;
+              margin-left: -14px;
+              transform: rotate(-90deg); }
 
 /*# sourceMappingURL=styles.css.map */
