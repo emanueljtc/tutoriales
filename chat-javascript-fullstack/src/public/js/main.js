@@ -34,7 +34,9 @@ $(function() {
     // Eventos
     $messageForm.submit(e => {
         e.preventDefault();
-        socket.emit('send message', $messageBox.val());
+        socket.emit('send message', $messageBox.val(), data => {
+            $chat.append(`<p class="alert alert-danger">${data}</p>`)
+        });
         $messageBox.val('');
     });
 
@@ -48,5 +50,9 @@ $(function() {
             html += `<p><i class="fas fa-user"></i> ${data[i]}</p>`
         }
         $users.html(html)
+    });
+
+    socket.on('msg_private', data => {
+        $chat.append(`<p class="alert alert-dark"><b>${data.nick}:</b> ${data.msg}</p>`);
     });
 })
