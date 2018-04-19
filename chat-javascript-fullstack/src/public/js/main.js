@@ -55,4 +55,14 @@ $(function() {
     socket.on('msg_private', data => {
         $chat.append(`<p class="alert alert-dark"><b>${data.nick}:</b> ${data.msg}</p>`);
     });
+
+    socket.on('load old msgs', msgs => {
+        for (let i = msgs.length - 1; i >= 0; i--) {
+            displayMsg(msgs[i]);
+        }
+    });
+
+    function displayMsg(data) {
+        $chat.append(`<p class="alert alert-dark"><b>${data.nick}:</b> ${data.msg}</p>`);
+    }
 })

@@ -1,8 +1,12 @@
+const Chat = require('./models/Chat');
 //CONEXION WEB SOCKET
 module.exports = function(io) {
     let users = {};
-    io.on("connection", socket => {
+    io.on("connection", async socket => {
         console.log("Nuevo Usuario Conectado");
+
+        let messages = await Chat.find({}).limit(8).sort('-created');
+        socket.emit('carga viejos msgs', messages);
 
         socket.on('new user', (data, cb) => {
             if (data in users) {
@@ -15,7 +19,7 @@ module.exports = function(io) {
             }
         });
         //cb = callback
-        socket.on('send message', (data, cb) => {
+        socket.on('send message', async(data, cb) => {
             var msg = data.trim();
             if (msg.substr(0, 3) === '/p ') {
                 msg = msg.substr(3);
@@ -36,6 +40,13 @@ module.exports = function(io) {
                     cb('!Error¡ Ingresa tu mensaje por favor.')
                 }
             } else {
+                var newMsg = new Chat({
+                    msg,
+                    nickname: socket.nickname
+
+                });
+                await newMsg.save();
+
                 io.sockets.emit("new message", {
                     msg: data,
                     nick: socket.nickname
