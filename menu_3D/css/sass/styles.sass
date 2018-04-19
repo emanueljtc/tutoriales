@@ -44,6 +44,32 @@ header
 				margin-top: 15px
 				transform: rotateY(240deg) scale(0)
 				transition: all 1s
+				box-shadow: $sombra
+				&:before
+					content: ''
+					width: 0
+					height: 0
+					border-right: 10px solid transparent
+					border-left: 10px solid transparent
+					border-bottom: 8px solid $background-sub-ul
+					position: absolute
+					margin-top: -8px
+					margin-left: 20px
+				li 
+					position: relative
+					&:hover > ul
+						transform: rotateY(8deg) scale(1)
+					ul 
+						right: -127px
+						top: -15px
+						background: $bg-sub-ul-2
+						&:before
+							position: absolute
+							border-bottom: 8px solid $bg-sub-ul-2
+							margin-top: 20px
+							margin-left: -14px
+							transform: rotate(-90deg)
+				
 
 				
 					
