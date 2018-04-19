@@ -1,0 +1,49 @@
+/* Author: Ing. Torres Emanuel */
+/*Year: 2018*/
+/*Country: Venezuela*/
+/*City: Villa de Cura*/
+/*State: Aragua*/
+@import variables
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: arial
+
+header
+	width: 100%
+	height: 50px
+	background: $color-background
+	
+.menu
+	width: 100%
+	height: 50px
+	display: flex
+	perspective: 200px
+	ul 
+		display: flex
+		margin: auto
+		li 
+			list-style: none
+			padding: 15px 20px
+			.item
+				width: 200px
+			&:hover
+				background: $background-li
+				color: $letra-li
+				cursor: pointer
+				transition: all 300ms
+			&:hover > ul 
+				transform: rotateY(0deg) scale(1)
+				transition: all 1s
+			ul 
+				*display: none
+				flex-direction: column
+				position: absolute
+				background: $background-sub-ul
+				margin-top: 15px
+				transform: rotateY(240deg) scale(0)
+				transition: all 1s
+
+				
+					
