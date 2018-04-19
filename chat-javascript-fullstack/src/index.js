@@ -4,10 +4,15 @@ const path = require('path');
 const express = require('express');
 const socketio = require('socket.io');
 
+const mongoose = require('mongoose');
+
 const app = express();
 const server = http.createServer(app);
 const io = socketio.listen(server);
-
+//Conexion con BD
+mongoose.connect('mongodb://localhost/chat-db')
+    .then(db => console.log('BD esta conectada'))
+    .catch(err => console.log(err));
 //Configuracion de puerto automatico o por defecto
 app.set('port', process.env.PORT || 3000)
 
