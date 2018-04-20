@@ -4,12 +4,13 @@
 /*City: Villa de Cura*/
 /*State: Aragua*/
 @import variables
+@import url('https://fonts.googleapis.com/css?family=Lemonada|Roboto')
 *
 	margin: 0
 	padding: 0
 	box-sizing: border-box
-	font-family: arial
-
+	*font-family: 'Roboto', sans-serif
+	font-family: 'Lemonada', cursive
 header
 	width: 100%
 	height: 50px
@@ -69,7 +70,33 @@ header
 							margin-top: 20px
 							margin-left: -14px
 							transform: rotate(-90deg)
-				
+.content-menu
+	width: 1000px
+	height: 650px
+	background: #c5afaf
+	display: flex
+	margin: auto
+	margin-top: 70px
+.page-left, .page-center, .page-rigth
+	padding: 10px
+	width: 100%
+	height: 100%
+	background: white
+	margin: 4px
+.content-list
+	width: 100%
+	height: 100%
+	.list-one, .list-two, .list-tree
+		width: 100%
+		text-align: center
+		h1 
+			font-size: 24px
+			text-align: center
+		img 
+			width: 150px
+			height: 150px
+.front
+	display: none 
 
 				
 					
