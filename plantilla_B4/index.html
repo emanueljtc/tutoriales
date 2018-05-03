@@ -16,7 +16,7 @@
 
 <body>
     <!-- Navegation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Bootstrap website</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#info-one">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -73,18 +73,75 @@
     <!-- Info One -->
     <section id="info-one">
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="info-left">
-                        <img src="img/image2.png">
+                        <img src="img/image2.png" style="width: 100%">
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6 my-auto">
+                    <div class="info-right">
+                        <h2>Qui do esse cupidatat</h2>
+                        <p>Excepteur est non laboris esse minim dolor enim ea laborum cillum proident cillum esse ex. Reprehenderit sit nisi sit deserunt nostrud. Pariatur culpa reprehenderit pariatur sunt. Nostrud aute nulla cillum aliqua. Nisi aliquip
+                            amet qui exercitation tempor nulla anim minim esse quis minim. Aliqua occaecat consectetur ex amet aliqua officia laboris tempor ut fugiat.</p>
+                        <a href="#" class="btn btn-outline-secondary btn-lg">Read More.</a>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- /Info One -->
-
+    <!-- Info Two -->
+    <section id="info-two">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <h2>Consectetur ullamco officia</h2>
+                    <p>Sit est officia minim elit ad anim sunt sint voluptate aliqua. Velit fugiat cillum nisi magna aliquip. Deserunt velit ullamco est do tempor laborum eu. Quis culpa sint qui eiusmod veniam exercitation eu consectetur nisi nostrud commodo
+                        minim.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Consectetur ullamco officia</h2>
+                    <p>Sit est officia minim elit ad anim sunt sint voluptate aliqua. Velit fugiat cillum nisi magna aliquip. Deserunt velit ullamco est do tempor laborum eu. Quis culpa sint qui eiusmod veniam exercitation eu consectetur nisi nostrud commodo
+                        minim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Info Two -->
+    <!-- Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <form class="card my-4">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="10" cols="30" placeholder="Message" class="form-control"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-secondary btn-block">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Contact -->
     <!-- /Header -->
     <!-- BOOTSTRAP IV - SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
