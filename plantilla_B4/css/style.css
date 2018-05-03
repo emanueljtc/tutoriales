@@ -21,13 +21,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover; }
   body .credit {
-    padding-top: 30px;
+    padding-top: 6px;
     padding-bottom: 30px;
     background-color: #2e2e2e;
-    background-position: 50% 50%; }
+    height: 130px; }
     body .credit .media-container-row {
       flex-wrap: nowrap;
       color: #fff;
       text-align: center; }
+      body .credit .media-container-row .credit-content {
+        display: flex;
+        text-align: center;
+        margin-left: 36%; }
+        body .credit .media-container-row .credit-content img {
+          height: 60px;
+          padding-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
