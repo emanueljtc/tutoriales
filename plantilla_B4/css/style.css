@@ -5,10 +5,17 @@
 
 body {
   font-family: "Titillium Web", sans-serif; }
+  body header {
+    margin-top: 75px; }
   body #testimonial {
     background: #f1f1f1;
     padding: 50px 0 30px 0;
     text-align: center;
     margin-top: 40px; }
+  body #info-two {
+    background: rgba(23, 176, 193, 0.98);
+    padding: 30px 0 30px 0; }
+  body footer {
+    background: url(../img/smartphones.png); }
 
 /*# sourceMappingURL=style.css.map */
