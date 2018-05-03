@@ -4,6 +4,7 @@
   box-sizing: border-box; }
 
 body {
+  width: 100%;
   font-family: "Titillium Web", sans-serif; }
   body header {
     margin-top: 75px; }
@@ -16,6 +17,17 @@ body {
     background: rgba(23, 176, 193, 0.98);
     padding: 30px 0 30px 0; }
   body footer {
-    background: url(../img/smartphones.png); }
+    background: url(../img/smartphones.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  body .credit {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #2e2e2e;
+    background-position: 50% 50%; }
+    body .credit .media-container-row {
+      flex-wrap: nowrap;
+      color: #fff;
+      text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

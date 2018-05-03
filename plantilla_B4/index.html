@@ -53,7 +53,7 @@
                         <h1 class="display-4">Voluptate id mollit</h1>
                         <p class=" mt-5 ">Sit officia sint est Lorem ad qui dolor sit cupidatat. In elit quis consectetur laborum magna incididunt ad qui fugiat minim. Ex deserunt anim proident sint. Ut voluptate incididunt ad irure voluptate cupidatat ad. Eu do cupidatat
                             eiusmod excepteur ex sint in consectetur tempor consequat dolore. Reprehenderit eu sit et reprehenderit officia minim aliqua culpa et magna in velit. Elit non voluptate sit est aute amet aliquip sunt dolor irure ad.</p>
-                        <a href="# " class="btn btn-outline-secondary btn-lg mt-2 ">Read More</a>
+                        <a href="# " class="btn btn-outline-secondary btn-lg mt-2 header-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <div class="card mt-4">
+                    <div class="card mt-4" style="margin-bottom: 22px">
                         <div class="card-body">
                             <form class="card my-4">
                                 <div class="card-body">
@@ -138,9 +138,20 @@
                         </div>
                     </div>
                 </div>
+                <br>
             </div>
         </div>
     </footer>
+    <section class="credit">
+        <div class="container">
+            <div class="media-container-row align-center">
+                <div class="col-12 my-4">
+                    <img src="img/logo.png">
+                    <p class="h4">Ing. Torres C. | @ 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- /Contact -->
     <!-- /Header -->
     <!-- BOOTSTRAP IV - SCRIPTS -->
@@ -149,6 +160,45 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T " crossorigin="anonymous "></script>
     <!-- ScrollRevealJS -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js "></script>
+    <!-- Scripts -->
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar', {
+            duration: 2000,
+            origin: 'bottom'
+        });
+        sr.reveal('.header-content-left', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        })
+        sr.reveal('.header-content-right', {
+            duration: 2000,
+            origin: 'right',
+            distance: '300px'
+        })
+        sr.reveal('.header-btn', {
+            duration: 2000,
+            origin: 'bottom',
+            delay: 1000
+        })
+        sr.reveal('#testimonial', {
+                duration: 2000,
+                origin: 'left',
+                distance: '300px',
+                viewFactor: 0.2
+            })
+            //Smoth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
