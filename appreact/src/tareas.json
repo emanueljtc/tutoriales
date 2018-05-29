@@ -1,0 +1,22 @@
+{
+  "tareas" : [
+    {
+      "title": "Tarea 1",
+      "responsible": "Emanuel",
+      "description": "lorem ipsum",
+      "priority": "low"
+    },
+    {
+      "title": "Tarea 2",
+      "responsible": "Juan",
+      "description": "lorem ipsum",
+      "priority": "medium"
+    },
+    {
+      "title": "Tarea 3",
+      "responsible": "Ana",
+      "description": "lorem ipsum",
+      "priority": "high"
+    }
+  ]
+}
