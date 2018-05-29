@@ -1,55 +1,93 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { tareas } from './tareas.json'
+
+// data
+import { todos } from './todos.json';
+
+// subcomponents
+import TodoForm from './components/TodoForm';
+
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      tareas
+      todos
     }
+    this.handleAddTodo = this.handleAddTodo.bind(this);
   }
+
+  removeTodo(index) {
+    this.setState({
+      todos: this.state.todos.filter((e, i) => {
+        return i !== index
+      })
+    });
+  }
+
+  handleAddTodo(todo) {
+    this.setState({
+      todos: [...this.state.todos, todo]
+    })
+  }
+
   render() {
-    const tasks = this.state.tareas.map((tareas, i) => {
+    const todos = this.state.todos.map((todo, i) => {
       return (
-        <div class="col-md-4">
+        <div className="col-md-4" key={i}>
           <div className="card mt-4">
-            <div className="card-header">
-              <h3>{tareas.title}</h3>
-                <span className="badge badge-pill badge-danger ml-2">
-                  {tareas.priority}
-                </span>
+            <div className="card-title text-center">
+              <h3>{todo.title}</h3>
+              <span className="badge badge-pill badge-danger ml-2">
+                {todo.priority}
+              </span>
             </div>
             <div className="card-body">
-              <p>{tareas.description}</p>
-              <p><mark>{tareas.responsible}</mark></p>
+              {todo.description}
+            </div>
+            <div className="card-footer">
+              <button
+                className="btn btn-danger"
+                onClick={this.removeTodo.bind(this, i)}>
+                Delete
+              </button>
             </div>
           </div>
         </div>
       )
-    })
+    });
+
+    // RETURN THE COMPONENT
     return (
-            <div className="App">
-              <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a href="" className="navbar-brand">
-                  Tareas
-                  <span className="bagde badge-pill badge-light ml-2">
-                      {this.state.tareas.length}
-                  </span>
-                </a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-              </nav>
-              <div className="container">
-                <div className="row mt-4">
-                  { tasks }
-                </div>
-              </div>
-              <img src = { logo } className = "App-logo" alt = "logo" />
+      <div className="App">
+
+        <nav className="navbar navbar-dark bg-dark">
+          <a className="navbar-brand" href="/">
+            Tasks
+            <span className="badge badge-pill badge-light ml-2">
+              {this.state.todos.length}
+            </span>
+          </a>
+        </nav>
+
+        <div className="container">
+          <div className="row mt-4">
+
+            <div className="col-md-4 text-center">
+                <img src={logo} className="App-logo" alt="logo" />
+              <TodoForm onAddTodo={this.handleAddTodo}></TodoForm>
             </div>
-        );
-    }
+
+            <div className="col-md-8">
+              <div className="row">
+                {todos}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
