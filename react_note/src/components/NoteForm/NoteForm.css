@@ -1,0 +1,13 @@
+.NoteForm input[type='text']{
+  padding: 10px;
+}
+.NoteForm button {
+  padding: 10px;
+  color: #fff;
+  background: #019875;
+  border: none;
+}
+
+.NoteForm button:hover {
+  background: #02bab5;
+}
