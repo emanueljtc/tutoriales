@@ -1,5 +1,6 @@
+// encapsulado de funciones 
 let contador = (() => {
-    // Por convencion, a las variables privadas se les antepone un '_' 
+    // Por convencion a las variables privadas se les antepone un '_' 
     let _contador = 0
 
     function incrementar() {
