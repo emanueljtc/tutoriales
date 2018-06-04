@@ -15,4 +15,28 @@
     }
 
     yo.saludar()
+
+    // Caso 2
+    // existe un funcion que recibe un objeto como parametro dentro de ella se le asigna  un metodo al objeto
+    // this en este caso hace referencia al objeto que se le añade el metodo
+
+    let preparandoSaludo = function(obj) {
+        obj.saludar = function() {
+            c(`Hola mi nombre es ${this.nombre}`)
+        }
+    }
+
+    const jhon = {
+            nombre: 'Jhonatan',
+            edad: 28
+        },
+        alvaro = {
+            nombre: 'Alvaro',
+            edad: 38
+        }
+    preparandoSaludo(jhon)
+    preparandoSaludo(alvaro)
+
+    jhon.saludar()
+    alvaro.saludar()
 })(console.log);
