@@ -88,4 +88,42 @@
     )
     perro3.ladrar()
     perro3.comer('puchero')
+
+    // 4- Clases apartir de ES6
+    c('***** Clases apartir de ES6 *****')
+
+    class Dog {
+        constructor(nombre, edad, raza, genero, esterilizado) {
+            //atributos
+            this.nombre = nombre
+            this.edad = edad
+            this.raza = raza
+            this.genero = genero
+            this.esterilizado = esterilizado
+        }
+
+        //metodos
+        ladrar() {
+            c('guaooo guaoo')
+        }
+
+        comer(comida) {
+            c(`${this.nombre} come ${comida}`)
+        }
+
+        aparecer(imagen) {
+            d.write(`<img  src="${imagen}"`)
+        }
+    }
+    const perro4 = new Perro('Coquito', 2, 'Pitbull', 'Macho', false)
+    c(
+        perro4,
+        perro4.nombre,
+        perro4.edad,
+        perro4.raza,
+        perro4.genero,
+        perro4.esterilizado
+    )
+    perro4.ladrar()
+    perro4.comer('puchero')
 })(console.log, document);
