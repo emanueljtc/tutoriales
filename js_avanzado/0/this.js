@@ -39,4 +39,25 @@
 
     jhon.saludar()
     alvaro.saludar()
+        // Caso 3
+        // una funcion que retorna un objeto, que contiene un metodo que invoca el this
+    let Humano = function(nombre, edad, perro) {
+        return {
+            nombre: nombre,
+            edad: edad,
+            saludar: function() {
+                c(`Hola mi nombre es ${this.nombre}`)
+            },
+            perro: {
+                nombre: perro,
+                saludar: function() {
+                    c(`${this.nombre} guauu guaaa!!!!`)
+                }
+            }
+        }
+    }
+
+    const ema = Humano('Emanuel', 27, 'Jetter');
+    ema.saludar()
+    ema.perro.saludar()
 })(console.log);
