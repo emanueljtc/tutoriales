@@ -139,13 +139,31 @@
                 c(`${fw.name} es un framework de ${this.name}`)
             }) */
             // Solucion de ES3
-            let that = this
-            this.frameworks.forEach(function(fw) {
+            /*  let that = this
+             this.frameworks.forEach(function(fw) {
+                     if (fw.name === 'React') {
+                         c(`${fw.name} es una libreria de ${that.name}`)
+                     }
+                     if (fw.name != 'React') {
+                         c(`${fw.name} es un framework de ${that.name}`)
+                     }
+                 }) */
+            //Solucion ES5
+            /*     this.frameworks.forEach(function(fw) {
+                    if (fw.name === 'React') {
+                        c(`${fw.name} es una libreria de ${this.name}`)
+                    }
+                    if (fw.name != 'React') {
+                        c(`${fw.name} es un framework de ${this.name}`)
+                    }
+                }.bind(this)) */
+            // Solucion ES6
+            this.frameworks.forEach(fw => {
                 if (fw.name === 'React') {
-                    c(`${fw.name} es una libreria de ${that.name}`)
+                    c(`${fw.name} es una libreria de ${this.name}`)
                 }
                 if (fw.name != 'React') {
-                    c(`${fw.name} es un framework de ${that.name}`)
+                    c(`${fw.name} es un framework de ${this.name}`)
                 }
             })
         }
