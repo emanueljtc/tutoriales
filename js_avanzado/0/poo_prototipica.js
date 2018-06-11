@@ -109,7 +109,7 @@
 
         this._iterable = () => {
             let message = 'Carrito: \n'
-            for (let key in this_carrito)
+            for (let key in this._carrito)
                 message += `\t${this._carrito[key]} ${key}\n`
 
             return message
