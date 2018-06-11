@@ -100,30 +100,26 @@
     c('*****POO con Constructor*****')
 
     function Carrito(articulo) {
-        let _articulo = articulo,
-            _carrito = {}
+        this._articulo = articulo,
+            this._carrito = {}
 
-        function agregar(articulo, cantidad) {
-            _carrito[articulo] = cantidad
-        }
+        this.agregar = (articulo, cantidad) => this._carrito[articulo] = cantidad
 
-        function quitar(articulo) {
-            delete _carrito[articulo]
-        }
+        this.quitar = (articulo) => delete this._carrito[articulo]
 
-        function _iterable() {
+        this._iterable = () => {
             let message = 'Carrito: \n'
-            for (let key in _carrito)
-                message += `\t${_carrito[key]} ${key}\n`
+            for (let key in this_carrito)
+                message += `\t${this._carrito[key]} ${key}\n`
 
             return message
         }
 
-        function ver(articulo = 'todos') {
+        this.ver = (articulo = 'todos') => {
             return (articulo === 'todos') ?
-                _iterable() :
-                (_carrito.hasOwnProperty(articulo)) ?
-                `${_carrito[articulo]} ${articulo}` :
+                this._iterable() :
+                (this._carrito.hasOwnProperty(articulo)) ?
+                `${this._carrito[articulo]} ${articulo}` :
                 `El articulo ${articulo} no existe en el Carrito`
         }
 
