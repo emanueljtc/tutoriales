@@ -1,84 +1,91 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Roboto");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-; }
 
 body {
-    background: #bcb3bb;
-    padding: 20px;
-}
+  background: #bcb3bb;
+  padding: 20px; }
 
 .content-cabecera {
-    width: 100%;
-    margin-top: 100px;
-    text-align: center;
-}
-
-.content-cabecera .content-logo {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center; }
+  .content-cabecera .content-logo {
     width: 100px;
     height: 100px;
     border-radius: 10%;
     overflow: hidden;
-    margin: auto;
-}
-
-.content-cabecera .content-logo img {
-    width: 90%;
-    height: 90%;
-}
-
-.content-cabecera h1 {
+    margin: auto; }
+    .content-cabecera .content-logo img {
+      width: 90%;
+      height: 90%; }
+  .content-cabecera h1 {
     font-weight: 100;
     color: #fff;
     margin-top: 20px;
-    font-family: "Cabin", sans-serif;
-}
-
-.content-cabecera p {
+    font-family: "Cabin", sans-serif; }
+  .content-cabecera p {
     margin-top: 40px;
-    color: #580055;
-}
-
-.content-cabecera a {
-    color: #580055;
-}
-
+    margin-bottom: 20px;
+    color: #580055; }
+  .content-cabecera a {
+    color: #580055; }
 
 /*Content_One */
-
 main {
-    background: #fff;
-}
+  background: #fff; }
 
 .content_one {
+  width: 100%; }
+  .content_one .img-content_one {
     width: 100%;
-}
+    text-align: center; }
+    .content_one .img-content_one img {
+      width: 300px;
+      height: auto;
+      border-radius: 50%; }
+  .content_one .content_text {
+    width: 100%; }
+    .content_one .content_text h2 {
+      margin-top: 40px;
+      font-weight: 100;
+      text-align: center; }
+    .content_one .content_text hr {
+      width: 100px;
+      height: 3px;
+      margin: auto;
+      margin-top: 20px;
+      border-style: none;
+      background: -webkit-linear-gradient(left, red, blue, black);
+      background: -moz-linear-gradient(left, red, blue, black);
+      background: -o-linear-gradient(left, red, blue, black); }
+    .content_one .content_text p {
+      margin-top: 40px;
+      color: black;
+      letter-spacing: 1px;
+      text-align: center; }
 
-.content_one .img-content_one {
-    width: 100%;
-    text-align: center;
-}
+.button-read {
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  cursor: pointer; }
 
-.content_one .img-content_one img {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.content_one .content_text {
-    width: 100%;
-}
-
-.content_one .content_text h2 {
-    margin-top: 40px;
+/* Content Two */
+.content_two {
+  width: 100%;
+  text-align: center; }
+  .content_two h2 {
     font-weight: 100;
-    text-align: center;
-}
-
-.content_one .content_text hr {
+    margin-top: 20px; }
+  .content_two hr {
     width: 100px;
     height: 3px;
     margin: auto;
@@ -86,24 +93,86 @@ main {
     border-style: none;
     background: -webkit-linear-gradient(left, red, blue, black);
     background: -moz-linear-gradient(left, red, blue, black);
-    background: -o-linear-gradient(left, red, blue, black);
-}
+    background: -o-linear-gradient(left, red, blue, black); }
+  .content_two .content-details {
+    width: 100%; }
+    .content_two .content-details .item-details {
+      width: 400px;
+      margin: auto; }
+    .content_two .content-details .icon-details {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #dddddd;
+      border-radius: 50%;
+      display: flex;
+      margin: auto;
+      margin-top: 40px; }
+      .content_two .content-details .icon-details span {
+        font-size: 80px;
+        border: 1px solid #dddddd;
+        border-radius: 50%;
+        padding: 46px;
+        margin: auto; }
+    .content_two .content-details h4 {
+      font-weight: 100;
+      font-size: 18px;
+      margin-top: 40px; }
+    .content_two .content-details p {
+      font-size: 16px;
+      margin-top: 20px;
+      letter-spacing: 1px;
+      color: black; }
 
-.content_one .content_text p {
-    margin-top: 40px;
-    color: black;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.button-read {
-    width: 200px;
-    padding: 16px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+/* Content tree */
+.content_tree {
+  width: 100%;
+  text-align: center; }
+  .content_tree h1 {
+    font-weight: 100; }
+  .content_tree hr {
+    width: 100px;
+    height: 3px;
     margin: auto;
+    margin-top: 20px;
+    border-style: none;
+    background: -webkit-linear-gradient(left, red, blue, black);
+    background: -moz-linear-gradient(left, red, blue, black);
+    background: -o-linear-gradient(left, red, blue, black); }
+  .content_tree p {
     margin-top: 40px;
-}
-
+    letter-spacing: 1px;
+    color: black; }
+  .content_tree .content-estadisticas {
+    width: 100%;
+    margin-top: 40px; }
+    .content_tree .content-estadisticas .item-estadistica {
+      width: 350px;
+      margin: auto;
+      color: #fff;
+      padding: 40px; }
+      .content_tree .content-estadisticas .item-estadistica span {
+        font-size: 80px;
+        color: #fff; }
+      .content_tree .content-estadisticas .item-estadistica p {
+        color: #fff;
+        margin-top: 0px; }
+      .content_tree .content-estadisticas .item-estadistica h4 {
+        font-weight: 100;
+        margin-top: 20px;
+        font-size: 20px; }
+    .content_tree .content-estadisticas .item1 {
+      background: #efa8b0;
+      border-radius: 10px 10px 0px 0px; }
+    .content_tree .content-estadisticas .item2 {
+      background: #c79cc8; }
+    .content_tree .content-estadisticas .item3 {
+      background: #a89cc8; }
+    .content_tree .content-estadisticas .item4 {
+      background: #9bb2e1; }
+    .content_tree .content-estadisticas .item5 {
+      background: #8cc9f0;
+      border-radius: 0px 0px 10px 10px; }
+  .content_tree .parrafo-content-tree {
+    text-align: justify; }
 
 /*# sourceMappingURL=estilos.css.map */
