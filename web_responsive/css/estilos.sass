@@ -10,6 +10,8 @@ body
   padding: 20px
 .content-cabecera
   width: 100%
+  max-width: 400px
+  margin: auto
   margin-top: 100px
   text-align: center
   .content-logo
@@ -35,8 +37,13 @@ body
     color: $purple
 
 /*Content_One*/
-main 
+main
+  max-width: 1000px
   background: $white
+  padding: 40px
+  margin: auto
+  margin-top: 40px
+  border-radius: 8px
 .content_one
   width: 100%
   .img-content_one
@@ -94,7 +101,8 @@ main
   .content-details
     width: 100%
     .item-details
-      width: 400px
+      width: 100%
+      max-width: 400px
       margin: auto
     .icon-details
       width: 200px
@@ -142,7 +150,8 @@ main
     width: 100%
     margin-top: 40px
     .item-estadistica
-      width: 350px
+      width: 100%
+      max-width: 350px
       margin: auto
       color: $white
       padding: 40px
@@ -170,6 +179,65 @@ main
       border-radius: 0px 0px 10px 10px
   .parrafo-content-tree
     text-align: justify
+  /* content for*/
+.content-for
+  width: 100%
+  text-align: center
+  h1 
+    font-weight: 100
+    margin-top: 20px
+  hr 
+    width: 100px
+    height: 3px
+    margin: auto
+    margin-top: 20px
+    border-style: none
+    background: -webkit-linear-gradient(left, red, blue, black )
+    background: -moz-linear-gradient(left, red, blue, black )
+    background: -o-linear-gradient(left, red, blue, black )
+  p 
+    margin-top: 40px
+    font-size: 20px
+    color: #877d7d
+  .button-content4
+    display: flex
+    justify-content: center
+    margin-top: 40px
+    button
+      width: 200px
+      height: 60px
+      background: $blue-light
+      border-style: none
+      border-radius: 10px
+      color: white
+      font-size: 18px
+      margin: auto
+      cursor: pointer
+      transition: opacity 300ms
+      &:hover
+        opacity: 0.8
+    .leer-content4
+      margin: auto
+/* MEDIA SCREEN */
+@media screen and (min-width: 800px)
 
-
-    
+  .content_one
+    display: flex
+    flex-direction: row-reverse
+    .img-content_one
+      width: 70%
+      img 
+        float: right
+        width: 300px
+        height: 300px
+  .content-details
+    display: flex
+  .content-estadisticas
+    display: flex
+    .item-estadistica
+      span 
+        font-size: 40px !important
+    .item1
+      border-radius: 10px 0px 0px 10px !important
+    .item5
+      border-radius: 0px 10px 10px 0px !important
