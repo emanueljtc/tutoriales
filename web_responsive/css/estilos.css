@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-; }
 
 body {
-  background: #bcb3bb;
+  background: rgba(150, 153, 18, 0.78);
   padding: 20px; }
 
 .content-cabecera {
@@ -51,7 +51,8 @@ main {
     width: 100%;
     text-align: center; }
     .content_one .img-content_one img {
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
       height: auto;
       border-radius: 50%; }
   .content_one .content_text {
@@ -135,6 +136,7 @@ main {
 .content_tree {
   width: 100%;
   text-align: center;
+  margin-top: 40px;
   /* content for */ }
   .content_tree h1 {
     font-weight: 100; }
