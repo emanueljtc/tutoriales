@@ -80,3 +80,39 @@
     libros.agregar('Santa Biblia', 1)
     libros.ver()
 })(console.log);
+((c) => {
+    c('****** Herencia, Polimorfismo******')
+
+    class Telefono {
+        constructor(marca, modelo, numero) {
+            this.marca = marca
+            this.modelo = modelo
+            this._numero = numero
+            this.puedoLlamar = true
+        }
+        llamar() {
+            c('Riiing Riiing!!!!')
+        }
+    }
+
+    class Celular extends Telefono {
+        constructor(marca, modelo, numero) {
+            super(marca, modelo, numero)
+            this.tengoCables = false
+        }
+        vibrar() {
+            c('Usted Recibio un Zumbido Vbrrrr Vbrrrrr!!!')
+        }
+    }
+
+
+    class Smartphone extends Celular {
+        constructor() {
+            super(marca, modelo, numero)
+            this.tengoInternet = true
+        }
+        conectar() {
+            c('Conectado a Internet!!!')
+        }
+    }
+})(console.log)
