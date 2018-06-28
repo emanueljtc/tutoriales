@@ -82,16 +82,34 @@
 })(console.log);
 ((c) => {
     c('****** Herencia, Polimorfismo******')
-
+    let privado = new WeakMap()
     class Telefono {
         constructor(marca, modelo, numero) {
             this.marca = marca
             this.modelo = modelo
-            this._numero = numero
+                // this._numero = numero
+            privado.set(this, { _numero: numero })
             this.puedoLlamar = true
+        }
+        set numero(numero) {
+            //this._numero = numero
+            privado.get(this)._numero = numero
+        }
+
+        get numero() {
+            // return c(this._numero)
+            return c(privado.get(this)._numero)
         }
         llamar() {
             c('Riiing Riiing!!!!')
+        }
+        verInfo() {
+            return c(
+                `${this.constructor.name}\n`,
+                `\tModelo: ${this.modelo}\n`,
+                `\tMarca: ${this.marca}\n`,
+                `\tPuedo Llamar: ${this.puedoLlamar}\n`
+            )
         }
         static queEs() {
             c('el telefono es un dispositivo de telecomunicacion diseñado para transmitir señales acusticas por medio de señales eléctricas')
@@ -99,9 +117,30 @@
     }
 
     Telefono.queEs()
-    let tel = new Telefono('Panasonic', 'KX-TS550', '0412345672')
+    let tel = new Telefono('Panasonic', 'KX-TS550', '04123456727')
     tel.llamar()
-    class Celular extends Telefono {
+    tel.numero
+    tel.numero = '04165615973'
+    tel.numero
+    tel.verInfo()
+
+    //Mixins
+    //En los lenguajes POO, un mixin es una clase que ofrece cierta
+    // funcionalidad para ser heredada por una subclase, pero que no esta
+    // ideada para ser autonona
+    // es una especie de clase abstracta
+    const Operadora = Superclass => class extends Superclass {
+        asignarOperadora(operadora) {
+            return c(`la operadora asignada es ${operadora}`)
+        }
+    }
+
+    const Red = Superclass => class extends Superclass {
+        asignarRed(red) {
+            return c(`la red de datos asignada es ${red}`)
+        }
+    }
+    class Celular extends Operadora(Red(Telefono)) {
         constructor(marca, modelo, numero) {
             super(marca, modelo, numero)
             this.tengoCables = false
@@ -109,11 +148,28 @@
         vibrar() {
             c('Usted Recibio un Zumbido Vbrrrr Vbrrrrr!!!')
         }
+        verInfo() {
+            return c(
+                `${this.constructor.name}\n`,
+                `\tModelo: ${this.modelo}\n`,
+                `\tMarca: ${this.marca}\n`,
+                `\tPuedo Llamar: ${this.puedoLlamar}\n`,
+                `\tTengo Cables: ${this.tengoCables}\n`
+            )
+        }
     }
-
+    let cel = new Celular('Nokia', '5120', '04124634911')
+    cel.verInfo()
+    cel.llamar()
+    cel.vibrar()
+    cel.numero
+    cel.numero = '04262442085'
+    cel.numero
+    cel.asignarRed('2g')
+    cel.asignarOperadora('movilnet')
 
     class Smartphone extends Celular {
-        constructor() {
+        constructor(marca, modelo, numero) {
             super(marca, modelo, numero)
             this.tengoInternet = true
         }
@@ -121,4 +177,12 @@
             c('Conectado a Internet!!!')
         }
     }
+    let sm = new Smartphone('Motorola', 'G4', '0412675456')
+    sm.verInfo()
+    sm.llamar()
+    sm.vibrar()
+    sm.conectar()
+    sm.numero
+    sm.asignarRed('4g')
+    sm.asignarOperadora('Digitel')
 })(console.log)
