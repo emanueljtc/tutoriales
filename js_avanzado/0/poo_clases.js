@@ -93,8 +93,14 @@
         llamar() {
             c('Riiing Riiing!!!!')
         }
+        static queEs() {
+            c('el telefono es un dispositivo de telecomunicacion diseñado para transmitir señales acusticas por medio de señales eléctricas')
+        }
     }
 
+    Telefono.queEs()
+    let tel = new Telefono('Panasonic', 'KX-TS550', '0412345672')
+    tel.llamar()
     class Celular extends Telefono {
         constructor(marca, modelo, numero) {
             super(marca, modelo, numero)
