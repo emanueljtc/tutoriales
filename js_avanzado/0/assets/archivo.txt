@@ -1,1 +1,4 @@
-Hola mi pana yo soy un archivo de texto plano menol
+Hola
+soy un archivo
+de texto plano 
+:P
