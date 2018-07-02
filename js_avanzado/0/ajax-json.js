@@ -6,7 +6,7 @@
     ajax.addEventListener('load', e => {
         let moviesInfo,
             moviesTemplate = ''
-        if (ajax.status >= 200 && ajax < 400) {
+        if (ajax.status >= 200 && ajax.status < 400) {
             moviesInfo = j.parse(ajax.responseText)
             c(moviesInfo)
 
