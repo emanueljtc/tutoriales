@@ -15,7 +15,6 @@ $res = "
     <li>Comentarios: $comentarios</li>
   </ul>
 ";
-
 //mail()
 
 echo $res;

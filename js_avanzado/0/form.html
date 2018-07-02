@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Formulario con Ajax</title>
+</head>
+
+<body>
+    <form>
+        <legend>Envianos tus comentario</legend>
+        <input type="text" name="nombre" title="Tu nombre" placeholder="Escribe tu nombre" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+" autofocus required><br>
+        <input type="email" name="email" title="Tu email" placeholder="Escribe tu email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required><br>
+        <input type="text" name="asunto" title="Asunto a tratar" placeholder="Asunto a tratar" required><br>
+        <textarea name="comentarios" title="Tus comentarios" placeholder="Escribe tus comentarios" cols="50" rows="5" required></textarea><br>
+        <div class="preload  hidden"><i class="fa  fa-refresh  fa-spin  fa-5x"></i></div>
+        <div class="message  hidden"></div>
+        <input type="submit" value="enviar">
+    </form>
+    <script src="ajax_form.js"></script>
+</body>
+
+</html>
