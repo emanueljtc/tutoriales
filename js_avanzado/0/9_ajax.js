@@ -6,7 +6,7 @@
         preload = d.querySelector('#preload'),
         country = d.querySelector('#country'),
         menu = d.querySelector('.menu')
-        // fUncion
+        // funcion country
     function countryInfo() {
         preload.innerHTML = '<i class="fa fa-refresh fa-spin fa-5x"></i>'
         if (ajax.readyState === READY_STATE_COMPLETE && ajax.status === OK) {
