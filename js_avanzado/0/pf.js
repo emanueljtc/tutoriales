@@ -72,18 +72,60 @@
     c('*****Programacion Funcional*****')
         //Funcion recursiva para obtener el factorial de un numero
         //(n+! = sumatoria de todos los numeros naturales desde 1 hasta n)
+    const factorialImperativo = n => {
+        let f = 1
+        for (let i = 1; i <= n; i++)
+            f = f * i
+        return f
+    }
+    const factorialDeclaritivo = n => {
+        return n === 0 ?
+            1 :
+            n * factorialDeclaritivo(n - 1)
+    }
+    c('factorial', factorialImperativo(5), factorialDeclaritivo(5))
+        //Funcion recursiva para obtener la suma factorial de un numero
+        //(n+! = sumatoria de todos los numeros naturales desde 1 hasta n)
+    const sumaFactorial = n => {
+        return n === 1 ?
+            1 :
+            n + sumaFactorial(n - 1)
+    }
 
-    //Funcion recursiva para obtener la suma factorial de un numero
-    //(n+! = sumatoria de todos los numeros naturales desde 1 hasta n)
+    c(
+            'factorial', sumaFactorial(5), sumaFactorial(10)
+        )
+        //funcion recursiva para calcular la potencia de un numero b elevado al exponente e
+        //(b elevado a e = se obtine como el producto de b con sigo e veces)
+    const pow = (b, e) => {
+        return e < 2 ?
+            b :
+            b * pow(b, e - 1)
+    }
+    c('Potencia', pow(2, 6), pow(3, 6), Math.pow(3, 6))
+        //funcion para determinar si un numero es par o impar sin el uso del operador modulo
+    const cal = (n) => {
+        return n === 0 ?
+            n :
+            n / cal(n / 2)
 
-    //funcion recursiva para calcular la potencia de un numero b elevado al exponente e
-    //(b elevado a e = se obtine como el producto de b con sigo e veces)
-
-    //funcion para determinar si un numero es par o impar sin el uso del operador modulo
-
-    //Funcion recursiva que sume los digitos de un nùmero
-    //pe 125 = 1 + 2 + 5 = 8
+    }
+    c('cal', cal(2))
+        //Funcion recursiva que sume los digitos de un nùmero
+        //pe 125 = 1 + 2 + 5 = 8
 
     //Funcion recursiva para determinar si un elemento esta contenido dentro de un vector
-
+    const existeEnVectorAux = (vector, elemento, posicion) => {
+        return posicion > vector.length - 1 ?
+            false :
+            (vector[posicion] === elemento) ?
+            true :
+            existeEnVectorAux(vector, elemento, posicion + 1)
+    }
+    const existeEnVector = (vector, elemento) => {
+        return existeEnVectorAux(vector, elemento, 0)
+    }
+    c('Elemento dentro de Vector',
+        existeEnVector([1, 2, 3, 4, 5], 4),
+        existeEnVector([1, 2, 3, 4, 5], 6))
 })(console.log)
