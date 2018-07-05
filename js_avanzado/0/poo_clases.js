@@ -186,3 +186,6 @@
     sm.asignarRed('4g')
     sm.asignarOperadora('Digitel')
 })(console.log)
+((c) => {
+    c('console log')
+})(console.log)
