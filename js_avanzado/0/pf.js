@@ -104,13 +104,27 @@
     }
     c('Potencia', pow(2, 6), pow(3, 6), Math.pow(3, 6))
         //funcion para determinar si un numero es par o impar sin el uso del operador modulo
-    const cal = (n) => {
+    const even = n => {
         return n === 0 ?
-            n :
-            n / cal(n / 2)
-
+            true :
+            n === 1 ?
+            false :
+            odd(n - 1)
     }
-    c('cal', cal(2))
+
+    const odd = n => {
+        return n === 0 ?
+            false :
+            n === 1 ?
+            true :
+            even(n - 1)
+    }
+
+    c(
+            'Numeros Pares e Impares',
+            5, even(5), odd(5),
+            6, even(6), odd(6)
+        )
         //Funcion recursiva que sume los digitos de un nùmero
         //pe 125 = 1 + 2 + 5 = 8
 

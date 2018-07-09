@@ -2,8 +2,8 @@
 ((c) => {
     //1. Asignacion Implicita: 
     //Caso 1
-    //this esta siendo invocado dentro de un metodo
-    //this, hace referencia al objeto que contiene  el metodo donde se invoca
+    // this esta siendo invocado dentro de un metodo
+    // this, hace referencia al objeto que contiene  el metodo donde se invoca
     c('******* Asignacion de This implicita *******')
 
     let yo = {
@@ -128,11 +128,16 @@
     const lenguaje = {
         name: 'Javascript',
         version: 6,
-        frameworks: [
-            { name: 'Angular', url: 'https://angular.io/' },
-            { name: 'React', url: 'https://facebook.github.io/react' },
-            { name: 'Vue.js', url: 'https://vuejs.org/' }
-        ],
+        frameworks: [{
+            name: 'Angular',
+            url: 'https://angular.io/'
+        }, {
+            name: 'React',
+            url: 'https://facebook.github.io/react'
+        }, {
+            name: 'Vue.js',
+            url: 'https://vuejs.org/'
+        }],
         nombrar: function() {
             // El problema de this en javascript
             /* this.frameworks.forEach(function(fw) {
