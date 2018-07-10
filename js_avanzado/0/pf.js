@@ -127,8 +127,21 @@
         )
         //Funcion recursiva que sume los digitos de un nùmero
         //pe 125 = 1 + 2 + 5 = 8
+    const sumaDigitos = n => {
+        return n < 10 ?
+            n :
+            n % 10 + sumaDigitos(Math.floor(n / 10))
+    }
 
-    //Funcion recursiva para determinar si un elemento esta contenido dentro de un vector
+    c(
+            'Suma de Digitos',
+            sumaDigitos(5),
+            sumaDigitos(25),
+            sumaDigitos(125),
+            sumaDigitos(3125)
+
+        )
+        //Funcion recursiva para determinar si un elemento esta contenido dentro de un vector
     const existeEnVectorAux = (vector, elemento, posicion) => {
         return posicion > vector.length - 1 ?
             false :
@@ -140,6 +153,30 @@
         return existeEnVectorAux(vector, elemento, 0)
     }
     c('Elemento dentro de Vector',
-        existeEnVector([1, 2, 3, 4, 5], 4),
-        existeEnVector([1, 2, 3, 4, 5], 6))
+            existeEnVector([1, 2, 3, 4, 5], 4),
+            existeEnVector([1, 2, 3, 4, 5], 6))
+        // numero repetido en vector
+    const repetidoEnVectorAux = (vector, posicion) => {
+        return posicion > vector.length - 1 ?
+            false
+            /* 
+             Cortocircuito OR - cuando el valor de la izquierda en la expresion
+             siempre pueda validar a true, es el valor que se encargara por defecto
+
+             Cortocircuito AND - cuando el valor de la izquierda en la expresion siempre
+             pueda validar a false, es el valor que se encargara por defecto
+            */
+            :
+            existeEnVectorAux(vector, vector[posicion], posicion + 1) || repetidoEnVectorAux(vector, posicion + 1)
+    }
+    const repetidoEnVector = vector => {
+        return repetidoEnVectorAux(vector, 0)
+    }
+    c(
+        'Numero Repetido en Vector',
+        repetidoEnVector([1, 2, 3, 4, 5, 6]),
+        repetidoEnVector([1, 2, 3, 4, 5, 3]),
+
+    )
+
 })(console.log)
