@@ -16,7 +16,7 @@
     let users = [],
         pub = Rx.Observable.create(user => {
             setInterval(() => {
-                c('Enviando información...')
+                c('Enviando    información...')
                 user.next(getUsers())
                 user.next(getUsers())
                 user.next(getUsers())
