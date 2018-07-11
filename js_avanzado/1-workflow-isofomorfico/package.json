@@ -9,6 +9,7 @@
   "author": "Emanuel Torres C <emanueljtc@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "ack-reload": "^2.0.12",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "node-sass-middleware": "^0.11.0",
