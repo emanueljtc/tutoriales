@@ -1,14 +1,17 @@
-$bg-color: rgb(137, 147, 179);
+$bg-color: rgb(126, 221, 2);
 html {
     font: {
         family: sanserif;
-        size: 18px;
+        size: 16px;
     }
     background-color: $bg-color;
-    display: grid;
+    display: flex;
 }
 
-.logo {
-    width: 200px;
-    height: 200px;
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }

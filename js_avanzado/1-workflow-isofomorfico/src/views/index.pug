@@ -3,7 +3,6 @@ block metatags
   title= title
   meta(name='description', content=description)
 block content
-  main.App
-    h1= title
-    p= description
-    img(src="./img/logo.png" class="logo")
+  main.ToDo
+    input#task.Task(type="text", placeholder="Tarea...", spellcheck)
+    ul#list.List
