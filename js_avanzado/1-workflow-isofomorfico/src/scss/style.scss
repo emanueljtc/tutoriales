@@ -1,8 +1,14 @@
-$bg-color: steelblue;
+$bg-color: rgb(137, 147, 179);
 html {
     font: {
         family: sanserif;
         size: 18px;
     }
     background-color: $bg-color;
+    display: grid;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
 }

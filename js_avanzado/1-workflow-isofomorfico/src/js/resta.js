@@ -1,3 +1,3 @@
-export function resta(a, b) {
+export default function resta(a, b) {
     return a - b
 }
