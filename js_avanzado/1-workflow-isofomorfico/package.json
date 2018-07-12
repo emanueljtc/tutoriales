@@ -13,10 +13,13 @@
         "ack-reload": "^2.0.12",
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
+        "babelify": "^8.0.0",
+        "browserify": "^16.2.2",
         "node-sass-middleware": "^0.11.0",
         "nodemon": "^1.18.1",
         "pug": "^2.0.3",
-        "serve-favicon": "^2.5.0"
+        "serve-favicon": "^2.5.0",
+        "watchify": "^3.11.0"
     },
     "dependencies": {
         "express": "^4.16.3"
