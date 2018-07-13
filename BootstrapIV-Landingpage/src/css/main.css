@@ -11,7 +11,7 @@
   min-height: 500px; }
   .main-header .background-overlay {
     position: absolute;
-    background: rgba(48, 51, 107, 0.7);
+    background: rgba(48, 51, 107, 0.6);
     top: 0;
     left: 0;
     width: 100%;
