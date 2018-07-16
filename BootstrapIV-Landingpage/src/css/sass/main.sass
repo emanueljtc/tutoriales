@@ -10,7 +10,7 @@
     background-size: cover
     min-height: 500px
     .background-overlay
-        background: rgba(48, 51, 107,.6)
+        background: rgba(0, 0, 0,.6)
         top: 0
         left: 0
         width: 100%
@@ -21,7 +21,18 @@
             margin-left: 16%
 .form-control, .btn
     border-radius: 0
+.card 
+    & :hover
+        background-color: rgba(0, 0 ,0, 0.15)
+        transform: rotateY(0deg) scale(1)
+        transition: all 1s
 .about, .bg-light
     background-color: rgba(158, 158, 158, 0.21) !important
 .team, footer
     background: #30336b
+/*MEDIA QUERYS*/
+@media (max-width: 900px)
+    .card
+        margin-top: 5px !important
+    .logo-contact
+        display: none
