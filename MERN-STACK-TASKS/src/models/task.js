@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://localhost/mern-tasks';
-mongoose.conect(URI)
-    .then(db => console.log('DB IS CONNECT'))
-    .catch(err => console.log(err));
+const { Schema } = mongoose;
 
-module.exports = mongoose;
+const TaskSchema = new Schema({
+    title: { type: String, required: true },
+    description: { type: String, required: true }
+});
+
+module.exports = mongoose.model('Task', TaskSchema);
