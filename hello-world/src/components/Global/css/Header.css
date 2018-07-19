@@ -24,3 +24,12 @@
   display: inline-block;
   padding-right: 10px
 }
+
+.Menu li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.Menu li a:hover {
+  color: #eee;
+}
