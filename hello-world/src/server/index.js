@@ -11,16 +11,22 @@ import webpackConfig from '../../webpack.config.babel';
 
 // Server Port
 const port = 3000;
-
+// Enviroment
+const isDevelopment = process.env.NODE_ENV !== 'production';
 // Express app
 const app = express();
+
+// Public
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Webpack Compiler
 const webpackCompiler = webpack(webpackConfig);
 
 // Webpack Middleware
-app.use(webpackDevMiddleware(webpackCompiler));
-app.use(webpackHotMiddleware(webpackCompiler));
+if (isDevelopment) {
+  app.use(webpackDevMiddleware(webpackCompiler));
+  app.use(webpackHotMiddleware(webpackCompiler));
+}
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
