@@ -10,5 +10,9 @@ export default [
   {
     title: 'Contactanos',
     url: '/contact'
+  },
+  {
+    title: 'Library',
+    url: '/library'
   }
 ]

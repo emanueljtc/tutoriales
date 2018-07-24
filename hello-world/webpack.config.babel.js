@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import path from 'path';
 import ChunksPlugin from 'webpack-split-chunks';
 
-// Enviroment
+// Environment
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 // Paths
@@ -13,21 +13,20 @@ const PATHS = {
   src: path.join(__dirname, 'src')
 };
 
-const getDevTool = () => 'cheap-module-eval-source-map';
+const getDevtool = () => 'cheap-module-eval-source-map';
 const getEntry = () => {
-  const entry = [
-    PATHS.index
-  ];
-  if(isDevelopment) {
+  const entry = [PATHS.index];
+
+  if (isDevelopment) {
     entry.push('webpack-hot-middleware/client?reload=true');
   }
 
   return entry;
 };
 const getOutput = () => ({
-   path: PATHS.build,
-   publicPath: '/',
-   filename: '[name].bundle.js'
+  path: PATHS.build,
+  publicPath: '/',
+  filename: '[name].bundle.js'
 });
 const getPlugins = () => {
   const plugins = [
@@ -36,12 +35,13 @@ const getPlugins = () => {
       test: /node_modules/
     })
   ];
-  if(isDevelopment){
+
+  if (isDevelopment) {
     plugins.push(
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoEmitOnErrorsPlugin()
     );
-  }else {
+  } else {
     plugins.push(
       new webpack.optimize.UglifyJsPlugin({
         compress: {
@@ -51,11 +51,11 @@ const getPlugins = () => {
       })
     );
   }
+
   return plugins;
 };
 const getLoaders = () => ({
-  loaders:
-  [
+  loaders: [
     {
       test: /\.js?$/,
       loaders: ['babel-loader'],
@@ -71,9 +71,10 @@ const getLoaders = () => ({
     }
   ]
 });
+
 export default {
-  devtool : getDevTool(),
-  entry : getEntry(),
+  devtool: getDevtool(),
+  entry: getEntry(),
   output: getOutput(),
   plugins: getPlugins(),
   module: getLoaders()
