@@ -108,3 +108,9 @@ button {
 .orbit-image {
     height: 379px;
 }
+
+#tickets-container {
+    padding: 1em 0;
+    background-color: #f6e15f;
+    color: #161742;
+}
