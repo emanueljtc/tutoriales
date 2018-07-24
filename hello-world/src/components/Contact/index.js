@@ -5,7 +5,7 @@ class Contact extends  Component {
   render () {
     return (
       <div className="Contact">
-        <h1>Contacto Pages</h1>
+        <h1>Pagina de Contacto</h1>
       </div>
     );
   }
