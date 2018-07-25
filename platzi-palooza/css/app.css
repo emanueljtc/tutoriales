@@ -8,7 +8,8 @@ h3,
 h4,
 h5,
 h6,
-button {
+button,
+input[type="submit"] {
     font-family: 'Bree Serif', serif;
 }
 
@@ -138,6 +139,25 @@ button {
 
 .pricing-table a.button {
     font-family: 'Bree Serif', serif;
+}
+
+#suscribete-container {
+    background-color: #ee3f54;
+    color: white;
+    padding: 1em 0;
+}
+
+#suscribete-container h4 small {
+    color: #ffcddc;
+}
+
+#suscribete-container .error-container {
+    font-family: 'Bree Serif', serif;
+}
+
+.is-invalid-input:not(:focus) {
+    background-color: rgb(255, 228, 228);
+    border-color: rgb(255, 228, 228);
 }
 
 #info-container {
