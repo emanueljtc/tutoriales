@@ -30,6 +30,7 @@ input[type="submit"] {
 #menu-container li a {
     color: white;
     font-family: 'Bree Serif', serif;
+    text-transform: uppercase;
 }
 
 #submenu-container {

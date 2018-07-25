@@ -14,285 +14,314 @@
 </head>
 
 <body>
-    <!-- Social -->
 
-    <section id="social-container">
-        <div class="row align-center text-center">
-            <div class="small-1 column">
-                <a href="#" target="_blank">
-                    <i class="fi-social-facebook"></i>
-                </a>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div id="offCanvas" class="off-canvas position-left" data-off-canvas>
+                <nav data-magellan>
+                    <ul class="vertical menu">
+                        <li><a href="#tickets-container">Tickets</a></li>
+                        <li>
+                            <a href="#lineup-container">Lineup</a>
+                            <ul id="submenu-container" class="menu">
+                                <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                                <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sábado</a></li>
+                                <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#info-container">Info</a></li>
+                        <li><a href="#suscribete-container">Subscribete</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="column small-1">
-                <a href="#" target="_blank">
-                    <i class="fi-social-twitter"></i>
-                </a>
-            </div>
-            <div class="column small-1">
-                <a href="#" target="_blank">
-                    <i class="fi-social-instagram"></i>
-                </a>
+            <div class="off-canvas-content" data-off-canvas-content>
+                <!-- Social -->
+
+                <section id="social-container">
+                    <div class="row align-center text-center">
+                        <div class="small-1 column">
+                            <a href="#" target="_blank">
+                                <i class="fi-social-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="column small-1">
+                            <a href="#" target="_blank">
+                                <i class="fi-social-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="column small-1">
+                            <a href="#" target="_blank">
+                                <i class="fi-social-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- /Social-->
+
+                <!-- Logo -->
+
+                <section id="logo-container">
+                    <div class="callout text-center">
+                        <h1>PlatziPalooza</h1>
+                    </div>
+                </section>
+
+                <!-- /Logo -->
+
+                <!-- MENU -->
+                <section id="scrollSticky" data-sticky-container>
+                    <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
+                        <nav id="menu-container" data-magellan>
+                            <ul class="menu align-spaced show-for-small-only">
+                                <li><a href="#offCanvas" data-toggle="offCanvas">Menu</a></li>
+                            </ul>
+                            <ul class="menu dropdown align-spaced show-for-medium" data-dropdown-menu>
+                                <li><a href="#tickets-container">Tickets</a></li>
+                                <li>
+                                    <a href="#lineup-container">Lineup</a>
+                                    <ul id="submenu-container" class="menu">
+                                        <li><a data-toggle-dia="panelViernes" href="#lineup-container">Viernes</a></li>
+                                        <li><a data-toggle-dia="panelSabado" href="#lineup-container">Sábado</a></li>
+                                        <li><a data-toggle-dia="panelDomingo" href="#lineup-container">Domingo</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#info-container">Info</a></li>
+                                <li><a href="#suscribete-container">Subscribete</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- /MENU -->
+
+                <!-- Tickets -->
+
+                <section id="tickets-action">
+                    <div class="callout large text-center">
+                        <a href="#">
+                            <button class="large hollow button">Comprar Boletos</button>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- /Tickets -->
+
+                <!-- LineUp -->
+
+                <section id="lineup-container" data-magellan-target="lineup-container">
+                    <h3 class="text-center">Lineup</h3>
+                    <ul class="tabs text-center" data-tabs id="lineup-tabs">
+                        <li class="tabs-title is-active">
+                            <a href="#panelViernes">Viernes</a>
+                        </li>
+                        <li class="tabs-title">
+                            <a href="#panelSabado">Sabado</a>
+                        </li>
+                        <li class="tabs-title">
+                            <a href="#panelDomingo">Domingo</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-content" data-tabs-content="lineup-tabs">
+                        <div class="tabs-panel is-active" id="panelViernes">
+                            <div class="row" data-equalizer data-equalize-on="small">
+
+                                <div class="small-12 medium-6 column">
+                                    <div class="orbit-container">
+                                        <div class="orbit-slide">
+                                            <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
+                                            <figcaption class="orbit-caption">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column">
+                                    <div class="orbit-container">
+                                        <div class="orbit-slide">
+                                            <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
+                                            <figcaption class="orbit-caption">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column">
+                                    <div class="orbit-container">
+                                        <div class="orbit-slide">
+                                            <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
+                                            <figcaption class="orbit-caption">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column">
+                                    <div class="orbit-container">
+                                        <div class="orbit-slide">
+                                            <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
+                                            <figcaption class="orbit-caption">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-panel" id="panelSabado">
+                            <div class="row" data-equalizer data-equalize-on="small">
+
+                                <div class=" small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Funky</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/redimi2.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Funky</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">funky</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tabs-panel " id="panelDomingo">
+                            <div class="row " data-equalizer data-equalize-on="small">
+
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Vico C</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Vico C</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Vico C</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-6 column ">
+                                    <div class="orbit-container ">
+                                        <div class="orbit-slide ">
+                                            <img class="orbit-image " data-equalizer-watch src="img/redimi2.jpg " alt="Redimi2 ">
+                                            <figcaption class="orbit-caption ">Redimi2</figcaption>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- /LineUp -->
+                <!-- Compra de Boletos -->
+
+                <section id="tickets-container" data-magellan-target="tickets-container">
+                    <h3 class="text-center ">Adquiere Tu Boleto</h3>
+                    <div class="row " data-equalizer data-equalize-on="small ">
+                        <div class="column small-10 small-offset-1 medium-6 medium-offset-3 ">
+                            <ul class="pricing-table no-bullet text-center ">
+                                <li class="title ">Platino</li>
+                                <li class="price ">25.000.000 Bf</li>
+                                <li class="description ">Acceso Todos los Dias</li>
+                                <li>2 Bebidas Cada Dia</li>
+                                <li>Estacionamiento Cada Dia</li>
+                                <li>Participa de un sorteo</li>
+                                <li><a class="button " href="# ">Comprar Platino</a></li>
+                            </ul>
+                        </div>
+                        <div class="column small-6 medium-4 medium-offset-2 ">
+                            <ul class="pricing-table no-bullet text-center ">
+                                <li class="title ">Gold</li>
+                                <li class="price ">20.000.000 Bf</li>
+                                <li class="description ">Acceso Todos los Dias</li>
+                                <li data-equalizer-watch>1 bebida increible incluida para ti cada dia</li>
+                                <li>-</li>
+                                <li>-</li>
+                                <li><a class="button " href="# ">Comprar Gold</a></li>
+                            </ul>
+                        </div>
+                        <div class="column small-6 medium-4 ">
+                            <ul class="pricing-table no-bullet text-center ">
+                                <li class="title ">Silver</li>
+                                <li class="price ">15.000.000 Bf</li>
+                                <li class="description ">Acceso Todos los Dias</li>
+                                <li data-equalizer-watch>-</li>
+                                <li>-</li>
+                                <li>-</li>
+                                <li><a class="button " href="# ">Comprar Silver</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- /Compra de Boletos -->
+
+                <!-- Suscribete -->
+
+                <section id="suscribete-container" data-magellan-target="suscribete-container">
+                    <h3 class="text-center">Suscríbete</h3>
+                    <h3 class="text-center"><small> Y recibe las últimas novedades 
+                    del concierto</small></h3>
+                    <form action="" method="" novalidate data-abide>
+                        <div data-abide-error class="row columns small-12 medium-6 text-center error-container" style="display: none;">
+                            <p><i class="fi-alert"></i> Ingresó un correo electrónico no valido</p>
+                        </div>
+                        <div class="row columns small-12 medium-6">
+                            <div class="input-group">
+                                <span class="input-group-label"><i class="fi-mail"></i></span>
+                                <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
+                                <div class="input-group-button">
+                                    <input type="submit" class="button" value="Suscribirse!">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- /Suscribete -->
+
+                <!-- Información -->
+
+                <section id="info-container" data-magellan-target="info-container">
+                    <h3 class="text-center">Información</h3>
+                    <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]"></div>
+
+                </section>
+
+                <!-- /Información -->
+
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- /Social-->
-
-    <!-- Logo -->
-
-    <section id="logo-container">
-        <div class="callout text-center">
-            <h1>PlatziPalooza</h1>
-        </div>
-    </section>
-
-    <!-- /Logo -->
-
-    <!-- MENU -->
-    <section id="scrollSticky" data-sticky-container>
-        <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky">
-            <nav id="menu-container" data-magellan>
-                <ul class="menu dropdown align-spaced" data-dropdown-menu>
-                    <li><a href="#tickets-container">Tickets</a></li>
-                    <li>
-                        <a href="#lineup-container">Lineup</a>
-                        <ul id="submenu-container" class="menu">
-                            <li><a data-toggle-dia="panelViernes" href="#">Viernes</a></li>
-                            <li><a data-toggle-dia="panelSabado" href="#">Sábado</a></li>
-                            <li><a data-toggle-dia="panelDomingo" href="#">Domingo</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#info-container">Info</a></li>
-                    <li><a href="#suscribete-container">Subscribete</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>
-
-    <!-- /MENU -->
-
-    <!-- Tickets -->
-
-    <section id="tickets-action">
-        <div class="callout large text-center">
-            <a href="#">
-                <button class="large hollow button">Comprar Boletos</button>
-            </a>
-        </div>
-    </section>
-
-    <!-- /Tickets -->
-
-    <!-- LineUp -->
-
-    <section id="lineup-container" data-magellan-target="lineup-container">
-        <h3 class="text-center">Lineup</h3>
-        <ul class="tabs text-center" data-tabs id="lineup-tabs">
-            <li class="tabs-title is-active">
-                <a href="#panelViernes">Viernes</a>
-            </li>
-            <li class="tabs-title">
-                <a href="#panelSabado">Sabado</a>
-            </li>
-            <li class="tabs-title">
-                <a href="#panelDomingo">Domingo</a>
-            </li>
-        </ul>
-        <div class="tabs-content" data-tabs-content="lineup-tabs">
-            <div class="tabs-panel is-active" id="panelViernes">
-                <div class="row" data-equalizer data-equalize-on="small">
-
-                    <div class="small-12 medium-6 column">
-                        <div class="orbit-container">
-                            <div class="orbit-slide">
-                                <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
-                                <figcaption class="orbit-caption">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column">
-                        <div class="orbit-container">
-                            <div class="orbit-slide">
-                                <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
-                                <figcaption class="orbit-caption">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column">
-                        <div class="orbit-container">
-                            <div class="orbit-slide">
-                                <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
-                                <figcaption class="orbit-caption">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column">
-                        <div class="orbit-container">
-                            <div class="orbit-slide">
-                                <img class="orbit-image" data-equalizer-watch src="img/redimi2.jpg" alt="Redimi2">
-                                <figcaption class="orbit-caption">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="tabs-panel" id="panelSabado">
-                <div class="row" data-equalizer data-equalize-on="small">
-
-                    <div class=" small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Funky</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/redimi2.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Funky</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/funky.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">funky</figcaption>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="tabs-panel " id="panelDomingo">
-                <div class="row " data-equalizer data-equalize-on="small">
-
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Vico C</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Vico C</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/vico.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Vico C</figcaption>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="small-12 medium-6 column ">
-                        <div class="orbit-container ">
-                            <div class="orbit-slide ">
-                                <img class="orbit-image " data-equalizer-watch src="img/redimi2.jpg " alt="Redimi2 ">
-                                <figcaption class="orbit-caption ">Redimi2</figcaption>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- /LineUp -->
-    <!-- Compra de Boletos -->
-
-    <section id="tickets-container" data-magellan-target="tickets-container">
-        <h3 class="text-center ">Adquiere Tu Boleto</h3>
-        <div class="row " data-equalizer data-equalize-on="small ">
-            <div class="column small-10 small-offset-1 medium-6 medium-offset-3 ">
-                <ul class="pricing-table no-bullet text-center ">
-                    <li class="title ">Platino</li>
-                    <li class="price ">25.000.000 Bf</li>
-                    <li class="description ">Acceso Todos los Dias</li>
-                    <li>2 Bebidas Cada Dia</li>
-                    <li>Estacionamiento Cada Dia</li>
-                    <li>Participa de un sorteo</li>
-                    <li><a class="button " href="# ">Comprar Platino</a></li>
-                </ul>
-            </div>
-            <div class="column small-6 medium-4 medium-offset-2 ">
-                <ul class="pricing-table no-bullet text-center ">
-                    <li class="title ">Gold</li>
-                    <li class="price ">20.000.000 Bf</li>
-                    <li class="description ">Acceso Todos los Dias</li>
-                    <li data-equalizer-watch>1 bebida increible incluida para ti cada dia</li>
-                    <li>-</li>
-                    <li>-</li>
-                    <li><a class="button " href="# ">Comprar Gold</a></li>
-                </ul>
-            </div>
-            <div class="column small-6 medium-4 ">
-                <ul class="pricing-table no-bullet text-center ">
-                    <li class="title ">Silver</li>
-                    <li class="price ">15.000.000 Bf</li>
-                    <li class="description ">Acceso Todos los Dias</li>
-                    <li data-equalizer-watch>-</li>
-                    <li>-</li>
-                    <li>-</li>
-                    <li><a class="button " href="# ">Comprar Silver</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- /Compra de Boletos -->
-
-    <!-- Suscribete -->
-
-    <section id="suscribete-container" data-magellan-target="suscribete-container">
-        <h3 class="text-center">Suscríbete</h3>
-        <h3 class="text-center"><small> Y recibe las últimas novedades 
-                del concierto</small></h3>
-        <form action="" method="" novalidate data-abide>
-            <div data-abide-error class="row columns small-12 medium-6 text-center error-container" style="display: none;">
-                <p><i class="fi-alert"></i> Ingresó un correo electrónico no valido</p>
-            </div>
-            <div class="row columns small-12 medium-6">
-                <div class="input-group">
-                    <span class="input-group-label"><i class="fi-mail"></i></span>
-                    <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
-                    <div class="input-group-button">
-                        <input type="submit" class="button" value="Suscribirse!">
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
-
-    <!-- /Suscribete -->
-
-    <!-- Información -->
-
-    <section id="info-container" data-magellan-target="info-container">
-        <h3 class="text-center">Información</h3>
-        <div class="info-map" data-interchange="[assets/map-small.html, small], [assets/map.html, medium]"></div>
-
-    </section>
-
-    <!-- /Información -->
 
     <script src="js/vendor/jquery.js "></script>
     <script src="js/vendor/what-input.js "></script>
