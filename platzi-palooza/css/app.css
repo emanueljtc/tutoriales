@@ -145,3 +145,7 @@ button {
     color: white;
     padding: 1em 0;
 }
+
+#info-container .info-map iframe {
+    width: 100%
+}
