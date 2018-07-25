@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Montserrat');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#header-container {
+    background-color: #99c84a;
+    color: white;
+}
+
+#header-container .container h1 {
+    font-family: 'Do Hyeon', sans-serif;
+}
