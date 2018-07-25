@@ -1,5 +1,5 @@
 body {
-    background-color: #ee3f54;
+    background-color: black;
 }
 
 h1,
@@ -54,6 +54,21 @@ input[type="submit"] {
 .data-sticky {
     width: 100%;
     z-index: 100;
+}
+
+#offCanvas,
+#offCanvas li a {
+    background-color: black;
+    color: white;
+    font-family: 'Bree Serif', serif;
+}
+
+.is-drilldown-submenu-parent>a::after {
+    border-color: transparent transparent transparent #ffffffc2;
+}
+
+.js-drilldown-back>a::before {
+    border-color: transparent #ffffffc2 transparent transparent;
 }
 
 #tickets-action .callout {

@@ -5,3 +5,8 @@ $('[data-toggle-dia]').click(function(ev) {
     console.log(panel)
     $('lineup-tabs').foundation('selectTab', panel);
 })
+
+const $offCanvas = $('#offCanvas')
+$offCanvas.find('li').click((ev) => {
+    $offCanvas.foundation('close')
+})
