@@ -104,13 +104,38 @@ button {
     text-align: right
 }
 
-.orbit-slide,
+
+/* .orbit-slide,
 .orbit-image {
     height: 379px;
-}
+} */
 
 #tickets-container {
     padding: 1em 0;
     background-color: #f6e15f;
     color: #161742;
+}
+
+.pricing-table {
+    border: 1px solid #161742;
+    border-top: 1px;
+    font-family: 'Ravi Prakash', cursive;
+}
+
+.pricing-table li,
+.pricing-table li.description {
+    font-size: 20px;
+}
+
+.pricing-table li.price,
+.pricing-table li.title {
+    font-size: 30px;
+}
+
+.pricing-table li.price {
+    background-color: white;
+}
+
+.pricing-table a.button {
+    font-family: 'Bree Serif', serif;
 }
