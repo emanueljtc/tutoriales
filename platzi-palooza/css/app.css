@@ -46,6 +46,15 @@ input[type="submit"] {
     color: white;
 }
 
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+    border-color: #ffffffc2 transparent transparent;
+}
+
+.data-sticky {
+    width: 100%;
+    z-index: 100;
+}
+
 #tickets-action .callout {
     background-color: #5e7eb7;
     color: white;
