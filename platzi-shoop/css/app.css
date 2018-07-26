@@ -11,3 +11,39 @@ body {
 #header-container .container h1 {
     font-family: 'Do Hyeon', sans-serif;
 }
+
+#header-container .login {
+    color: white;
+}
+
+.hamburguesa {
+    left: 88%;
+    margin-top: -13%;
+    position: absolute;
+    color: white;
+}
+
+#menu-container {
+    background-color: rgba(187, 187, 187, 0.38);
+}
+
+.btn.btn-platzi {
+    background-color: #99c84a;
+    color: white;
+}
+
+.btn.btn-platzi:hover {
+    background-color: #8ab542;
+}
+
+input.form-control:focus {
+    border-color: #99c84a;
+}
+
+
+/* .row {
+    border: 1px solid red
+}
+.columna {
+    border: 1px solid blue
+} */
