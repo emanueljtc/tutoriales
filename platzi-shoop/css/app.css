@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Montserrat|Arvo');
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arvo', serif;
 }
 
-#header-container {
+#header-container,
+#info-container {
     background-color: #99c84a;
     color: white;
 }
@@ -38,6 +39,30 @@ body {
 
 input.form-control:focus {
     border-color: #99c84a;
+}
+
+#menu-container input.form-control {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#info-container h4 {
+    margin: 1em 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+#info-container img {
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+#footer-container {
+    background-color: #1c3643;
+    color: white;
+    padding: 3em 0;
+}
+
+#footer-container h4 {
+    font-size: 16px;
 }
 
 
