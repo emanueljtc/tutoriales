@@ -65,10 +65,22 @@ input.form-control:focus {
     font-size: 16px;
 }
 
-
-/* .row {
-    border: 1px solid red
+#footer-container .nav-link {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0.4;
+    font-weight: bold;
 }
-.columna {
-    border: 1px solid blue
-} */
+
+#footer-container .nav-link:hover {
+    color: #8ab542;
+}
+
+@media (max-width: 768px) {
+    #footer-container [class*="col-"] {
+        margin-bottom: 2em;
+    }
+    #footer-container .col-sm-1 {
+        width: 48%;
+    }
+}
