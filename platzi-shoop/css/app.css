@@ -18,7 +18,7 @@ body {
 }
 
 .hamburguesa {
-    left: 88%;
+    left: 82%;
     margin-top: -13%;
     position: absolute;
     color: white;
@@ -94,11 +94,36 @@ input.form-control:focus {
     border: 1px solid rgb(3, 102, 11);
 }
 
+#breadcrumbs-container .breadcrumb {
+    background-color: white;
+    padding-left: 0;
+}
+
+#breadcrumbs-container .breadcrumb .breadcrumb-item {
+    color: #1c3643;
+}
+
+#breadcrumbs-container .breadcrumb .breadcrumb-item.active {
+    color: #95a5a6;
+}
+
+#breadcrumbs-container .breadcrumb-item+.breadcrumb-item::before {
+    content: ">"
+}
+
 @media (max-width: 768px) {
     #footer-container [class*="col-"] {
         margin-bottom: 2em;
     }
     #footer-container .col-sm-1 {
         width: 48%;
+    }
+}
+
+@media (max-width: 640px) {
+    #menu-container .btn.btn-platzi {
+        position: absolute;
+        margin-top: 0px !important;
+        margin-left: 73% !important;
     }
 }

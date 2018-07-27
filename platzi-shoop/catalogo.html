@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
     <!-- CUSTOM CSS-->
     <link rel="stylesheet" href="css/app.css">
-    <title>Platzi Shoop</title>
+    <title>PlatziShop</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row flex-row">
                 <div class="col-sm-5 col-md-5 columna mt-2">
-                    <h1>Platzi Shoop</h1>
+                    <h1>PlatziShop</h1>
                 </div>
                 <div class="col-sm-4 col-md-5 offset-md-2 columna text-md-right mt-md-3 my-md-2">
                     <button class="hamburguesa navbar-toggler  d-md-none d-sm-block" data-toggle="collapse" data-target="#navMenu">
@@ -37,7 +37,7 @@
     <!-- Navbar -->
     <div id="menu-container">
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand " href="#">Menu</a>
+            <!-- <a class="navbar-brand " href="#">Menu</a> -->
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav mr-auto text-center">
                     <li class="nav-item">
@@ -53,17 +53,32 @@
                         <a class="nav-link" href="#">Login</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                    <input class="form-control mr-sm-2" type="search" placeholder="¿Encontro lo que buscaba?" aria-label="Search">
-                    <button class="btn btn-platzi my-2 my-sm-0" type="submit"><span class="hidden-sm-down">Buscar</span>
-                        <i class="fa fa-search hidden-md-up"></i>
-                    </button>
-                </form>
+
             </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-md-2" type="search" placeholder="¿Encontro lo que buscaba?" aria-label="Search">
+                <button class="btn btn-platzi my-2 my-sm-0" type="submit"><span class="d-none d-md-inline-block">Buscar</span>
+                        <i class="fa fa-search d-sm-inline-block"></i>
+                    </button>
+            </form>
         </nav>
     </div>
     <!-- /Navbar -->
 
+    <!-- Breadcrumbs -->
+    <section id="breadcrumbs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <nav class="breadcrumb">
+                        <a href="catalogo.html" class="breadcrumb-item">Catálogo</a>
+                        <span class="breadcrumb-item active"> Todos los productos</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Breadcrumbs -->
 
     <!-- Footer -->
     <footer id="footer-container">
