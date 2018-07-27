@@ -37,11 +37,11 @@
     <!-- Navbar -->
     <div id="menu-container">
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand " href="#">Menu</a>
+            <!-- <a class="navbar-brand " href="#">Menu</a> -->
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav mr-auto text-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="catalogo.html">Catálogo</a>
@@ -53,13 +53,14 @@
                         <a class="nav-link" href="#">Login</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                    <input class="form-control mr-sm-2" type="search" placeholder="¿Encontro lo que buscaba?" aria-label="Search">
-                    <button class="btn btn-platzi my-2 my-sm-0" type="submit"><span class="hidden-sm-down">Buscar</span>
-                        <i class="fa fa-search hidden-md-up"></i>
-                    </button>
-                </form>
+
             </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-md-2" type="search" placeholder="¿Encontro lo que buscaba?" aria-label="Search">
+                <button class="btn btn-platzi my-2 my-sm-0" type="submit"><span class="d-none d-md-inline-block">Buscar</span>
+                            <i class="fa fa-search d-sm-inline-block"></i>
+                        </button>
+            </form>
         </nav>
     </div>
     <!-- /Navbar -->
