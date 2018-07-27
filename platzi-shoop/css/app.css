@@ -111,6 +111,18 @@ input.form-control:focus {
     content: ">"
 }
 
+#filtros-container .list-group-item-action.active {
+    background-color: #99c84a;
+    border-color: #99c84a;
+}
+
+#filtros-container .list-group {
+    margin-bottom: 1em;
+}
+
+
+/* Media Querys */
+
 @media (max-width: 768px) {
     #footer-container [class*="col-"] {
         margin-bottom: 2em;
