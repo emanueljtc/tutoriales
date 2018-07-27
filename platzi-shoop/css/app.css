@@ -111,13 +111,17 @@ input.form-control:focus {
     content: ">"
 }
 
-#filtros-container .list-group-item-action.active {
+#productos-container {
+    margin-bottom: 2em;
+}
+
+#productos-container .list-group-item-action.active {
     background-color: #99c84a;
     border-color: #99c84a;
 }
 
-#filtros-container .list-group {
-    margin-bottom: 1em;
+#productos-container .list-group+.list-group {
+    margin-top: 1em;
 }
 
 
@@ -129,6 +133,9 @@ input.form-control:focus {
     }
     #footer-container .col-sm-1 {
         width: 48%;
+    }
+    #productos-container .filtros-toggle {
+        margin-bottom: 1em;
     }
 }
 
