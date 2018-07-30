@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// Componentes
+import WeatherLocation from './components/WeatherLocation';
+// Assets
 import './App.css';
-
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Wheather Location
+        <WeatherLocation/>
       </div>
     );
   }
