@@ -1,4 +1,13 @@
 import React from 'react';
-const WeatherData = () => (<div>WheaterData</div>);
+
+//Componentes
+import WeatherTemperature from './WeatherTemperature';
+import WeatherExtraInfo from './WeatherExtraInfo';
+const WeatherData = () => (
+  <div>
+    <WeatherTemperature />
+    <WeatherExtraInfo />
+  </div>
+);
 
 export  default WeatherData;
