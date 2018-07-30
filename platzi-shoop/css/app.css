@@ -124,6 +124,21 @@ input.form-control:focus {
     margin-top: 1em;
 }
 
+.listado-productos .card {
+    margin-bottom: 1em;
+}
+
+#paginator-container .page-item.active .page-link:focus,
+.page-item.active .page-link:hover,
+.page-item.active .page-link {
+    background-color: #99c84a;
+    border-color: #99c84a;
+}
+
+#paginator-container .page-item:not(.active):not(.disabled) .page-link {
+    color: #99c84a;
+}
+
 
 /* Media Querys */
 
@@ -134,8 +149,8 @@ input.form-control:focus {
     #footer-container .col-sm-1 {
         width: 48%;
     }
-    #productos-container .filtros-toggle {
-        margin-bottom: 1em;
+    .listado-productos {
+        margin-top: 2em;
     }
 }
 
