@@ -1,7 +1,7 @@
 // Dependencias
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 // Constantes
 import {CLOUD,
   CLOUDY,
@@ -37,7 +37,7 @@ const WeatherTemperature = ({temperature, weatherState}) => (
   </div>
 );
 WeatherTemperature.propTypes = {
-  temperature:  PropTypes.number,
+  temperature:  PropTypes.number.isRequired,
   weatherState: PropTypes.string
 };
 export default WeatherTemperature;
