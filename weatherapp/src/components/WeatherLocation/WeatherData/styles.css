@@ -1,3 +1,10 @@
 .weatherDataContainer {
-  background-color: blue;
-}
+  background-color: blue; }
+
+.weatherExtraInfoContainer {
+  background-color: red; }
+
+.weatherTemperatureContainer {
+  background-color: yellow; }
+
+/*# sourceMappingURL=styles.css.map */
