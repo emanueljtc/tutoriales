@@ -1,10 +1,17 @@
 .weatherDataContainer {
-  background-color: blue; }
-
-.weatherExtraInfoContainer {
-  background-color: red; }
+  background-color: blue;
+  width: 400px;
+  height: 100px;
+  line-height: 100px; }
 
 .weatherTemperatureContainer {
-  background-color: yellow; }
+  background-color: yellow;
+  width: 60%;
+  display: inline-block; }
+
+.weatherExtraInfoContainer {
+  background-color: red;
+  width: 40%;
+  display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */
