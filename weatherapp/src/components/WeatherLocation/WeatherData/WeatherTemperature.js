@@ -2,6 +2,9 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
+// Estilos CSS
+import './styles.css';
+
 // Constantes
 import {CLOUD,
   CLOUDY,

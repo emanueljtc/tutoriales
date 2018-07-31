@@ -1,6 +1,8 @@
 // Dependencias
 import React from 'react'
 import PropTypes from 'prop-types';
+// Estilos CSS
+import './styles.css';
 const WeatherExtraInfo = ({humidity, wind}) => (
   <div>
     <span>{`${humidity} % | `}</span>
