@@ -20,6 +20,13 @@
 .weatherExtraInfoContainer {
   background-color: red;
   width: 40%;
-  display: inline-block; }
+  display: inline-block;
+  line-height: 25px;
+  text-align: left; }
+  .weatherExtraInfoContainer .extraInfoText {
+    display: block;
+    color: #1535C5;
+    font-size: 18px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */
