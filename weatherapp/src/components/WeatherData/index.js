@@ -4,7 +4,7 @@ import React from 'react';
 import WeatherTemperature from './WeatherTemperature';
 import WeatherExtraInfo from './WeatherExtraInfo';
 // Constantes
-import {SNOW} from './../constants/weathers';
+import {SNOW} from './../../constants/weathers';
 const WeatherData = () => (
   <div>
     <WeatherTemperature temperature={10} weatherState={SNOW}/>
