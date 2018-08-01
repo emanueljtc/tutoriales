@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 const Location = ({ city }) => ( // Object destructuring
   (
-    <div>
+    <div className='locationContainer'>
     <h1>{city}</h1>
     </div>)
 );

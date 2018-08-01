@@ -3,10 +3,10 @@ import React from 'react';
 // Componentes
 import Location from './Location';
 import WeatherData from './WeatherData';
-// Estilo CSS 
+// Estilo CSS
 import './styles.css';
 const WheaterLocation = () => (
-  <div>
+  <div className='weatherLocationContainer'>
     <Location city={'Villa de Cura'}/>
     <WeatherData />
   </div>
