@@ -26,7 +26,7 @@ class WheaterLocation extends Component {
     };
   }
   getTemp = kelvin => {
-    return convert(kelvin).from('K').to('C')
+    return convert(kelvin).from('K').to('C').toFixed(2);
   }
   getWeatherState = (weatherState) => {
     return SUN;
