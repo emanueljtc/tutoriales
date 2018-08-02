@@ -45,7 +45,7 @@ class WheaterLocation extends Component {
       console.log(data);
       return data.json();
     }).then( weather_data => {
-      debugger;
+      //debugger;
       const data = this.getData(weather_data);
       this.setState({ data });
     });
