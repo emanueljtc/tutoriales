@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Location from './Location';
 import WeatherData from './WeatherData';
 // Constantes
-import { WINDY } from './../../constants/weathers'
+import { SUN, WINDY } from './../../constants/weathers'
 // Estilo CSS
 import './styles.css';
 const location = "Buenos Aires,ar";
@@ -24,11 +24,31 @@ class WheaterLocation extends Component {
       data: data1
     };
   }
+  getWeatherState = (weatherState) => {
+    return SUN;
+  }
+  getData = weather_data => {
+    const { humidity, temp } = weather_data.main;
+    const { speed } = weather_data.wind;
+    const weatherState = this.getWeatherState(this.weather);
+
+    const data = {
+      humidity,
+      temperature: temp,
+      weatherState,
+      wind: `${speed} m/s`,
+    }
+    return data
+  }
   handleUpdateClick = () => {
-    fetch(api_weather);
-    // this.setState({
-    //   data: data2
-    // });
+    fetch(api_weather).then(data => {
+      console.log(data);
+      return data.json();
+    }).then( weather_data => {
+      debugger;
+      const data = this.getData(weather_data);
+      this.setState({ data });
+    });
     console.log('actualizado');
   }
  render = () => {
