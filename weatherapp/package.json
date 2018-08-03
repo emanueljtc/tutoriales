@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "convert-units": "^2.3.4",
+    "material-ui": "^0.20.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

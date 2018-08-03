@@ -15,7 +15,7 @@ class WheaterLocation extends Component {
   constructor() {
     super();
     this.state = {
-      city: 'Buenos Aires, ar',
+      city: 'Buenos Aires',
       data: null
     };
     console.log("constructor");
