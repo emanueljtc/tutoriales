@@ -1,5 +1,6 @@
 //Dependencias
 import React, { Component } from 'react';
+import CircularProgress from 'material-ui/CircularProgress';
 // Componentes
 import Location from './Location';
 import WeatherData from './WeatherData';
@@ -40,7 +41,7 @@ render = () => {
     return (
       <div className='weatherLocationContainer'>
       <Location city={city}/>
-      {data ? <WeatherData data={data}/> : 'Cargando... '}
+      {data ? <WeatherData data={data}/> :  <CircularProgress size={60} thickness={7} /> }
     </div>);
   }
 
