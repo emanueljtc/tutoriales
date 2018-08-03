@@ -33,9 +33,10 @@ class WheaterLocation extends Component {
    });
  }
 render = () => {
+    const { onWeatherLocationClick } = this.props;
     const { city, data } = this.state;
     return (
-      <div className='weatherLocationContainer'>
+      <div className='weatherLocationContainer' onClick={onWeatherLocationClick}>
       <Location city={city}/>
       {data ? <WeatherData data={data}/> :  <CircularProgress size={60} thickness={7} /> }
     </div>);
@@ -44,5 +45,6 @@ render = () => {
 }
 WheaterLocation.propTypes = {
   city: PropTypes.string,
+  onWeatherLocationClick: PropTypes.func,
 }
 export default WheaterLocation;
