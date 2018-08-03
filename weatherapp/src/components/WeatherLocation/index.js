@@ -15,7 +15,7 @@ class WheaterLocation extends Component {
   constructor() {
     super();
     this.state = {
-      city: 'Buenos Aires',
+      city: 'Buenos Aires, ar',
       data: null
     };
     console.log("constructor");
@@ -29,7 +29,7 @@ class WheaterLocation extends Component {
       const data = transformWeather(weather_data);
       this.setState({ data });
     });
-    console.log('actualizado');
+    console.log('actualizado 100%');
   }
  componentWillMount() {
    this.handleUpdateClick();
@@ -41,7 +41,6 @@ render = () => {
       <div className='weatherLocationContainer'>
       <Location city={city}/>
       {data ? <WeatherData data={data}/> : 'Cargando... '}
-      <button onClick={this.handleUpdateClick}>Actualizar</button>
     </div>);
   }
 
