@@ -1,5 +1,5 @@
 //Dependencias
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CircularProgress from 'material-ui/CircularProgress';
 // Componentes
 import Location from './Location';
@@ -13,7 +13,7 @@ const location = "Buenos Aires,ar";
 const api_key = "ba97e056eb1220e06c4a0b6aae37fd8b";
 const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}`;
 class WheaterLocation extends Component {
-  constructor() {
+  constructor({ city }) {
     super();
     this.state = {
       city: 'Buenos Aires',
@@ -45,5 +45,8 @@ render = () => {
     </div>);
   }
 
+}
+WheaterLocation.propTypes = {
+  city: PropTypes.string,
 }
 export default WheaterLocation;
