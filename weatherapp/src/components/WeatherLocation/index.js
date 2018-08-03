@@ -1,5 +1,6 @@
 //Dependencias
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CircularProgress from 'material-ui/CircularProgress';
 // Componentes
 import Location from './Location';
@@ -9,34 +10,29 @@ import transformWeather from './../../services/transformWeather'
 
 // Estilo CSS
 import './styles.css';
-const location = "Buenos Aires,ar";
 const api_key = "ba97e056eb1220e06c4a0b6aae37fd8b";
-const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}`;
+const url = `http://api.openweathermap.org/data/2.5/weather`;
 class WheaterLocation extends Component {
   constructor({ city }) {
     super();
     this.state = {
-      city: 'Buenos Aires',
+      city,
       data: null
     };
     console.log("constructor");
   }
 
-  handleUpdateClick = () => {
-    fetch(api_weather).then(data => {
-      return data.json();
-    }).then( weather_data => {
-      //debugger;
-      const data = transformWeather(weather_data);
-      this.setState({ data });
-    });
-    console.log('actualizado 100%');
-  }
  componentWillMount() {
-   this.handleUpdateClick();
+   const { city } = this.state;
+   const api_weather = `${url}?q=${city}&appid=${api_key}`;
+   fetch(api_weather).then(data => {
+     return data.json();
+   }).then( weather_data => {
+     const data = transformWeather(weather_data);
+     this.setState({ data });
+   });
  }
 render = () => {
-    console.log("render");
     const { city, data } = this.state;
     return (
       <div className='weatherLocationContainer'>
