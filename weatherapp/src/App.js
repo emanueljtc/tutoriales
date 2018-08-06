@@ -21,22 +21,20 @@ class App extends Component {
     render() {
         return (
            <MuiThemeProvider>
-              <Grid fluid>
-                <Row>
-                  <Col xs={12} sm={6} md={4} lg={3}>
-                    <div className="red"></div>
-                  </Col>
-                  <Col xs={12} sm={6} md={4} lg={3}>
-                    <div className='green'></div>
-                  </Col>
-                  <Col xs={12} sm={6} md={4} lg={3}>
-                    <div className='blue'></div>
-                  </Col>
-                  <Col xs={12} sm={6} md={4} lg={3}>
-                    <div className='green'></div>
-                  </Col>
-                </Row>
-              </Grid>
+           <Grid>
+             <Row>
+              Titulo
+             </Row>
+             <Row>
+                <Col xs={12} md={6}>
+                  <LocationList cities={cities} onSelectedLocation={this.handleSelectedLocation}/>
+                </Col>
+                <Col xs={12} md={6}>
+                    <div className="detail">
+                    </div>
+                </Col>
+             </Row>
+           </Grid>
            </MuiThemeProvider>
         );
     }
