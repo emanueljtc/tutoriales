@@ -5,6 +5,7 @@ import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 // Componentes
 import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended';
 // Assets
 import './App.css';
 const cities = [
@@ -36,6 +37,7 @@ class App extends Component {
                 <Col xs={12} md={6}>
                     <Paper zDepth={4}>
                       <div className="detail">
+                        <ForecastExtended />
                       </div>
                     </Paper>
                 </Col>
