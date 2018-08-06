@@ -21,7 +21,18 @@
 .App-intro {
   font-size: large;
 }
-
+.red, .green, .blue {
+  height: 100px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
