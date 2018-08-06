@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class ForecastExtended extends Component {
   render() {
-    return (<div>Pronostico Extendido</div>);
+    const { city } = this.props;
+    return (<div>Pronostico Extendido para {city}</div>);
   }
 }
 

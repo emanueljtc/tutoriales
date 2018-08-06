@@ -37,7 +37,7 @@ class App extends Component {
                 <Col xs={12} md={6}>
                     <Paper zDepth={4}>
                       <div className="detail">
-                        <ForecastExtended />
+                        <ForecastExtended city={'Buenos Aires,ar'}/>
                       </div>
                     </Paper>
                 </Col>
