@@ -8,6 +8,9 @@
 .weatherTemperatureContainer {
   width: 60%;
   display: inline-block; }
+  .weatherTemperatureContainer i {
+    margin-left: 5%;
+    margin-top: 6%; }
   .weatherTemperatureContainer .temperature {
     font-size: 35px;
     font-weight: bold;
