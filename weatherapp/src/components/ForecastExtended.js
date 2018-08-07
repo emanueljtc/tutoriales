@@ -6,7 +6,7 @@ class ForecastExtended extends Component {
     const { city } = this.props;
     return (
       <div>
-        <h2>Pronóstico Extendido para {city}</h2>
+        <h2 className='forecast-title'>Pronóstico Extendido para {city}</h2>
       </div>);
   }
 }
