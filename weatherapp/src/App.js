@@ -1,23 +1,33 @@
 // Dependencies
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { createStore } from 'redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
+
 // Componentes
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
+
+//Actions
+import { setCity } from './actions/';
 // Assets
 import './App.css';
 const cities = [
   'Buenos Aires,ar',
   'Miami,us',
   'Bogota,co',
-  'London,gb',
   'Madrid,es',
   'Caracas,ve',
-  'Santiago,cl'
+  'Villa de Cura,ve'
 ];
+
+const store = createStore(() => {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+
+
 class App extends Component {
     constructor() {
       super();
@@ -26,6 +36,7 @@ class App extends Component {
     handleSelectedLocation = city => {
       this.setState({ city })
       console.log(`handleSelectedLocation ${city}`);
+      store.dispatch(setCity(city));
     }
     render() {
         const {city} = this.state;

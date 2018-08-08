@@ -28,13 +28,13 @@ class ForecastExtended extends Component {
     this.state = { forecastData: null}
   }
   componentDidMount() {
-    // Fetch or axios
+    // Fetch o Axios
     this.updateCity(this.props.city);
   }
   componentWillReceiveProps(nextProps) {
     if(nextProps.city !== this.props.city){
       /* se establece el forecastData en null para que cargue de nuevo
-      progress */
+      progress*/
       this.setState({ forecastData: null});
       this.updateCity(nextProps.city);
     }
