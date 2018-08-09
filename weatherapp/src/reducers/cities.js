@@ -11,4 +11,5 @@ export const cities = (state = {}, action) => {
   }
 }
 
+// Selector 
 export const getForecastDataFromCities = (state, city) => state[city] && state[city].forecastData;
