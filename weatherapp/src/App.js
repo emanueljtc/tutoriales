@@ -7,7 +7,7 @@ import AppBar from 'material-ui/AppBar';
 
 // Componentes
 import LocationListContainer from './containers/LocationListContainer';
-import ForecastExtended from './components/ForecastExtended';
+import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
 
 
 // Assets
@@ -22,12 +22,8 @@ const cities = [
 ];
 
 class App extends Component {
-    constructor() {
-      super();
-      this.state = { city: null };
-    }
+
       render() {
-        const {city} = this.state;
         return (
            <MuiThemeProvider>
            <Grid>
@@ -43,10 +39,7 @@ class App extends Component {
                 <Col xs={12} md={6}>
                     <Paper zDepth={4}>
                       <div className="detail">
-                        {
-                          city &&
-                            <ForecastExtended city={city}/>
-                        }
+                            <ForecastExtendedContainer/>
                       </div>
                     </Paper>
                 </Col>
