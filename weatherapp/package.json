@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "convert-units": "^2.3.4",
+    "lodash.topairs": "^4.3.0",
     "material-ui": "^0.20.2",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
