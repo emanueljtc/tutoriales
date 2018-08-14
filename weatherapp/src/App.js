@@ -13,39 +13,39 @@ import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
 // Assets
 import './App.css';
 const cities = [
-  'Buenos Aires,ar',
-  'Miami,us',
-  'Bogota,co',
-  'Madrid,es',
-  'Caracas,ve',
-  'Villa de Cura,ve'
+    'Buenos Aires,ar',
+    'Miami,us',
+    'Bogota,co',
+    'Madrid,es',
+    'Caracas,ve',
+    'Villa de Cura,ve'
 ];
 
 class App extends Component {
 
-      render() {
+    render() {
         return (
-           <MuiThemeProvider>
-           <Grid>
-             <Row>
-                <Col xs={12} md={12}>
-                  <AppBar title="Weather App" />
-                </Col>
-             </Row>
-             <Row>
-                <Col xs={12} md={6}>
-                  <LocationListContainer cities={cities} />
-                </Col>
-                <Col xs={12} md={6}>
-                    <Paper zDepth={4}>
-                      <div className="detail">
-                            <ForecastExtendedContainer/>
-                      </div>
-                    </Paper>
-                </Col>
-             </Row>
-           </Grid>
-           </MuiThemeProvider>
+            <MuiThemeProvider>
+                <Grid>
+                    <Row>
+                        <Col xs={12} md={12}>
+                            <AppBar title="Weather App" />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={6}>
+                            <LocationListContainer cities={cities} />
+                        </Col>
+                        <Col xs={12} md={6}>
+                            <Paper zDepth={4}>
+                                <div className="detail">
+                                    <ForecastExtendedContainer />
+                                </div>
+                            </Paper>
+                        </Col>
+                    </Row>
+                </Grid>
+            </MuiThemeProvider>
         );
     }
 }
