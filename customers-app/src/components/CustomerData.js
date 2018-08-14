@@ -1,3 +1,4 @@
+// Dependencias
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,11 +14,9 @@ const CustomersData = ({name, dni, age }) => {
      </div>
    );
 };
-
 CustomersData.propTypes = {
     name: PropTypes.string.isRequired,
     dni: PropTypes.string.isRequired,
     age: PropTypes.number,
 };
-
 export default CustomersData;
