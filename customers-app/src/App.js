@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router , Route, Switch} from 'react-router-dom';
 import './App.css';
+import HomeContainer from './containers/HomeContainer';
 
 class App extends Component {
 
-  renderHome = () => <h1>Inicio</h1>;
+  renderHome = () => <HomeContainer />;
 
   renderCustomerContainer = () => <h2>Customer Container</h2>;
 
