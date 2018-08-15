@@ -18,15 +18,23 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207ce5', endColorstr='#499bea', GradientType=1);
 }
 
-.customer-actions {
+.customers-actions {
   background: #AAA;
   padding: 10px;
   margin: 10px;
 }
 
-.customer-actions button {
+.customers-actions button {
   background: white;
-  min-width: 100px;
+  min-width: 200px;
   height: 30px;
   margin: 5px;
+}
+
+.customers-list-item .field{
+  width: 130px;
+  margin: 1px;
+  padding: 4px;
+  background: #eeeeee;
+  display: inline-block;
 }
