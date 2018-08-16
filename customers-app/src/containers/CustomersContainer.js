@@ -45,28 +45,7 @@ CustomersContainers.propTypes = {
 };
 
 CustomersContainers.defaultProps = {
-  customers: [
-    {
-      "dni": 20355749,
-      "name": "Ana Cordova",
-      "age": 26
-    },
-    {
-      "dni": 18971787,
-      "name": "Emanuel Torres",
-      "age": 28
-    },
-    {
-      "dni": 5161055,
-      "name": "Joaquin Torres",
-      "age": 59
-    },
-    {
-      "dni": 8784453,
-      "name": "Ana Clemente.",
-      "age": 54
-    },
-  ]
+  customers: []
 };
 
 const mapDispatchToProps = { fetchCustomers };
