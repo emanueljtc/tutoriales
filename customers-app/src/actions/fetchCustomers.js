@@ -1,6 +1,5 @@
+import { FETCH_CUSTOMERS } from './../constants';
 
-export const fetchCustomers = () => {
-  debugger;
-  return { type: 'FECH_CUSTOMERS', payload: null}
-
-};
+export const fetchCustomers = () => (
+  { type: FETCH_CUSTOMERS, payload: null}
+);
