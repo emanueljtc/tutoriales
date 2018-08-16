@@ -8,28 +8,7 @@ import CustomersActions from '../components/CustomersActions';
 import { fetchCustomers } from '../actions/fetchCustomers';
 
 
-const customers = [
-  {
-    "dni": 20355749,
-    "name": "Ana Cordova",
-    "age": 26
-  },
-  {
-    "dni": 18971787,
-    "name": "Emanuel Torres",
-    "age": 28
-  },
-  {
-    "dni": 5161055,
-    "name": "Joaquin Torres",
-    "age": 59
-  },
-  {
-    "dni": 8784453,
-    "name": "Ana Clemente",
-    "age": 55
-  },
-];
+
 
 class CustomersContainers extends Component {
 
@@ -54,7 +33,7 @@ class CustomersContainers extends Component {
   render() {
     return (
       <div>
-        <AppFrame header={'Listado de Clientes'} body={this.renderBody(customers)}></AppFrame>
+        <AppFrame header={'Listado de Clientes'} body={this.renderBody(this.props.customers)}></AppFrame>
       </div>
     );
   }
@@ -62,11 +41,33 @@ class CustomersContainers extends Component {
  
 CustomersContainers.propTypes = {
   fetchCustomers: PropTypes.func.isRequired,
+  customers: PropTypes.array.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ( 
-  {
-    fetchCustomers: () => dispatch(fetchCustomers())
-  }
-)
+CustomersContainers.defaultProps = {
+  customers: [
+    {
+      "dni": 20355749,
+      "name": "Ana Cordova",
+      "age": 26
+    },
+    {
+      "dni": 18971787,
+      "name": "Emanuel Torres",
+      "age": 28
+    },
+    {
+      "dni": 5161055,
+      "name": "Joaquin Torres",
+      "age": 59
+    },
+    {
+      "dni": 8784453,
+      "name": "Ana Clemente.",
+      "age": 54
+    },
+  ]
+};
+
+const mapDispatchToProps = { fetchCustomers };
 export default withRouter(connect(null, mapDispatchToProps)(CustomersContainers));
