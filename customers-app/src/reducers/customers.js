@@ -1,7 +1,7 @@
 // utilidad para manejar los reducers
-import {handleActions} from 'redux';
+import { handleActions } from 'redux-actions';
 import { FETCH_CUSTOMERS } from '../constants/index';
 
-const customers = handleActions({
+export const customers = handleActions({
   [FETCH_CUSTOMERS]: state => state
 }, {});
