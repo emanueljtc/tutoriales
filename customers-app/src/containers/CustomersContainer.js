@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AppFrame from '../components/AppFrame';
@@ -32,6 +32,10 @@ const customers = [
 ];
 
 class CustomersContainers extends Component {
+
+  componentDidMount() {
+    this.props.fetchCustomers();
+  }
   handleAddNew = () => {
     this.props.history.push('/customers/new');
   }
@@ -55,10 +59,10 @@ class CustomersContainers extends Component {
     );
   }
 }
-
-/* CustomersContainers.propTypes = {
-
-}; */
+ 
+CustomersContainers.propTypes = {
+  fetchCustomers: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = dispatch => ( 
   {
