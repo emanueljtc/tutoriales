@@ -1,2 +1,6 @@
 
-export const fetchCustomers = () => ({ type: 'FECH_CUSTOMERS', payload: null});
+export const fetchCustomers = () => {
+  debugger;
+  return { type: 'FECH_CUSTOMERS', payload: null}
+
+};
