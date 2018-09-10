@@ -6,6 +6,10 @@ var personas = [
   {
     name: 'Jose Andres',
     nickname: 'El Zurdo'
+  },
+  {
+    name: 'Emanuel',
+    nickname: 'LordSystem'
   }
 ]
 
