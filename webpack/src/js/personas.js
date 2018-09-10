@@ -9,7 +9,7 @@ var personas = [
   },
   {
     name: 'Emanuel',
-    nickname: 'LordSystem'
+    nickname: 'Lord_System'
   }
 ]
 

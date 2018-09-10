@@ -1,0 +1,22 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "css-loader": "^1.0.0",
+    "jquery": "^3.3.1",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.17.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --entry ./src/js/app.js --ouput-filename ./dist/bundle.js"
+  },
+  "author": "Ing. Torres Clemente",
+  "license": "ISC"
+}
