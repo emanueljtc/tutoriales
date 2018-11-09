@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  border: 0;
+}
+body {
+  font-size: 2em;
+}
+nav {
+  background-color: black;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 20px;
+  color: white;
+  text-align: center
+}
+nav ul {
+  display: inline-flex;
+  list-style: none;
+}
+nav ul li {
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+  color: yellow;
+}

@@ -1,0 +1,18 @@
+// Codigo Javascript en PUG 
+// Code unbuffered (no sale a HMTL)
+// Code buffered (si sale a HTML)
+
+- let currrentPage = 'home'
+- let name = 'Emanuel Torres'
+- 
+  let hispanoSoluciones = {
+    ceo: 'Jonathan Araul',
+    cto: 'Miguel Carmona',
+    rhh: 'Adelys Araul'
+  }
+body(class= currrentPage).main-page
+    h1 Team Hispanos Soluciones
+    p= `${hispanoSoluciones.ceo}, CEO`
+    p= `${hispanoSoluciones.cto}, CTO`
+    p= `${hispanoSoluciones.rhh}, RHH`
+

@@ -1,0 +1,25 @@
+// Codigo Javascript en PUG
+// CICLOS o Interacciones 
+
+- var days = ['lunes', 'martes', 'miercoles']
+
+each day, i in days
+  p= `${day.toUpperCase()} es el dia ${i}`
+
+- pages = []
+
+ul 
+  each page in pages
+    li: a(href=`${page.split(' ').join('-')}.html`)= page
+  else
+    li No hay elementos disponibles por ahora.
+p ------------- **** -------------
+- 
+  let hispanoSoluciones = {
+    ceo: 'Jonathan Araul',
+    cto: 'Miguel Carmona',
+    rhh: 'Adelys Araul'
+  }
+ul 
+  each val, key in hispanoSoluciones
+    li= `${val} el es ${key.toUpperCase()} de Hispanos Soluciones`
