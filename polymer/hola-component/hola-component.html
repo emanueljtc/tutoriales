@@ -9,13 +9,29 @@
       }
     </style>
     <!-- HTML Templates -->
-    <h1>Hola [[name]]</h1>
+    <h1>Hola [[name]] tu edad es [[edad]]</h1>
   </template>
   <script>
     Polymer({
       is: "hola-component",
-      propierties: {
-        name: String
+      properties: {
+        name: {
+          type: String,
+          value: "Usuario"
+        },
+        edad: {
+          type: Number,
+          value: 0
+        }
+      },
+      created: function(){
+        console.log("Elemento Creado");
+      },
+      ready: function(){
+        setTimeout(()=>{
+          this.name="Ana",
+          this.edad="26"
+        },3000)
       }
     })
   </script>
