@@ -1,3 +1,22 @@
 <!-- HTML IMPORTS-->
 <link rel="import" href="../polymer/polymer-element.html">
-
+<dom-module id="hola-component">
+  <template>
+    <style>
+      :host{
+        background-color: red;
+        display: block;
+      }
+    </style>
+    <!-- HTML Templates -->
+    <h1>Hola [[name]]</h1>
+  </template>
+  <script>
+    Polymer({
+      is: "hola-component",
+      propierties: {
+        name: String
+      }
+    })
+  </script>
+</dom-module>
