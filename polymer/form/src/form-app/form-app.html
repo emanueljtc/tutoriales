@@ -5,16 +5,26 @@
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-form/iron-form.html">
+<link rel="import" href="./form-button.html">
+<link rel="import" href="./hidding-behavior.html">
+<link rel="import" href="./mis-estilos.html">
 
 
 
 <dom-module id="form-app">
   <template>
-    <style>
+    <style include="mis-estilos">
       :host {
         display: block;
         text-align: center;
+        --form-button-theme: {
+          background-color: red;
+          color: white;
+          border: none;
+          border-radius: 5px;
+        }
       }
+
       paper-card{
         text-align: left;
         width: 25em;
@@ -40,20 +50,22 @@
         background-color: var(--primary-color);
         color: white;
       }
+      button{
+        background-color: red;
+      }
     </style>
     <paper-card elevation="3" animated-shadow="false">
         <div class="card-header">
           <iron-icon icon="account-circle"></iron-icon>
-          Crear cuenta
+          <span class="indigo-text">Crear cuenta</span>
         </div>
         <form is="iron-form" id="form">
             <div class="card-content">
-                <paper-input label="Email" required type="email" id="input-1"></paper-input>
-                <paper-input label="Contraseña" required type="password" id="input-2"></paper-input>
+                <paper-input label="Email" required type="email" value="{{email}}"></paper-input>
+                <paper-input label="Contraseña" required type="password"></paper-input>
             </div>
             <div class="card-actions">
-              <paper-button raised id="login">Enviar</paper-button>
-              <paper-button>Cancelar</paper-button>
+              <form-button></form-button>
             </div>
         </form>
     </paper-card>
@@ -66,10 +78,20 @@
      */
     Polymer({
       is: 'form-app',
+      properties: {
+        email: {
+          type: String,
+          observer: "_emailChanged"
+        }
+      },
+      behaviors: [FormApp.Hidding],
       ready: function(){
-        this.$.login.addEventListener("click", ()=>{
+        /* this.$.login.addEventListener("click", ()=>{
           this.$.form.submit()
-        })
+        }) */
+      },
+      _emailChanged: function(newValue, oldValue){
+        console.log("La Propiedad ahora es igual a:"+newValue+", antes era igual a:"+oldValue)
       }
       
     })

@@ -1,0 +1,23 @@
+<script>
+  var FormApp = FormApp || {}
+  FormApp.Hidding = {
+    properties:{
+      up:{
+        type: Boolean
+      }
+    },
+    listeners: {
+      click: "_toogleShadow"
+    },
+    _toogleShadow: function () {
+      if(this.up){
+        this.style.boxShadow = "none"
+        this.up = false
+      }else{
+        this.style.boxShadow = "10px 10px 20px black"
+        this.up = true
+
+      }
+    }
+  }
+</script>

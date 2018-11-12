@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./hidding-behavior.html">
+
+<dom-module id="form-button">
+  <style>
+      button{
+        @apply(--form-button-theme);
+      }
+  </style>
+  <template>
+    <button>Hola</button>
+  </template>
+  <script>
+    Polymer({
+      is:"form-button",
+      behaviors: [FormApp.Hidding]
+      
+    })
+  </script>
+</dom-module>
