@@ -3,8 +3,8 @@
   "description": "hola mundo",
   "main": "hola-component.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0",
-    "paper-input": "PolymerElements/paper-input#^1.0.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-elements": "PolymerElements/paper-elements"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",

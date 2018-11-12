@@ -1,0 +1,77 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-form/iron-form.html">
+
+
+
+<dom-module id="form-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        text-align: center;
+      }
+      paper-card{
+        text-align: left;
+        width: 25em;
+        padding: 1em;
+      }
+      paper-card .card-actions{
+        padding-top: 1em;
+        text-align: right;
+      }
+      paper-card .card-header{
+        font-size: 2em;
+        color: var(--paper-grey-700);
+      }
+      paper-card .card-header iron-icon{
+        height: 2em;
+        width: 2em;
+        color: var(--paper-blue-100)
+      }
+      paper-button{
+        color: var(--paper-red-500);
+      }
+      paper-button[raised]{
+        background-color: var(--primary-color);
+        color: white;
+      }
+    </style>
+    <paper-card elevation="3" animated-shadow="false">
+        <div class="card-header">
+          <iron-icon icon="account-circle"></iron-icon>
+          Crear cuenta
+        </div>
+        <form is="iron-form" id="form">
+            <div class="card-content">
+                <paper-input label="Email" required type="email" id="input-1"></paper-input>
+                <paper-input label="Contraseña" required type="password" id="input-2"></paper-input>
+            </div>
+            <div class="card-actions">
+              <paper-button raised id="login">Enviar</paper-button>
+              <paper-button>Cancelar</paper-button>
+            </div>
+        </form>
+    </paper-card>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    Polymer({
+      is: 'form-app',
+      ready: function(){
+        this.$.login.addEventListener("click", ()=>{
+          this.$.form.submit()
+        })
+      }
+      
+    })
+  </script>
+</dom-module>

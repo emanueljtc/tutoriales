@@ -2,19 +2,22 @@
 <!-- <link rel="import" href="../polymer/polymer-element.html"> -->
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="./nombre-component.html">
+
 <dom-module id="hola-component">
   <template>
     <style>
-      :host{
+      :host {
         display: block;
+        padding: 1em;
       }
-      paper-button{
+
+      paper-button {
         background-color: var(--paper-red-500);
       }
     </style>
-    <paper-button raised>Click</paper-button>
+    <paper-button raised id="boton">Click</paper-button>
     <!-- HTML Templates -->
-    <h1 id="titulo">Hola  <nombre-component name="[[name]]"></nombre-component> ,  tengo [[edad]]</h1>
+    <h1 id="titulo">Hola <nombre-component name="{{name}}"></nombre-component> , tengo [[edad]]</h1>
   </template>
   <script>
     Polymer({
@@ -29,11 +32,24 @@
           value: 0
         }
       },
-      created: function(){
+      listeners:{
+        "nameChanged": "click",
+        "click": "click"
+      },
+      created: function () {
         console.log("Elemento Creado");
       },
-      ready: function(){
-        
+      ready: function () {
+        /* this.$.boton
+              .addEventListener("click", function(){
+                this.click()
+              }) */
+        // this.$$("nombre-component").addEventListener("nameChanged", () => this.click())
+      },
+      click: function(e){
+        console.log(e.target);
+        console.log("Ejecutaron Click");
+        this.name="Hubo Click"
       }
     })
   </script>

@@ -1,0 +1,13 @@
+{
+  "name": "form",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-elements":"PolymerElements/paper-elements",
+    "iron-elements":"PolymerElements/iron-elements"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}
